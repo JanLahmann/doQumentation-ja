@@ -14,7 +14,7 @@
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"doQumentation","applicationCategory":"EducationalApplication","operatingSystem":"Web, Docker, Raspberry Pi","description":"Open-source frontend for IBM Quantum documentation with live Jupyter code execution, simulator mode, and offline support.","url":"https://doqumentation.org","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"license":"https://www.apache.org/licenses/LICENSE-2.0"}</script>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV" crossorigin="anonymous">
 <script src="https://unpkg.com/thebelab@0.4.0/lib/index.js" async></script><link rel="stylesheet" href="/assets/css/styles.cf54faa5.css">
-<script src="/assets/js/runtime~main.a4013437.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.e4ff82be.js" defer="defer"></script>
 <script src="/assets/js/main.aa37ba59.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
@@ -62,12 +62,12 @@
 <p>上記の一部の指標についてのより詳しい説明は、IBM Research Blog の<a href="https://research.ibm.com/blog/quantum-metric-layer-fidelity" target="_blank" rel="noopener noreferrer" class="">こちらの記事</a>をご覧ください。産業界における量子コンピューティング採用の各フェーズは、回路の幅、量子ビットの接続性、エラー率などのさまざまなパラメーターを用いて計算される量子ボリュームの増大によって推進されます。</p>
 <p>量子ボリュームの技術的な定義は、数式なしで伝えるのが困難です。
 IBM の研究担当ディレクターである Dario Gil が説明します。</p>
-<div style="margin:1rem 0"><div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;border-radius:8px"><iframe src="https://video.ibm.com/embed/recorded/133345140" title="Dario Gil explains the concept of quantum volume. In particular he explains how and why it depends on both qubit count and error rates." style="position:absolute;top:0;left:0;width:100%;height:100%;border:0" allowfullscreen="" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" loading="lazy"></iframe></div></div>
+<!-- -->
 <p>量子ボリュームをより深く理解するために、次のような興味深いアナロジーを考えてみましょう。以下のセクションでは、ニューヨーク市観光を例に、時間、空間、エラー率について説明します。</p>
 <p><strong>量子ボリュームの状態を巡る旅</strong></p>
 <p>量子ボリュームは、量子コンピューターが探索できる最大の量子計算空間を表します。量子空間の体積は 2<sup>N</sup>（N は量子ビット数、すなわち通常の状態空間の次元数）です。ここで意図的に「空間」という言葉を使っているのは、空間と言えば体積を連想しやすいからです。</p>
-<p>この探索を制限す る要因はエラー率です。エラー率は、空間を探索できる時間の量に相当します。エラーが多いほど、探索できる時間が少なくなります。計算空間が広いほど、完全に探索するのに時間がかかるため、エラー率の小さい量子コンピューターが必要になります。</p>
-<p>ニューヨーク市を観光している旅行者を想像してください。旅行者は市全体を探索したい、つまりニューヨーク市全体の大きさの「観光ボリューム」を達成したいと考えています。もし旅行者に 1 日しか与えられないとすれば、そのような広い空間を探索する方法はなく、旅行者は望む観光ボリュームを得られません。しかし、3 日間を与えれば、旅行者はおそらく主要なスポットをすべて訪れ、ニューヨーク市の必要な観光ボリュームを達成できるでしょう。</p>
+<p>この探索を制限する要因はエラー率です。エラー率は、空間を探索できる時間の量に相当します。エラーが多いほど、探索できる時間が少なくなります。計算空間が広いほど、完全に探索するのに時間がかかるため、エラー率の小さい量子コンピューターが必要になります。</p>
+<p>ニューヨーク市を観光している旅行者を想像してください。旅行者は市全体を探索したい、つまりニューヨーク市全体の大きさの「観光ボリ  ューム」を達成したいと考えています。もし旅行者に 1 日しか与えられないとすれば、そのような広い空間を探索する方法はなく、旅行者は望む観光ボリュームを得られません。しかし、3 日間を与えれば、旅行者はおそらく主要なスポットをすべて訪れ、ニューヨーク市の必要な観光ボリュームを達成できるでしょう。</p>
 <p>では、旅行者により多くの時間を与えながらも、空間をニューヨーク市に制限したらどうなるでしょうか？つまり、量子ビット数を同じに保ちつつエラー率を下げた場合はどうなるでしょうか？この場合、旅行者はすでに市を探索し終えており、同じ場所を繰り返し訪れているだけなので、旅行者に何のメリットもありません。観光ボリュームは変わりません。むしろ、より多くの時間があるなら、旅行者は訪れる観光スポットの数を増やすほうが賢明です。</p>
 <p>あるいは、時間を 3 日間に固定しながら、旅行者がニューヨーク市とロングアイランド全体を探索しようとしたとします。つまり、エラー率を固定したまま量子ビットを増やした場合はどうなるでしょうか？この場合も、旅行者は与えられた時間内でその広い空間を探索できないため、観光ボリュームはニューヨーク市のままです。つまり、より優れた旅行者になり、より大きな観光ボリュームを達成するには、観光空間と探索できる時間の両方を同時に増やす必要があります。</p>
 <p>全く同じ方法で、より大きな量子ボリュームを達成する優れた量子コンピューターを構築するには、量子計算空間（量子ビット数）を増やしながら、同時にエラー率を下げる（アルゴリズムが実行できる時間を増やす）必要があります。例えば、チューナブルカップリングアーキテクチャの進歩により、IBM はたった 1 年間で量子ボリュームを 2 回倍増させました！</p>
@@ -81,13 +81,13 @@ IBM の研究担当ディレクターである Dario Gil が説明します。</
 <h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="quantum-utility">量子ユーティリティ<a href="#quantum-utility" class="hash-link" aria-label="量子ユーティリティへの直接リンク" title="量子ユーティリティへの直接リンク" translate="no">​</a></h3>
 <p>IBM Quantum とカリフォルニア大学バークレー校は、IBM Quantum ハードウェアとエラー緩和手法の進歩により、量子コンピューターが予想よりも早く価値を提供できるという証拠を発表しました。単なる概念実証にとどまらず、実用的なレベルで正確な結果を提供しました。この研究で探索した計算モデルは、近い将来の量子コンピューター向けに設計された多くのアルゴリズムの核心的な要素です。</p>
 <p>量子と古典のフィードバックループは、量子技術を進歩させる鍵となります。量子ユーティリティに焦点を当て、既存の高性能コンピューティングフレームワークに挑戦する複雑な問題を量子で探索し、その結果を古典的に検証します。量子が複雑な回路を実行し、古典コンピューターが量子の結果を検証するというこの継続的なやり取りにより、両方の計算領域が改善され、近い将来の量子コンピューターの能力に対するユーザーの信頼が高まります。</p>
-<div style="margin:1rem 0"><div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;border-radius:8px"><iframe src="https://video.ibm.com/embed/recorded/134056420" title="This video outlines how noisy quantum computers use error mitigation to out-perform brute force classical methods on an example problem." style="position:absolute;top:0;left:0;width:100%;height:100%;border:0" allowfullscreen="" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" loading="lazy"></iframe></div></div>
+<!-- -->
 <details class="details_lb9f alert alert--info details_b_Ee" data-collapsed="true"><summary><p>任意の追加資料 — 三角をクリックして実験の詳細を読む</p></summary><div><div class="collapsibleContent_i85q"><ul>
 <li class="">
 <p>この実験では、IBM Quantum Eagle プロセッサーの 127 量子ビットすべてを使って、量子コンピューターに自然にマッピングされるシステム（量子イジングモデルと呼ばれる）の変化する挙動をシミュレートしました。イジングモデルは、エネルギー場の中で相互作用する原子を格子状の量子的な二択システムとして表現した、自然の単純化されたモデルです。これらのシステムは、量子コンピューターを構成する二状態の量子ビットによく似ており、手法の能力をテストするのに適しています。ZNE を使って、期待値（回路の可能な結果の加重平均）と呼ばれるシステムの特性を正確に計算しようとしました。</p>
 </li>
 <li class="">
-<p>同時に、バークレーチームは Lawrence Berkeley National Lab の National Energy Research Scientific Computing Center（NERSC）およびパデュー大学の高性能スーパーコンピューターを使って、テンソルネットワーク法で同じシステムのシミュレーションを試みました。</p>
+<p>同時に、バークレーチームは Lawrence Berkeley National Lab の National Energy Research Scientific Computing Center（NERSC）およびパデュー大学の  高性能スーパーコンピューターを使って、テンソルネットワーク法で同じシステムのシミュレーションを試みました。</p>
 </li>
 <li class="">
 <p>量子手法は厳密な手法と一致し続けました。しかし最終的に、難易度が上がるにつれ古典的な近似手法が精度を落とし始めました。</p>
@@ -98,7 +98,7 @@ IBM の研究担当ディレクターである Dario Gil が説明します。</
 </ul></div></div></details>
 <h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="error-correction">エラー訂正<a href="#error-correction" class="hash-link" aria-label="エラー訂正への直接リンク" title="エラー訂正への直接リンク" translate="no">​</a></h3>
 <p>エラー訂正は何十年もの間、主要な研究分野でした。しかしその大部分の間、理論的なエラー訂正技術は実際の量子コンピューターへの実装が現実的ではありませんでした。最大の理由は、必要な物理量子ビット数が非常に多いためです。実際、多くの専門家が、実用的なフォールトトレラント量子コンピューティング（FTQC）には数百万個の物理量子ビットが必要になると予測しています。しかし、Nature の表紙を飾った最近の論文で、IBM の研究者たちはその制限を克服する新しいコード（グロスコードと呼ばれる）を発表しました。</p>
-<p>論文<a href="https://www.nature.com/articles/s41586-024-07107-7" target="_blank" rel="noopener noreferrer" class="">「高閾値・低オーバーヘッドのフォールトトレラント量子メモリ」</a>では、デリケートな量子データを蓄積するエラーから保護する効率が従来の方法の約 10 倍高い、新しい量子エラー訂正コードが説明されています。エラー訂正の始まりにどれだけ近づいているかを考えるために、グロスコードを使えば 288 量子ビットを使って 12 個の論理量子ビットを約 100 万サイクルのエラーチェックで保護できます。</p>
+<p>論文<a href="https://www.nature.com/articles/s41586-024-07107-7" target="_blank" rel="noopener noreferrer" class="">「高閾値・低オーバーヘッドのフォールトトレラント量子メモリ  」</a>では、デリケートな量子データを蓄積するエラーから保護する効率が従来の方法の約 10 倍高い、新しい量子エラー訂正コードが説明されています。エラー訂正の始まりにどれだけ近づいているかを考えるために、グロスコードを使えば 288 量子ビットを使って 12 個の論理量子ビットを約 100 万サイクルのエラーチェックで保護できます。</p>
 <p>エラー訂正がエラー緩和やエラー抑制を突然置き換えることは期待されていません。むしろ、今後数年間は、エラー緩和と抑制が引き続き重要な役割を果たし、エラー訂正された量子ビット数の増加と並行して進むでしょう。</p>
 <h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="ibm-quantum-development-roadmap">IBM Quantum 開発ロードマップ<a href="#ibm-quantum-development-roadmap" class="hash-link" aria-label="IBM Quantum 開発ロードマップへの直接リンク" title="IBM Quantum 開発ロードマップへの直接リンク" translate="no">​</a></h3>
 <p>私たちは今、量子ユーティリティの時代に確かに入っています。これは量子コンピューターが量子コンピューティングにおいて古典コンピューターよりも優れており、ユーザーが新しいアルゴリズムを発見し量子優位性を探求するために活用できることを意味します。私たちのロードマップは歴史的なマイルストーンと 2026 年までに近い将来の量子優位性を達成するための計画を概説しています。</p>
@@ -108,7 +108,7 @@ IBM の研究担当ディレクターである Dario Gil が説明します。</
 <h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="5k-challenge">5k チャレンジ<a href="#5k-challenge" class="hash-link" aria-label="5k チャレンジへの直接リンク" title="5k チャレンジへの直接リンク" translate="no">​</a></h3>
 <p>IBM は量子研究コミュニティと協力して、量子コンピューティングから恩恵を受ける可能性のあるユースケースを探索しています。ユーザーが量子で重要な問題を探求できるよう、ますます強力なツールを提供しています。2024 年には、長く高品質な回路のバイアスのない観測量を計算できるツールをリリースしました。100 個以上の量子ビットとディープ回路の組み合わせで何ができるかを探ることは、かつて「100x100 チャレンジ」と呼ばれていました。しかし、正確な量子ビット数と深さよりも、その組み合わせの力を活用することの方が重要です。1 回の計算で 5,000 個の量子回路を使えば何が可能かを想像してみてください。ユーザーは現在の最高性能の古典コンピューターの能力を超えた複雑さと実行時間を持つ量子回路を実行できます。量子コミュニティが量子の力を活用し、重要な問題を解決するために何を構築するかを楽しみにしています。</p>
 <h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="quantum-centric-supercomputers">量子中心スーパーコンピューター<a href="#quantum-centric-supercomputers" class="hash-link" aria-label="量子中心スーパーコンピューターへの直接リンク" title="量子中心スーパーコンピューターへの直接リンク" translate="no">​</a></h3>
-<p>スケールの大きな問題を解決する鍵は、単一チッププロセッサーを超えることです。2024 年には、複数のチップで構成された初めての単一プロセッサー Crossbill を発表しました。これは新しいスケーリング時代の幕開けを告げる第一歩であり、量子中心スーパーコンピューティングによる 100,000 量子ビット以上への明確な道筋を提供します。これはスケーリングを可能にするモジュラーコンピューティングアーキテクチャです。量子通信と計算を組み合わせて計算能力を  高め、ハイブリッドクラウドミドルウェアを採用して量子ワークフローと古典ワークフローをシームレスに統合します。</p>
+<p>スケールの大きな問題を解決する鍵は、単一チッププロセッサーを超えることです。2024 年には、複数のチップで構成された初めての単一プロセッサー Crossbill を発表しました。これは新しいスケーリング時代の幕開けを告げる第一歩であり、量子中心スーパーコンピューティングによる 100,000 量子ビット以上への明確な道筋を提供します。これはスケーリングを可能にするモジュラーコンピューティングアーキテクチャです。量子通信と計算を組み合わせて計算能力を高め、ハイブリッドクラウドミドルウェアを採用して量子ワークフローと古典ワークフローをシームレスに統合します。</p>
 <p>世界で最も複雑な問題を解くには、古典リソースと量子リソースを組み合わせる必要があります。さらに、産業界と学術界の継続的なコラボレーションにも依存しています。</p>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="key-takeaways">重要なポイント<a href="#key-takeaways" class="hash-link" aria-label="重要なポイントへの直接リンク" title="重要なポイントへの直接リンク" translate="no">​</a></h2>
 <p>以下の重要なポイントを押さえておきましょう。</p>
