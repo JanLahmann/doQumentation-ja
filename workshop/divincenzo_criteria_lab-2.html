@@ -14,8 +14,8 @@
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"doQumentation","applicationCategory":"EducationalApplication","operatingSystem":"Web, Docker, Raspberry Pi","description":"Open-source frontend for IBM Quantum documentation with live Jupyter code execution, simulator mode, and offline support.","url":"https://doqumentation.org","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"license":"https://www.apache.org/licenses/LICENSE-2.0"}</script>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV" crossorigin="anonymous">
 <script src="https://unpkg.com/thebelab@0.4.0/lib/index.js" async></script><link rel="stylesheet" href="/assets/css/styles.09715444.css">
-<script src="/assets/js/runtime~main.0ab79e10.js" defer="defer"></script>
-<script src="/assets/js/main.3acf54e1.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.83eb29f8.js" defer="defer"></script>
+<script src="/assets/js/main.6f99bf7b.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
 <svg style="display: none;"><defs>
@@ -151,11 +151,11 @@ M834 80h400000v40h-400000z"></path></svg></span></span></span><span class="vlist
 <li class=""><strong>静止Qubitとフライング（飛行）Qubitの相互変換能力。</strong>（例：プロセッサ内のQubitを移動できる光子にマッピングする。）</li>
 <li class=""><strong>位置間でフライングQubitを忠実に転送する能力。</strong>（例：量子情報を失わずに光子Qubitをファイバーで送信する。）</li>
 </ol>
-<p>これらはQiskitの標準的な使用範囲を超えており、Qiskitは主にチップ上の静止Qubitを扱います。ただし、<strong>量子テレポーテーション</strong>という簡単な例でこれらの基準の<em>概念</em>を説明できます。テレポーテーションは、静止QubitのGate状態を、もつれたペア（「フライング」部分）が運ぶ情報と古典通信に変換し、それを使って別の場所の別の静止Qubitで状態を再構築することを示しています。</p>
+<p>これらはQiskitの標準的な使用範囲を超えており、Qiskitは主にチップ上の静止Qubitを扱います。ただし、<strong>量子テレポーテーション</strong>という簡単な例でこれらの基準の<em>概念</em>を説明できます。テレポーテーションは、静止Qubitの状態を、もつれたペア（「フライング」部分）が運ぶ情報と古典通信に変換し、それを使って別の場所の別の静止Qubitで状態を再構築することを示しています。</p>
 <h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="recommended-activity-take-the-qiskit-in-classrooms-quantum-teleportation-module">推奨アクティビティ：Qiskit in Classroomsの<em>量子テレポーテーション</em>モジュール<a href="#recommended-activity-take-the-qiskit-in-classrooms-quantum-teleportation-module" class="hash-link" aria-label="recommended-activity-take-the-qiskit-in-classrooms-quantum-teleportation-moduleへの直接リンク" title="recommended-activity-take-the-qiskit-in-classrooms-quantum-teleportation-moduleへの直接リンク" translate="no">​</a></h3>
 <p>Dr. Katie McCormickによるQiskit in Classrooms <a href="https://quantum.cloud.ibm.com/learning/en/modules/computer-science/quantum-teleportation" target="_blank" rel="noopener noreferrer" class="">Quantum Teleportation</a>モジュールでは、量子情報における最も魅力的なプロトコルの一つである量子テレポーテーションを段階的に解説します。量子状態（Qubit）がエンタングルメントとわずか2つの古典ビットを使ってアリスからボブに送られる仕組みを学べます。エンタングルされたBellペアの準備方法、アリス側でのBell基底測定の実行、古典的な結果の送信、そして元の状態を完全に回復するためのボブのQubitへの正しい量子Gateの適用という、テレポーテーション手順の全体を学びます。途中では、Qubitの情報をテレポートすることがno-cloning定理に違反したり光速を超えたりしない理由も探求します。IBM Quantum ハードウェアまたはシミュレータを使ったハンズオン演習を通じて、実際の測定、エンタングルメント、フィードフォワード制御の実践的な理解を深めます。</p>
-<p>量子テレポーテーションをマスターすることで、異なるノード間で量子情報をエンコード、送信、回復する方法を理解し、量子ネットワーク、中継器システム、安全な通信スキーム、およびスケーラブルなモジュ  ール式量子コンピューティングの基盤を築くことができます。</p>
-<p><strong>基準6と7との関連性：</strong> 実際の量子ネットワークでは、共有されたエンタングルペアは、アリスとボブの場所の間に「フライング」Qubit（光子など）を分配することで作成されます（基準7：忠実な転送）。テレポーテーションプロトコル自体は、アリスの静止QubitGate状態をエンタングルペアの彼女の半分にマッピングし、実質的にボブへ「送信」する方法として機能します（基準6：相互変換）。Qiskitはプロトコルのロジックを完全にシミュレートでき、通信アーキテクチャにおけるこれらの基準がどのように満たされるかの概念モデルを提供します。</p>
+<p>量子テレポーテーションをマスターすることで、異なるノード間で量子情報をエンコード、送信、回復する方法を理解し、量子ネットワーク、中継器システム、安全な通信スキーム、およびスケーラブルなモジュール式量子コンピューティングの基盤を築くことができます。</p>
+<p><strong>基準6と7との関連性：</strong> 実際の量子ネットワークでは、共有されたエンタングルペアは、アリスとボブの場所の間に「フライング」Qubit（光子など）を分配することで作成されます（基準7：忠実な転送）。テレポーテーションプロトコル自体は、アリスの静止Qubitの状態をエンタングルペアの彼女の半分にマッピングし、実質的にボブへ「送信」する方法として機能します（基準6：相互変換）。Qiskitはプロトコルのロジックを完全にシミュレートでき、通信アーキテクチャにおけるこれらの基準がどのように満たされるかの概念モデルを提供します。</p>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="conclusion-summary">まとめと結論<a href="#conclusion-summary" class="hash-link" aria-label="まとめと結論への直接リンク" title="まとめと結論への直接リンク" translate="no">​</a></h2>
 <p>Qiskitを使用してDiVincenzo基準を説明するための、コードに焦点を当てた一連の演習を設計しました。これらのハンズオン例を通じて、実際の量子コンピューティングプラットフォームが各要件をどのように満たすかを探求しました。</p>
 <ul>
