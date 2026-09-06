@@ -15,8 +15,8 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV" crossorigin="anonymous">
 <script src="https://unpkg.com/thebelab@0.4.0/lib/index.js" async></script>
 <script src="https://cloud.umami.is/script.js" defer="defer" data-website-id="97f347ac-e7ba-4be3-b26f-ab4b328bdbf2" data-domains="doqumentation.org"></script><link rel="stylesheet" href="/assets/css/styles.e55021e4.css">
-<script src="/assets/js/runtime~main.78efbff6.js" defer="defer"></script>
-<script src="/assets/js/main.815d3204.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.adb8282e.js" defer="defer"></script>
+<script src="/assets/js/main.884ff3f2.js" defer="defer"></script>
 <link data-rh-hreflang rel="alternate" hreflang="en" href="https://doqumentation.org/qiskit-addons/obp/getting_started" /><link data-rh-hreflang rel="alternate" hreflang="de" href="https://de.doqumentation.org/qiskit-addons/obp/getting_started" /><link data-rh-hreflang rel="alternate" hreflang="es" href="https://es.doqumentation.org/qiskit-addons/obp/getting_started" /><link data-rh-hreflang rel="alternate" hreflang="fr" href="https://fr.doqumentation.org/qiskit-addons/obp/getting_started" /><link data-rh-hreflang rel="alternate" hreflang="it" href="https://it.doqumentation.org/qiskit-addons/obp/getting_started" /><link data-rh-hreflang rel="alternate" hreflang="pt" href="https://pt.doqumentation.org/qiskit-addons/obp/getting_started" /><link data-rh-hreflang rel="alternate" hreflang="ja" href="https://ja.doqumentation.org/qiskit-addons/obp/getting_started" /><link data-rh-hreflang rel="alternate" hreflang="fil" href="https://tl.doqumentation.org/qiskit-addons/obp/getting_started" /><link data-rh-hreflang rel="alternate" hreflang="ar" href="https://ar.doqumentation.org/qiskit-addons/obp/getting_started" /><link data-rh-hreflang rel="alternate" hreflang="he" href="https://he.doqumentation.org/qiskit-addons/obp/getting_started" /><link data-rh-hreflang rel="alternate" hreflang="ms" href="https://ms.doqumentation.org/qiskit-addons/obp/getting_started" /><link data-rh-hreflang rel="alternate" hreflang="id" href="https://id.doqumentation.org/qiskit-addons/obp/getting_started" /><link data-rh-hreflang rel="alternate" hreflang="th" href="https://th.doqumentation.org/qiskit-addons/obp/getting_started" /><link data-rh-hreflang rel="alternate" hreflang="ko" href="https://ko.doqumentation.org/qiskit-addons/obp/getting_started" /><link data-rh-hreflang rel="alternate" hreflang="pl" href="https://pl.doqumentation.org/qiskit-addons/obp/getting_started" /><link data-rh-hreflang rel="alternate" hreflang="ro" href="https://ro.doqumentation.org/qiskit-addons/obp/getting_started" /><link data-rh-hreflang rel="alternate" hreflang="uk" href="https://uk.doqumentation.org/qiskit-addons/obp/getting_started" /><link data-rh-hreflang rel="alternate" hreflang="cs" href="https://cs.doqumentation.org/qiskit-addons/obp/getting_started" /><link data-rh-hreflang rel="alternate" hreflang="swg" href="https://swg.doqumentation.org/qiskit-addons/obp/getting_started" /><link data-rh-hreflang rel="alternate" hreflang="de" href="https://bad.doqumentation.org/qiskit-addons/obp/getting_started" /><link data-rh-hreflang rel="alternate" hreflang="bar" href="https://bar.doqumentation.org/qiskit-addons/obp/getting_started" /><link data-rh-hreflang rel="alternate" hreflang="ksh" href="https://ksh.doqumentation.org/qiskit-addons/obp/getting_started" /><link data-rh-hreflang rel="alternate" hreflang="nds" href="https://nds.doqumentation.org/qiskit-addons/obp/getting_started" /><link data-rh-hreflang rel="alternate" hreflang="gsw" href="https://gsw.doqumentation.org/qiskit-addons/obp/getting_started" /><link data-rh-hreflang rel="alternate" hreflang="de" href="https://sax.doqumentation.org/qiskit-addons/obp/getting_started" /><link data-rh-hreflang rel="alternate" hreflang="de" href="https://bln.doqumentation.org/qiskit-addons/obp/getting_started" /><link data-rh-hreflang rel="alternate" hreflang="de-AT" href="https://aut.doqumentation.org/qiskit-addons/obp/getting_started" /><link data-rh-hreflang rel="alternate" hreflang="x-default" href="https://doqumentation.org/qiskit-addons/obp/getting_started" /></head>
 <body>
 <svg style="display: none;"><defs>
@@ -29,27 +29,37 @@
 <p>演算子が大きくなりすぎることを防ぎながら、回路への逆伝播をより深く行う方法の一つは、演算子に追加する代わりに、係数が小さい項を切り捨てることです。項の切り捨てにより、実行する量子回路の数を減らすことができますが、切り捨てた項の係数の大きさに比例した誤差が最終的な期待値の計算に生じます。
 このチュートリアルでは、オペレーター逆伝播を使用してハイゼンベルク・スピン鎖の量子ダイナミクスをシミュレートするための <a href="https://quantum.cloud.ibm.com/docs/guides/serverless#qiskit-patterns-with-quantum-serverless" target="_blank" rel="noopener noreferrer" class="">Qiskit パターン</a> を実装します。</p>
 <ul>
-<li class=""><strong>ステップ 1: 量子問題へのマッピング</strong>
+<li class="">
+<p><strong>ステップ 1: 量子問題へのマッピング</strong></p>
 <ul>
 <li class="">時間発展したハミルトニアンを量子回路にマッピングする</li>
 </ul>
 </li>
-<li class=""><strong>ステップ 2: 問題の最適化</strong>
+<li class="">
+<p><strong>ステップ 2: 問題の最適化</strong></p>
 <ul>
-<li class="">回路をスライスに分割する</li>
+<li class="">
+<p>回路をスライスに分割する</p>
+</li>
 <li class="">
 <font color="#0F62FE">回路からスライスをパウリ・オブザーバブルに逆伝播させる</font>
 </li>
-<li class="">残りのスライスを単一の回路にまとめる</li>
-<li class="">Backend 向けに回路をトランスパイルする</li>
+<li class="">
+<p>残りのスライスを単一の回路にまとめる</p>
+</li>
+<li class="">
+<p>Backend 向けに回路をトランスパイルする</p>
+</li>
 </ul>
 </li>
-<li class=""><strong>ステップ 3: 実験の実行</strong>
+<li class="">
+<p><strong>ステップ 3: 実験の実行</strong></p>
 <ul>
 <li class="">このノートブックでは簡略化のため、<a href="https://quantum.cloud.ibm.com/docs/api/qiskit/qiskit.primitives.StatevectorEstimator" target="_blank" rel="noopener noreferrer" class="">StatevectorEstimator</a> を使用して、削減された回路と拡張されたオブザーバブルで期待値を計算する</li>
 </ul>
 </li>
-<li class=""><strong>ステップ 4: 結果の再構成</strong>
+<li class="">
+<p><strong>ステップ 4: 結果の再構成</strong></p>
 <ul>
 <li class="">該当なし</li>
 </ul>
@@ -124,6 +134,7 @@ circuit.draw(&quot;mpl&quot;, style=&quot;iqp&quot;, scale=0.6)
 ![Quantum circuit diagram](/img/qiskit-addons/obp/01-getting-started/output_2.png)
 
 ## ステップ 2: 問題の最適化 \{#step-2-optimize-the-problem}
+
 ### 逆伝播するための回路スライスを作成する \{#create-circuit-slices-to-backpropagate}
 
 ``backpropagate`` 関数はスライス全体を一度に逆伝播させることを覚えておいてください。そのため、スライス方法の選択は、逆伝播が特定の問題に対してどの程度有効かに影響を与えます。ここでは、[slice_by_gate_types](https://qiskit.github.io/qiskit-addon-utils/stubs/qiskit_addon_utils.slicing.slice_by_gate_types.html) 関数を使用して、同じ種類の Gate をスライスにグループ化します。
@@ -266,6 +277,7 @@ bp_obs_trunc_isa = bp_obs_trunc.apply_layout(bp_circuit_trunc_isa.layout)
 ```
 
 ## ステップ 3: 量子実験の実行 \{#step-3-execute-quantum-experiments}
+
 ### 期待値を計算する \{#calculate-expectation-value}
 
 最後に、ノイズのない [StatevectorEstimator](https://quantum.cloud.ibm.com/docs/api/qiskit/qiskit.primitives.StatevectorEstimator) を使用して、逆伝播した実験を実行し、完全な実験と比較できます。切り捨てなしの逆伝播期待値は、数値精度の範囲内で正確な値と等しいことがわかります。

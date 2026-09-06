@@ -15,8 +15,8 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV" crossorigin="anonymous">
 <script src="https://unpkg.com/thebelab@0.4.0/lib/index.js" async></script>
 <script src="https://cloud.umami.is/script.js" defer="defer" data-website-id="97f347ac-e7ba-4be3-b26f-ab4b328bdbf2" data-domains="doqumentation.org"></script><link rel="stylesheet" href="/assets/css/styles.e55021e4.css">
-<script src="/assets/js/runtime~main.78efbff6.js" defer="defer"></script>
-<script src="/assets/js/main.815d3204.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.adb8282e.js" defer="defer"></script>
+<script src="/assets/js/main.884ff3f2.js" defer="defer"></script>
 <link data-rh-hreflang rel="alternate" hreflang="en" href="https://doqumentation.org/guides/qiskit-sdk-version-strategy" /><link data-rh-hreflang rel="alternate" hreflang="de" href="https://de.doqumentation.org/guides/qiskit-sdk-version-strategy" /><link data-rh-hreflang rel="alternate" hreflang="es" href="https://es.doqumentation.org/guides/qiskit-sdk-version-strategy" /><link data-rh-hreflang rel="alternate" hreflang="fr" href="https://fr.doqumentation.org/guides/qiskit-sdk-version-strategy" /><link data-rh-hreflang rel="alternate" hreflang="it" href="https://it.doqumentation.org/guides/qiskit-sdk-version-strategy" /><link data-rh-hreflang rel="alternate" hreflang="pt" href="https://pt.doqumentation.org/guides/qiskit-sdk-version-strategy" /><link data-rh-hreflang rel="alternate" hreflang="ja" href="https://ja.doqumentation.org/guides/qiskit-sdk-version-strategy" /><link data-rh-hreflang rel="alternate" hreflang="fil" href="https://tl.doqumentation.org/guides/qiskit-sdk-version-strategy" /><link data-rh-hreflang rel="alternate" hreflang="ar" href="https://ar.doqumentation.org/guides/qiskit-sdk-version-strategy" /><link data-rh-hreflang rel="alternate" hreflang="he" href="https://he.doqumentation.org/guides/qiskit-sdk-version-strategy" /><link data-rh-hreflang rel="alternate" hreflang="ms" href="https://ms.doqumentation.org/guides/qiskit-sdk-version-strategy" /><link data-rh-hreflang rel="alternate" hreflang="id" href="https://id.doqumentation.org/guides/qiskit-sdk-version-strategy" /><link data-rh-hreflang rel="alternate" hreflang="th" href="https://th.doqumentation.org/guides/qiskit-sdk-version-strategy" /><link data-rh-hreflang rel="alternate" hreflang="ko" href="https://ko.doqumentation.org/guides/qiskit-sdk-version-strategy" /><link data-rh-hreflang rel="alternate" hreflang="pl" href="https://pl.doqumentation.org/guides/qiskit-sdk-version-strategy" /><link data-rh-hreflang rel="alternate" hreflang="ro" href="https://ro.doqumentation.org/guides/qiskit-sdk-version-strategy" /><link data-rh-hreflang rel="alternate" hreflang="uk" href="https://uk.doqumentation.org/guides/qiskit-sdk-version-strategy" /><link data-rh-hreflang rel="alternate" hreflang="cs" href="https://cs.doqumentation.org/guides/qiskit-sdk-version-strategy" /><link data-rh-hreflang rel="alternate" hreflang="swg" href="https://swg.doqumentation.org/guides/qiskit-sdk-version-strategy" /><link data-rh-hreflang rel="alternate" hreflang="de" href="https://bad.doqumentation.org/guides/qiskit-sdk-version-strategy" /><link data-rh-hreflang rel="alternate" hreflang="bar" href="https://bar.doqumentation.org/guides/qiskit-sdk-version-strategy" /><link data-rh-hreflang rel="alternate" hreflang="ksh" href="https://ksh.doqumentation.org/guides/qiskit-sdk-version-strategy" /><link data-rh-hreflang rel="alternate" hreflang="nds" href="https://nds.doqumentation.org/guides/qiskit-sdk-version-strategy" /><link data-rh-hreflang rel="alternate" hreflang="gsw" href="https://gsw.doqumentation.org/guides/qiskit-sdk-version-strategy" /><link data-rh-hreflang rel="alternate" hreflang="de" href="https://sax.doqumentation.org/guides/qiskit-sdk-version-strategy" /><link data-rh-hreflang rel="alternate" hreflang="de" href="https://bln.doqumentation.org/guides/qiskit-sdk-version-strategy" /><link data-rh-hreflang rel="alternate" hreflang="de-AT" href="https://aut.doqumentation.org/guides/qiskit-sdk-version-strategy" /><link data-rh-hreflang rel="alternate" hreflang="x-default" href="https://doqumentation.org/guides/qiskit-sdk-version-strategy" /></head>
 <body>
 <svg style="display: none;"><defs>
@@ -31,14 +31,14 @@
 <p>破壊的なAPI変更はメジャーバージョンリリースのために予約されています。メジャー
 バージョンリリース間の<strong>最小</strong>期間は1年です。マイナーバージョンはAPIの互換性を
 壊すことなく新機能とバグ修正を導入し、現在のメジャーバージョンに対して<strong>のみ</strong>
-定期的に（現在は3ヶ月ごとに）公開されます。パッチバージョンは、アクティブに
+定期的に（現在は、約3ヶ月ごとに）公開されます。パッチバージョンは、アクティブに
 サポートされている各リリースシリーズ（つまり、メジャーバージョン）の最新マイナー
 バージョンで特定されたバグの修正を提供します。同時にサポートされるリリース
 シリーズは最大2つであり、これは新しいメジャーバージョンリリース後の重複期間中
 にのみ発生します（詳細は以下で説明します）。</p>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="release-schedule">リリーススケジュール<a href="#release-schedule" class="hash-link" aria-label="リリーススケジュールへの直接リンク" title="リリーススケジュールへの直接リンク" translate="no">​</a></h2>
-<p>暫定的なリリーススケジュールは以下の通りです：</p>
-<p><img decoding="async" loading="lazy" alt="暫定的なQiskitリリーススケジュール" src="/assets/images/release_schedule-1773ed2741facc7656f68e0351ed74ec.avif" width="1048" height="360" class="img_ev3q"></p>
+<p>メジャーリリースXのケイデンスの例：</p>
+<p><img decoding="async" loading="lazy" alt="Qiskit release schedule schema" src="/assets/images/release_schedule-1773ed2741facc7656f68e0351ed74ec.avif" width="1048" height="360" class="img_ev3q"></p>
 <p>最新のリリーススケジュールについては、Qiskit GitHubプロジェクトの<a href="https://github.com/Qiskit/qiskit/milestones" target="_blank" rel="noopener noreferrer" class="">マイルストーンリスト</a>を参照してください。こちらには常に最新のリリース計画が含まれています。</p>
 <p>新しいメジャーバージョンのリリースに伴い、前のメジャーバージョンはバグ修正に
 対して少なくとも6ヶ月間、セキュリティ修正に対して1年間サポートされます。この
@@ -85,8 +85,8 @@ Qiskitバージョンを引き上げるべきではありません。前のメ�
 バージョンシリーズで行われたAPI変更に対する警告と非推奨が含まれています。</p>
 <p>例えば、1.0.0リリースの直前に、0.46.0リリースが公開されます。0.46.0リリースは
 0.45.0リリースと同等ですが、1.0.0リリースの一部として行われたAPI変更を文書化する
-追加の非推奨警告が含まれています。このパターンは、将来のメジャーバージョン
-リリースにも使用されます。</p>
+追加の非推奨警告が含まれています。このパターンは、任意のメジャーバージョン
+リリースに適用されます。</p>
 <p>Qiskitユーザーはまずこの最終マイナーバージョンにアップグレードして非推奨警告を
 確認し、潜在的に破壊的なリリースを試す前にQiskitの使用方法を調整する必要が
 あります。前のメジャーバージョンはアップグレードに十分な時間を提供するために
@@ -109,7 +109,7 @@ Qiskitバージョンを引き上げるべきではありません。前のメ�
 公開された場合、それは<code>rc</code>リリースと同じ保証を持たず、プレビュー
 リリースにすぎないことに注意してください。APIはこれらのプレリリースと
 同じバージョン番号の最終リリースの間で変更される可能性があります。
-例えば、<code>1.0.0pre1</code>は<code>1.0.0</code>とは異なる最終APIを持つ可能性があります。</p>
+例えば、<code>X.0.0pre1</code>は最終的な<code>X.0.0</code>とは異なるAPIを持つ可能性があります。</p>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="post-releases">ポストリリース<a href="#post-releases" class="hash-link" aria-label="ポストリリースへの直接リンク" title="ポストリリースへの直接リンク" translate="no">​</a></h2>
 <p>リリースのパッケージングに問題がある場合、それを修正するために
 ポストリリースが発行されることがあります。これらは<code>X.Y.Z.1</code>の形式で、

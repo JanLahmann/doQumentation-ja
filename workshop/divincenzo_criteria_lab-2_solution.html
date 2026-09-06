@@ -15,8 +15,8 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV" crossorigin="anonymous">
 <script src="https://unpkg.com/thebelab@0.4.0/lib/index.js" async></script>
 <script src="https://cloud.umami.is/script.js" defer="defer" data-website-id="97f347ac-e7ba-4be3-b26f-ab4b328bdbf2" data-domains="doqumentation.org"></script><link rel="stylesheet" href="/assets/css/styles.e55021e4.css">
-<script src="/assets/js/runtime~main.78efbff6.js" defer="defer"></script>
-<script src="/assets/js/main.815d3204.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.adb8282e.js" defer="defer"></script>
+<script src="/assets/js/main.884ff3f2.js" defer="defer"></script>
 </head>
 <body>
 <svg style="display: none;"><defs>
@@ -28,11 +28,21 @@
 <p>物理学者David DiVincenzoは、量子コンピュータのあらゆる物理的実装に必要な5つの主要要件と、量子通信のための2つの追加基準を示しました。このノートブックでは、<strong>実践的なQiskitデモンストレーションを通じて、各DiVincenzo基準を体験</strong>します。理論の深掘りは行わず、各セクションで1つの基準を簡潔に説明したうえで、Qiskit 2を使ったコード演習を提供します。シミュレータや実際のIBM Quantumデバイスでサーキットを実行し、<strong>各原理をハンズオンで探求</strong>します。</p>
 <p><strong>DiVincenzoの量子計算に関する5つの基準</strong>：</p>
 <ol>
-<li class=""><strong>よく特性評価されたQubitを持つ、スケーラブルな物理システム。</strong></li>
-<li class=""><strong>Qubitを単純な基準状態</strong>（例：|00…0〉）に<strong>初期化する能力。</strong></li>
-<li class=""><strong>長いデコヒーレンス時間</strong>（Qubitのコヒーレンスがゲート操作時間よりもはるかに長いこと）。</li>
-<li class=""><strong>普遍的な量子Gateのセット</strong>（任意のユニタリ演算を実行できること）。</li>
-<li class=""><strong>Qubit固有の測定能力</strong>（各Qubitの状態を読み出すこと）。</li>
+<li class="">
+<p><strong>よく特性評価されたQubitを持つ、スケーラブルな物理システム。</strong></p>
+</li>
+<li class="">
+<p><strong>Qubitを単純な基準状態</strong>（例：|00…0〉）に<strong>初期化する能力。</strong></p>
+</li>
+<li class="">
+<p><strong>長いデコヒーレンス時間</strong>（Qubitのコヒーレンスがゲート操作時間よりもはるかに長いこと）。</p>
+</li>
+<li class="">
+<p><strong>普遍的な量子Gateのセット</strong>（任意のユニタリ演算を実行できること）。</p>
+</li>
+<li class="">
+<p><strong>Qubit固有の測定能力</strong>（各Qubitの状態を読み出すこと）。</p>
+</li>
 </ol>
 <p><em>(DiVincenzoは量子通信のための2つの基準も述べています。定常Qubitと「フライング」Qubitを相互変換する能力、およびフライングQubitを場所間で忠実に転送する能力です。これらはこのノートブックの最後の推奨アクティビティに含まれています。)</em></p>
 <p>以下の各セクションは1つの基準に対応しています。Qiskitを使い、コードと<strong>インタラクティブな実験</strong>でそのコンセプトを説明します。たとえば、Qubitの数やCircuitの深さを増やすとどのように結果が変わるか（基準1）、Qubitの状態のリセットと準備の方法（基準2）、シミュレータと実デバイスでのQubitsの測定方法（基準4）、Qiskitが普遍Gateをどのように構成するか（基準3）、有限のコヒーレンス（T₁、T₂）がどのように計算に影響するか（基準5）を見ていきます。最終的には、各DiVincenzo基準が実際に何を意味し、Qiskitがどのようにそれらの実験を可能にするかについて、より深い直感を得ることができるでしょう。</p>
@@ -140,8 +150,12 @@ M834 80h400000v40h-400000z"></path></svg></span></span></span><span class="vlist
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="quantum-communication-criteria-flying-qubits">量子通信基準（フライング・qubit）<a href="#quantum-communication-criteria-flying-qubits" class="hash-link" aria-label="量子通信基準（フライング・qubit）への直接リンク" title="量子通信基準（フライング・qubit）への直接リンク" translate="no">​</a></h2>
 <p>DiVincenzoは、ネットワーク接続された量子コンピュータを構築する場合に重要な、量子通信に特化した2つの基準も挙げています：</p>
 <ol start="6">
-<li class=""><strong>静止Qubitとフライング・Qubitを相互変換する能力。</strong>（例：プロセッサ内のQubitを移動できる光子にマッピングする。）</li>
-<li class=""><strong>フライング・Qubitを場所間で忠実に伝送する能力。</strong>（例：量子情報を失わずに光ファイバーを通じて光子Qubitを送信する。）</li>
+<li class="">
+<p><strong>静止Qubitとフライング・Qubitを相互変換する能力。</strong>（例：プロセッサ内のQubitを移動できる光子にマッピングする。）</p>
+</li>
+<li class="">
+<p><strong>フライング・Qubitを場所間で忠実に伝送する能力。</strong>（例：量子情報を失わずに光ファイバーを通じて光子Qubitを送信する。）</p>
+</li>
 </ol>
 <p>Qiskitは主にチップ上の静止Qubitを扱うため、これらは標準的なQiskitの使用範囲を超えています。ただし、<strong>量子テレポーテーション</strong>というシンプルな例でこれらの基準の<em>概念</em>を示すことができます。テレポーテーションは、静止Qubitの状態をエンタングルしたペア（「フライング」部分）によって運ばれる情報と古典的な通信に変換し、それを使用して別の場所にある別の静止Qubitで状態を再構成することを示しています。</p>
 <h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="recommended-activity-take-the-qiskit-in-classrooms-quantum-teleportation-module">推奨アクティビティ：Qiskit in Classrooms の<em>量子テレポーテーション</em>モジュールを受講する<a href="#recommended-activity-take-the-qiskit-in-classrooms-quantum-teleportation-module" class="hash-link" aria-label="recommended-activity-take-the-qiskit-in-classrooms-quantum-teleportation-moduleへの直接リンク" title="recommended-activity-take-the-qiskit-in-classrooms-quantum-teleportation-moduleへの直接リンク" translate="no">​</a></h3>
@@ -151,11 +165,21 @@ M834 80h400000v40h-400000z"></path></svg></span></span></span><span class="vlist
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="conclusion-summary">まとめ<a href="#conclusion-summary" class="hash-link" aria-label="まとめへの直接リンク" title="まとめへの直接リンク" translate="no">​</a></h2>
 <p>私たちは、Qiskitを使用してDiVincenzo基準を説明することに焦点を当てた一連のコード演習を設計しました。これらのハンズオンの例を通じて、実際の量子コンピュータプラットフォームが各要件をどのように満たすかを探求しました：</p>
 <ul>
-<li class=""><strong>スケーラビリティ</strong>：より多くのQubitでCircuitを構築し、ノイズのスケーリングを理解する。</li>
-<li class=""><strong>初期化</strong>：リセットと状態準備を使用して、既知の状態で確実に計算を開始する。</li>
-<li class=""><strong>普遍的なGate</strong>：複雑な操作をマシンの基底Gateにトランスパイルし、任意の計算を実行できることを証明する。</li>
-<li class=""><strong>測定</strong>：Qubitを読み出し、現実的な読み出しエラーに対処する。</li>
-<li class=""><strong>コヒーレンス</strong>：アルゴリズムの忠実度に対する有限T₁、T₂の影響と、デコヒーレンスに対して操作が速い必要性を確認する。</li>
+<li class="">
+<p><strong>スケーラビリティ</strong>：より多くのQubitでCircuitを構築し、ノイズのスケーリングを理解する。</p>
+</li>
+<li class="">
+<p><strong>初期化</strong>：リセットと状態準備を使用して、既知の状態で確実に計算を開始する。</p>
+</li>
+<li class="">
+<p><strong>普遍的なGate</strong>：複雑な操作をマシンの基底Gateにトランスパイルし、任意の計算を実行できることを証明する。</p>
+</li>
+<li class="">
+<p><strong>測定</strong>：Qubitを読み出し、現実的な読み出しエラーに対処する。</p>
+</li>
+<li class="">
+<p><strong>コヒーレンス</strong>：アルゴリズムの忠実度に対する有限T₁、T₂の影響と、デコヒーレンスに対して操作が速い必要性を確認する。</p>
+</li>
 </ul>
 <p>完全性のために、Qiskit in Classrooms <a href="https://quantum.cloud.ibm.com/learning/en/modules/computer-science/quantum-teleportation" target="_blank" rel="noopener noreferrer" class="">量子テレポーテーション</a>モジュールを通じて量子通信の側面にも触れ、最後の2つの基準（フライング・qubit）と結びつけました。</p>
 <p>最後に、これらの基準がIBMの実際の量子コンピュータでどのように組み合わさるかを指摘する価値があります。<strong>ibmq_brisbane</strong>のようなデバイスは127の超伝導Qubit（基準1）を持ち、各Qubitは|0〉から開始し（基準2）、普遍性のためのキャリブレートされたGateセットとコンパイラ（基準4）、各Qubitのマイクロ波読み出し共振器（基準5）、そしてナノ秒単位の操作に対して数百マイクロ秒オーダーのコヒーレンス時間（基準3）を持っています。量子ネットワーキング実験のために、IBMや他の機関はフライング・Qubitのためのマイクロ波から光学への変換や、遠隔Qubitのエンタングル（基準6と7）を探求しています；これらは活発な研究分野です。</p>

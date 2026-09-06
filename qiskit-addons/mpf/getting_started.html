@@ -15,8 +15,8 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV" crossorigin="anonymous">
 <script src="https://unpkg.com/thebelab@0.4.0/lib/index.js" async></script>
 <script src="https://cloud.umami.is/script.js" defer="defer" data-website-id="97f347ac-e7ba-4be3-b26f-ab4b328bdbf2" data-domains="doqumentation.org"></script><link rel="stylesheet" href="/assets/css/styles.e55021e4.css">
-<script src="/assets/js/runtime~main.78efbff6.js" defer="defer"></script>
-<script src="/assets/js/main.815d3204.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.adb8282e.js" defer="defer"></script>
+<script src="/assets/js/main.884ff3f2.js" defer="defer"></script>
 <link data-rh-hreflang rel="alternate" hreflang="en" href="https://doqumentation.org/qiskit-addons/mpf/getting_started" /><link data-rh-hreflang rel="alternate" hreflang="de" href="https://de.doqumentation.org/qiskit-addons/mpf/getting_started" /><link data-rh-hreflang rel="alternate" hreflang="es" href="https://es.doqumentation.org/qiskit-addons/mpf/getting_started" /><link data-rh-hreflang rel="alternate" hreflang="fr" href="https://fr.doqumentation.org/qiskit-addons/mpf/getting_started" /><link data-rh-hreflang rel="alternate" hreflang="it" href="https://it.doqumentation.org/qiskit-addons/mpf/getting_started" /><link data-rh-hreflang rel="alternate" hreflang="pt" href="https://pt.doqumentation.org/qiskit-addons/mpf/getting_started" /><link data-rh-hreflang rel="alternate" hreflang="ja" href="https://ja.doqumentation.org/qiskit-addons/mpf/getting_started" /><link data-rh-hreflang rel="alternate" hreflang="fil" href="https://tl.doqumentation.org/qiskit-addons/mpf/getting_started" /><link data-rh-hreflang rel="alternate" hreflang="ar" href="https://ar.doqumentation.org/qiskit-addons/mpf/getting_started" /><link data-rh-hreflang rel="alternate" hreflang="he" href="https://he.doqumentation.org/qiskit-addons/mpf/getting_started" /><link data-rh-hreflang rel="alternate" hreflang="ms" href="https://ms.doqumentation.org/qiskit-addons/mpf/getting_started" /><link data-rh-hreflang rel="alternate" hreflang="id" href="https://id.doqumentation.org/qiskit-addons/mpf/getting_started" /><link data-rh-hreflang rel="alternate" hreflang="th" href="https://th.doqumentation.org/qiskit-addons/mpf/getting_started" /><link data-rh-hreflang rel="alternate" hreflang="ko" href="https://ko.doqumentation.org/qiskit-addons/mpf/getting_started" /><link data-rh-hreflang rel="alternate" hreflang="pl" href="https://pl.doqumentation.org/qiskit-addons/mpf/getting_started" /><link data-rh-hreflang rel="alternate" hreflang="ro" href="https://ro.doqumentation.org/qiskit-addons/mpf/getting_started" /><link data-rh-hreflang rel="alternate" hreflang="uk" href="https://uk.doqumentation.org/qiskit-addons/mpf/getting_started" /><link data-rh-hreflang rel="alternate" hreflang="cs" href="https://cs.doqumentation.org/qiskit-addons/mpf/getting_started" /><link data-rh-hreflang rel="alternate" hreflang="swg" href="https://swg.doqumentation.org/qiskit-addons/mpf/getting_started" /><link data-rh-hreflang rel="alternate" hreflang="de" href="https://bad.doqumentation.org/qiskit-addons/mpf/getting_started" /><link data-rh-hreflang rel="alternate" hreflang="bar" href="https://bar.doqumentation.org/qiskit-addons/mpf/getting_started" /><link data-rh-hreflang rel="alternate" hreflang="ksh" href="https://ksh.doqumentation.org/qiskit-addons/mpf/getting_started" /><link data-rh-hreflang rel="alternate" hreflang="nds" href="https://nds.doqumentation.org/qiskit-addons/mpf/getting_started" /><link data-rh-hreflang rel="alternate" hreflang="gsw" href="https://gsw.doqumentation.org/qiskit-addons/mpf/getting_started" /><link data-rh-hreflang rel="alternate" hreflang="de" href="https://sax.doqumentation.org/qiskit-addons/mpf/getting_started" /><link data-rh-hreflang rel="alternate" hreflang="de" href="https://bln.doqumentation.org/qiskit-addons/mpf/getting_started" /><link data-rh-hreflang rel="alternate" hreflang="de-AT" href="https://aut.doqumentation.org/qiskit-addons/mpf/getting_started" /><link data-rh-hreflang rel="alternate" hreflang="x-default" href="https://doqumentation.org/qiskit-addons/mpf/getting_started" /></head>
 <body>
 <svg style="display: none;"><defs>
@@ -28,25 +28,31 @@
 <p>このノートブックでは、**マルチプロダクト公式（MPF）**を使用して、実際に実行する最も深いトロッター回路によって生じるトロッター誤差よりも低い、観測量に対するトロッター誤差を達成する方法を学びます。
 <strong>Qiskit パターン</strong>のステップを通じて実践します。</p>
 <ul>
-<li class=""><strong>ステップ 1: 量子問題へのマッピング</strong>
+<li class="">
+<p><strong>ステップ 1: 量子問題へのマッピング</strong></p>
 <ul>
-<li class="">問題のハミルトニアンを初期化する</li>
+<li class="">
+<p>問題のハミルトニアンを初期化する</p>
+</li>
 <li class="">
 <font color="#0F62FE">MPF を使用してトロッター化された時間発展回路を生成する</font>
 </li>
 </ul>
 </li>
-<li class=""><strong>ステップ 2: 問題の最適化</strong>
+<li class="">
+<p><strong>ステップ 2: 問題の最適化</strong></p>
 <ul>
 <li class="">ここでは <a href="https://quantum.cloud.ibm.com/docs/api/qiskit/qiskit.providers.fake_provider.GenericBackendV2" target="_blank" rel="noopener noreferrer" class="">GenericBackendV2</a> 向けに回路をトランスパイルします</li>
 </ul>
 </li>
-<li class=""><strong>ステップ 3: 実験の実行</strong>
+<li class="">
+<p><strong>ステップ 3: 実験の実行</strong></p>
 <ul>
 <li class="">このノートブックでは簡便さのために <a href="https://quantum.cloud.ibm.com/docs/api/qiskit/qiskit.primitives.StatevectorEstimator" target="_blank" rel="noopener noreferrer" class="">StatevectorEstimator</a> を使用します</li>
 </ul>
 </li>
-<li class=""><strong>ステップ 4: 結果の再構成</strong>
+<li class="">
+<p><strong>ステップ 4: 結果の再構成</strong></p>
 <ul>
 <li class="">
 <font color="#0F62FE">MPF の期待値を計算する</font>
@@ -81,8 +87,12 @@
 <p>ここで重要な点は、残りのトロッター誤差が最大の <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>k</mi><mi>j</mi></msub></mrow><annotation encoding="application/x-tex">k_j</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.9805em;vertical-align:-0.2861em"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03148em">k</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3117em"><span style="top:-2.55em;margin-left:-0.0315em;margin-right:0.05em"><span class="pstrut" style="height:2.7em"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.05724em">j</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2861em"><span></span></span></span></span></span></span></span></span></span> 値を単純に使用した場合に得られるトロッター誤差よりも小さいことです。</p>
 <p>MPF の有用性は 2 つの視点から見ることができます。</p>
 <ol>
-<li class="">実行可能なトロッターステップの固定バジェットに対して、合計のトロッター誤差がより小さい結果を得ることができます。</li>
-<li class="">深い回路をもたらすトロッターステップ数に対して、MPF を使用して同様のトロッター誤差をもたらす複数の短い深さの回路を見つけて実行できます。</li>
+<li class="">
+<p>実行可能なトロッターステップの固定バジェットに対して、合計のトロッター誤差がより小さい結果を得ることができます。</p>
+</li>
+<li class="">
+<p>深い回路をもたらすトロッターステップ数に対して、MPF を使用して同様のトロッター誤差をもたらす複数の短い深さの回路を見つけて実行できます。</p>
+</li>
 </ol>
 <h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="an-introduction-to-static-mpfs">静的 MPF の概要<a href="#an-introduction-to-static-mpfs" class="hash-link" aria-label="静的 MPF の概要への直接リンク" title="静的 MPF の概要への直接リンク" translate="no">​</a></h4>
 <p><em>静的</em> MPF とは、<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>x</mi><mi>j</mi></msub></mrow><annotation encoding="application/x-tex">x_j</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7167em;vertical-align:-0.2861em"></span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3117em"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em"><span class="pstrut" style="height:2.7em"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.05724em">j</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2861em"><span></span></span></span></span></span></span></span></span></span> の値が発展時間 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>t</mi></mrow><annotation encoding="application/x-tex">t</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6151em"></span><span class="mord mathnormal">t</span></span></span></span> に依存<strong>しない</strong>ものです。</p>

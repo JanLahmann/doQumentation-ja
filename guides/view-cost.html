@@ -15,8 +15,8 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV" crossorigin="anonymous">
 <script src="https://unpkg.com/thebelab@0.4.0/lib/index.js" async></script>
 <script src="https://cloud.umami.is/script.js" defer="defer" data-website-id="97f347ac-e7ba-4be3-b26f-ab4b328bdbf2" data-domains="doqumentation.org"></script><link rel="stylesheet" href="/assets/css/styles.e55021e4.css">
-<script src="/assets/js/runtime~main.78efbff6.js" defer="defer"></script>
-<script src="/assets/js/main.815d3204.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.adb8282e.js" defer="defer"></script>
+<script src="/assets/js/main.884ff3f2.js" defer="defer"></script>
 <link data-rh-hreflang rel="alternate" hreflang="en" href="https://doqumentation.org/guides/view-cost" /><link data-rh-hreflang rel="alternate" hreflang="de" href="https://de.doqumentation.org/guides/view-cost" /><link data-rh-hreflang rel="alternate" hreflang="es" href="https://es.doqumentation.org/guides/view-cost" /><link data-rh-hreflang rel="alternate" hreflang="fr" href="https://fr.doqumentation.org/guides/view-cost" /><link data-rh-hreflang rel="alternate" hreflang="it" href="https://it.doqumentation.org/guides/view-cost" /><link data-rh-hreflang rel="alternate" hreflang="pt" href="https://pt.doqumentation.org/guides/view-cost" /><link data-rh-hreflang rel="alternate" hreflang="ja" href="https://ja.doqumentation.org/guides/view-cost" /><link data-rh-hreflang rel="alternate" hreflang="fil" href="https://tl.doqumentation.org/guides/view-cost" /><link data-rh-hreflang rel="alternate" hreflang="ar" href="https://ar.doqumentation.org/guides/view-cost" /><link data-rh-hreflang rel="alternate" hreflang="he" href="https://he.doqumentation.org/guides/view-cost" /><link data-rh-hreflang rel="alternate" hreflang="ms" href="https://ms.doqumentation.org/guides/view-cost" /><link data-rh-hreflang rel="alternate" hreflang="id" href="https://id.doqumentation.org/guides/view-cost" /><link data-rh-hreflang rel="alternate" hreflang="th" href="https://th.doqumentation.org/guides/view-cost" /><link data-rh-hreflang rel="alternate" hreflang="ko" href="https://ko.doqumentation.org/guides/view-cost" /><link data-rh-hreflang rel="alternate" hreflang="pl" href="https://pl.doqumentation.org/guides/view-cost" /><link data-rh-hreflang rel="alternate" hreflang="ro" href="https://ro.doqumentation.org/guides/view-cost" /><link data-rh-hreflang rel="alternate" hreflang="uk" href="https://uk.doqumentation.org/guides/view-cost" /><link data-rh-hreflang rel="alternate" hreflang="cs" href="https://cs.doqumentation.org/guides/view-cost" /><link data-rh-hreflang rel="alternate" hreflang="swg" href="https://swg.doqumentation.org/guides/view-cost" /><link data-rh-hreflang rel="alternate" hreflang="de" href="https://bad.doqumentation.org/guides/view-cost" /><link data-rh-hreflang rel="alternate" hreflang="bar" href="https://bar.doqumentation.org/guides/view-cost" /><link data-rh-hreflang rel="alternate" hreflang="ksh" href="https://ksh.doqumentation.org/guides/view-cost" /><link data-rh-hreflang rel="alternate" hreflang="nds" href="https://nds.doqumentation.org/guides/view-cost" /><link data-rh-hreflang rel="alternate" hreflang="gsw" href="https://gsw.doqumentation.org/guides/view-cost" /><link data-rh-hreflang rel="alternate" hreflang="de" href="https://sax.doqumentation.org/guides/view-cost" /><link data-rh-hreflang rel="alternate" hreflang="de" href="https://bln.doqumentation.org/guides/view-cost" /><link data-rh-hreflang rel="alternate" hreflang="de-AT" href="https://aut.doqumentation.org/guides/view-cost" /><link data-rh-hreflang rel="alternate" hreflang="x-default" href="https://doqumentation.org/guides/view-cost" /></head>
 <body>
 <svg style="display: none;"><defs>
@@ -29,9 +29,15 @@
 <p>インスタンスの使用量を把握するには、<a href="https://quantum.cloud.ibm.com/instances" target="_blank" rel="noopener noreferrer" class="">インスタンスページ</a>からインスタンスをクリックして詳細ページを開きます。<strong>請求の概要</strong>に関連付けられたリンクをクリックすると、完全なコストおよび請求の詳細を確認できます。</p>
 <p><strong>インスタンスの使用量</strong>は、インスタンスに関連付けられたプランの種類によって、報告される値が異なります。</p>
 <ul>
-<li class="">Premium プランおよび Open プランの場合、過去 28 日間（ローリング）のリアルタイム使用量（当日の現在時刻まで）が表示されます。</li>
-<li class="">Pay-As-You-Go プランの場合、インスタンスが作成された時点からのすべての使用量が表示されます。</li>
-<li class="">Flex プランの場合、契約開始時点からの使用量が表示されます。</li>
+<li class="">
+<p>Premium プランおよび Open プランの場合、過去 28 日間（ローリング）のリアルタイム使用量（当日の現在時刻まで）が表示されます。</p>
+</li>
+<li class="">
+<p>Pay-As-You-Go プランの場合、インスタンスが作成された時点からのすべての使用量が表示されます。</p>
+</li>
+<li class="">
+<p>Flex プランの場合、契約開始時点からの使用量が表示されます。</p>
+</li>
 </ul>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="view-workload-usage">ワークロードの使用量を確認する<a href="#view-workload-usage" class="hash-link" aria-label="ワークロードの使用量を確認するへの直接リンク" title="ワークロードの使用量を確認するへの直接リンク" translate="no">​</a></h2>
 <p>特定のワークロードで発生した使用量を把握するには、<a href="https://quantum.cloud.ibm.com/workloads" target="_blank" rel="noopener noreferrer" class="">ワークロードページ</a>を開き、対象のワークロードの「Usage」列を確認してください。</p>
