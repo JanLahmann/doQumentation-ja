@@ -14,8 +14,8 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV" crossorigin="anonymous">
 <script src="https://unpkg.com/thebelab@0.4.0/lib/index.js" async></script>
 <script src="https://cloud.umami.is/script.js" defer="defer" data-website-id="97f347ac-e7ba-4be3-b26f-ab4b328bdbf2" data-domains="doqumentation.org"></script><link rel="stylesheet" href="/assets/css/styles.d115d309.css">
-<script src="/assets/js/runtime~main.9fcb3c7a.js" defer="defer"></script>
-<script src="/assets/js/main.dfd7642f.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.58b4bdb7.js" defer="defer"></script>
+<script src="/assets/js/main.ceb08db8.js" defer="defer"></script>
 <link data-rh-hreflang rel="alternate" hreflang="en" href="https://doqumentation.org/tutorials/quantum-approximate-optimization-algorithm" /><link data-rh-hreflang rel="alternate" hreflang="de" href="https://de.doqumentation.org/tutorials/quantum-approximate-optimization-algorithm" /><link data-rh-hreflang rel="alternate" hreflang="es" href="https://es.doqumentation.org/tutorials/quantum-approximate-optimization-algorithm" /><link data-rh-hreflang rel="alternate" hreflang="fr" href="https://fr.doqumentation.org/tutorials/quantum-approximate-optimization-algorithm" /><link data-rh-hreflang rel="alternate" hreflang="it" href="https://it.doqumentation.org/tutorials/quantum-approximate-optimization-algorithm" /><link data-rh-hreflang rel="alternate" hreflang="pt" href="https://pt.doqumentation.org/tutorials/quantum-approximate-optimization-algorithm" /><link data-rh-hreflang rel="alternate" hreflang="ja" href="https://ja.doqumentation.org/tutorials/quantum-approximate-optimization-algorithm" /><link data-rh-hreflang rel="alternate" hreflang="fil" href="https://tl.doqumentation.org/tutorials/quantum-approximate-optimization-algorithm" /><link data-rh-hreflang rel="alternate" hreflang="ar" href="https://ar.doqumentation.org/tutorials/quantum-approximate-optimization-algorithm" /><link data-rh-hreflang rel="alternate" hreflang="he" href="https://he.doqumentation.org/tutorials/quantum-approximate-optimization-algorithm" /><link data-rh-hreflang rel="alternate" hreflang="ms" href="https://ms.doqumentation.org/tutorials/quantum-approximate-optimization-algorithm" /><link data-rh-hreflang rel="alternate" hreflang="id" href="https://id.doqumentation.org/tutorials/quantum-approximate-optimization-algorithm" /><link data-rh-hreflang rel="alternate" hreflang="th" href="https://th.doqumentation.org/tutorials/quantum-approximate-optimization-algorithm" /><link data-rh-hreflang rel="alternate" hreflang="ko" href="https://ko.doqumentation.org/tutorials/quantum-approximate-optimization-algorithm" /><link data-rh-hreflang rel="alternate" hreflang="pl" href="https://pl.doqumentation.org/tutorials/quantum-approximate-optimization-algorithm" /><link data-rh-hreflang rel="alternate" hreflang="ro" href="https://ro.doqumentation.org/tutorials/quantum-approximate-optimization-algorithm" /><link data-rh-hreflang rel="alternate" hreflang="uk" href="https://uk.doqumentation.org/tutorials/quantum-approximate-optimization-algorithm" /><link data-rh-hreflang rel="alternate" hreflang="cs" href="https://cs.doqumentation.org/tutorials/quantum-approximate-optimization-algorithm" /><link data-rh-hreflang rel="alternate" hreflang="x-default" href="https://doqumentation.org/tutorials/quantum-approximate-optimization-algorithm" /></head>
 <body>
 <svg style="display: none;"><defs>
@@ -29,25 +29,25 @@
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="learning-outcomes">学習成果<a href="#learning-outcomes" class="hash-link" aria-label="学習成果への直接リンク" title="学習成果への直接リンク" translate="no">​</a></h2>
 <ul>
 <li class="">
-<p>How to map a classical combinatorial optimization problem (max-cut) to a quantum Hamiltonian</p>
+<p>古典的な組合せ最適化問題（Max-Cut）を量子ハミルトニアンにマッピングする方法</p>
 </li>
 <li class="">
-<p>How to implement and run the Quantum Approximate Optimization Algorithm (QAOA) using IBM Quantum Compute Service sessions</p>
+<p>IBM Quantum Compute Service セッションを使用して量子近似最適化アルゴリズム（QAOA）を実装・実行する方法</p>
 </li>
 <li class="">
-<p>How to scale a QAOA workflow from a small simulator example to utility-scale hardware execution</p>
+<p>小規模なシミュレーターの例からユーティリティスケールのハードウェア実行まで、QAOAワークフローをスケールする方法</p>
 </li>
 </ul>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="prerequisites">前提条件<a href="#prerequisites" class="hash-link" aria-label="前提条件への直接リンク" title="前提条件への直接リンク" translate="no">​</a></h2>
 <ul>
 <li class="">
-<p><a class="" href="/learning/courses/basics-of-quantum-information">Basics of quantum circuits</a></p>
+<p><a class="" href="/learning/courses/basics-of-quantum-information">量子回路の基礎</a></p>
 </li>
 <li class="">
-<p><a class="" href="/learning/courses/variational-algorithm-design">Variational algorithms</a></p>
+<p><a class="" href="/learning/courses/variational-algorithm-design">変分アルゴリズム</a></p>
 </li>
 <li class="">
-<p><a class="" href="/learning/courses/quantum-computing-in-practice/utility-scale-qaoa">QAOA in depth</a> — for a comprehensive treatment of the QAOA algorithm and applying it at utility scale</p>
+<p><a class="" href="/learning/courses/quantum-computing-in-practice/utility-scale-qaoa">QAOA詳説</a> — QAOAアルゴリズムの包括的な扱いと、それをユーティリティスケールで適用する方法について</p>
 </li>
 </ul>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="background">背景<a href="#background" class="hash-link" aria-label="背景への直接リンク" title="背景への直接リンク" translate="no">​</a></h2>

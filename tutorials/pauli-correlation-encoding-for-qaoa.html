@@ -14,8 +14,8 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV" crossorigin="anonymous">
 <script src="https://unpkg.com/thebelab@0.4.0/lib/index.js" async></script>
 <script src="https://cloud.umami.is/script.js" defer="defer" data-website-id="97f347ac-e7ba-4be3-b26f-ab4b328bdbf2" data-domains="doqumentation.org"></script><link rel="stylesheet" href="/assets/css/styles.d115d309.css">
-<script src="/assets/js/runtime~main.9fcb3c7a.js" defer="defer"></script>
-<script src="/assets/js/main.dfd7642f.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.58b4bdb7.js" defer="defer"></script>
+<script src="/assets/js/main.ceb08db8.js" defer="defer"></script>
 <link data-rh-hreflang rel="alternate" hreflang="en" href="https://doqumentation.org/tutorials/pauli-correlation-encoding-for-qaoa" /><link data-rh-hreflang rel="alternate" hreflang="de" href="https://de.doqumentation.org/tutorials/pauli-correlation-encoding-for-qaoa" /><link data-rh-hreflang rel="alternate" hreflang="es" href="https://es.doqumentation.org/tutorials/pauli-correlation-encoding-for-qaoa" /><link data-rh-hreflang rel="alternate" hreflang="fr" href="https://fr.doqumentation.org/tutorials/pauli-correlation-encoding-for-qaoa" /><link data-rh-hreflang rel="alternate" hreflang="it" href="https://it.doqumentation.org/tutorials/pauli-correlation-encoding-for-qaoa" /><link data-rh-hreflang rel="alternate" hreflang="pt" href="https://pt.doqumentation.org/tutorials/pauli-correlation-encoding-for-qaoa" /><link data-rh-hreflang rel="alternate" hreflang="ja" href="https://ja.doqumentation.org/tutorials/pauli-correlation-encoding-for-qaoa" /><link data-rh-hreflang rel="alternate" hreflang="fil" href="https://tl.doqumentation.org/tutorials/pauli-correlation-encoding-for-qaoa" /><link data-rh-hreflang rel="alternate" hreflang="ar" href="https://ar.doqumentation.org/tutorials/pauli-correlation-encoding-for-qaoa" /><link data-rh-hreflang rel="alternate" hreflang="he" href="https://he.doqumentation.org/tutorials/pauli-correlation-encoding-for-qaoa" /><link data-rh-hreflang rel="alternate" hreflang="ms" href="https://ms.doqumentation.org/tutorials/pauli-correlation-encoding-for-qaoa" /><link data-rh-hreflang rel="alternate" hreflang="id" href="https://id.doqumentation.org/tutorials/pauli-correlation-encoding-for-qaoa" /><link data-rh-hreflang rel="alternate" hreflang="th" href="https://th.doqumentation.org/tutorials/pauli-correlation-encoding-for-qaoa" /><link data-rh-hreflang rel="alternate" hreflang="ko" href="https://ko.doqumentation.org/tutorials/pauli-correlation-encoding-for-qaoa" /><link data-rh-hreflang rel="alternate" hreflang="pl" href="https://pl.doqumentation.org/tutorials/pauli-correlation-encoding-for-qaoa" /><link data-rh-hreflang rel="alternate" hreflang="ro" href="https://ro.doqumentation.org/tutorials/pauli-correlation-encoding-for-qaoa" /><link data-rh-hreflang rel="alternate" hreflang="uk" href="https://uk.doqumentation.org/tutorials/pauli-correlation-encoding-for-qaoa" /><link data-rh-hreflang rel="alternate" hreflang="cs" href="https://cs.doqumentation.org/tutorials/pauli-correlation-encoding-for-qaoa" /><link data-rh-hreflang rel="alternate" hreflang="x-default" href="https://doqumentation.org/tutorials/pauli-correlation-encoding-for-qaoa" /></head>
 <body>
 <svg style="display: none;"><defs>
@@ -29,19 +29,19 @@
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="learning-outcomes">学習成果<a href="#learning-outcomes" class="hash-link" aria-label="学習成果への直接リンク" title="学習成果への直接リンク" translate="no">​</a></h2>
 <ul>
 <li class="">
-<p>Understand the theoretical principles behind Pauli Correlation Encoding (PCE), including how multi‑body Pauli strings enable polynomial compression of classical optimization problems.</p>
+<p>多体パウリ文字列が古典的な最適化問題の多項式圧縮を可能にする仕組みを含む、Pauli相関エンコーディング（PCE）の理論的原理を理解する。</p>
 </li>
 <li class="">
-<p>Implement PCE in practice to encode and solve large‑scale optimization tasks on near‑term quantum hardware.</p>
+<p>短期的な（near-term）量子ハードウェア上で大規模な最適化タスクをエンコードして解くために、PCEを実際に実装できます。</p>
 </li>
 </ul>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="prerequisites">前提条件<a href="#prerequisites" class="hash-link" aria-label="前提条件への直接リンク" title="前提条件への直接リンク" translate="no">​</a></h2>
 <ul>
 <li class="">
-<p><a class="" href="/learning/courses/variational-algorithm-design">Variational quantum algorithms</a></p>
+<p><a class="" href="/learning/courses/variational-algorithm-design">変分量子アルゴリズム</a></p>
 </li>
 <li class="">
-<p><a class="" href="/tutorials/quantum-approximate-optimization-algorithm">QAOA and max-cut</a></p>
+<p><a class="" href="/tutorials/quantum-approximate-optimization-algorithm">QAOAとmax-cut</a></p>
 </li>
 </ul>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="background">背景<a href="#background" class="hash-link" aria-label="背景への直接リンク" title="背景への直接リンク" translate="no">​</a></h2>
