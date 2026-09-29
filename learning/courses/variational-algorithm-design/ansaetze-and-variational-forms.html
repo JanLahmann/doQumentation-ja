@@ -14,8 +14,8 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV" crossorigin="anonymous">
 <script src="https://unpkg.com/thebelab@0.4.0/lib/index.js" async></script>
 <script src="https://cloud.umami.is/script.js" defer="defer" data-website-id="97f347ac-e7ba-4be3-b26f-ab4b328bdbf2" data-domains="doqumentation.org"></script><link rel="stylesheet" href="/assets/css/styles.d115d309.css">
-<script src="/assets/js/runtime~main.ca21abb1.js" defer="defer"></script>
-<script src="/assets/js/main.7dd7f3b8.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.881178e7.js" defer="defer"></script>
+<script src="/assets/js/main.281adb1f.js" defer="defer"></script>
 <link data-rh-hreflang rel="alternate" hreflang="en" href="https://doqumentation.org/learning/courses/variational-algorithm-design/ansaetze-and-variational-forms" /><link data-rh-hreflang rel="alternate" hreflang="de" href="https://de.doqumentation.org/learning/courses/variational-algorithm-design/ansaetze-and-variational-forms" /><link data-rh-hreflang rel="alternate" hreflang="es" href="https://es.doqumentation.org/learning/courses/variational-algorithm-design/ansaetze-and-variational-forms" /><link data-rh-hreflang rel="alternate" hreflang="fr" href="https://fr.doqumentation.org/learning/courses/variational-algorithm-design/ansaetze-and-variational-forms" /><link data-rh-hreflang rel="alternate" hreflang="it" href="https://it.doqumentation.org/learning/courses/variational-algorithm-design/ansaetze-and-variational-forms" /><link data-rh-hreflang rel="alternate" hreflang="pt" href="https://pt.doqumentation.org/learning/courses/variational-algorithm-design/ansaetze-and-variational-forms" /><link data-rh-hreflang rel="alternate" hreflang="ja" href="https://ja.doqumentation.org/learning/courses/variational-algorithm-design/ansaetze-and-variational-forms" /><link data-rh-hreflang rel="alternate" hreflang="fil" href="https://tl.doqumentation.org/learning/courses/variational-algorithm-design/ansaetze-and-variational-forms" /><link data-rh-hreflang rel="alternate" hreflang="ar" href="https://ar.doqumentation.org/learning/courses/variational-algorithm-design/ansaetze-and-variational-forms" /><link data-rh-hreflang rel="alternate" hreflang="he" href="https://he.doqumentation.org/learning/courses/variational-algorithm-design/ansaetze-and-variational-forms" /><link data-rh-hreflang rel="alternate" hreflang="ms" href="https://ms.doqumentation.org/learning/courses/variational-algorithm-design/ansaetze-and-variational-forms" /><link data-rh-hreflang rel="alternate" hreflang="id" href="https://id.doqumentation.org/learning/courses/variational-algorithm-design/ansaetze-and-variational-forms" /><link data-rh-hreflang rel="alternate" hreflang="th" href="https://th.doqumentation.org/learning/courses/variational-algorithm-design/ansaetze-and-variational-forms" /><link data-rh-hreflang rel="alternate" hreflang="ko" href="https://ko.doqumentation.org/learning/courses/variational-algorithm-design/ansaetze-and-variational-forms" /><link data-rh-hreflang rel="alternate" hreflang="pl" href="https://pl.doqumentation.org/learning/courses/variational-algorithm-design/ansaetze-and-variational-forms" /><link data-rh-hreflang rel="alternate" hreflang="ro" href="https://ro.doqumentation.org/learning/courses/variational-algorithm-design/ansaetze-and-variational-forms" /><link data-rh-hreflang rel="alternate" hreflang="uk" href="https://uk.doqumentation.org/learning/courses/variational-algorithm-design/ansaetze-and-variational-forms" /><link data-rh-hreflang rel="alternate" hreflang="cs" href="https://cs.doqumentation.org/learning/courses/variational-algorithm-design/ansaetze-and-variational-forms" /><link data-rh-hreflang rel="alternate" hreflang="x-default" href="https://doqumentation.org/learning/courses/variational-algorithm-design/ansaetze-and-variational-forms" /></head>
 <body>
 <svg style="display: none;"><defs>
@@ -25,8 +25,8 @@
 <!-- -->
 <!-- -->
 <header><h1>アンザッツと変分形式</h1></header>
-<p>すべての変分アルゴリズムの核心にあるのは、状態間の差異を分析するという重要なアイデアです。これらの状態は、パラメータや変数の集合からの、適切に振る舞うマッピング（例えば、連続的、微分可能）を通じて便利に関連付けられています — これが名前の由来です。</p>
-<p>まず、パラメータ化された Circuit を手動で構築する方法を探ります。これらの Circuit を使って、変分アルゴリズムが探索するパラメータ化された状態の集合を表す <abbr title="繰り返し回数だけ繰り返されるパラメータ化されたゲートの層であり、アルゴリズム中にゲートのパラメータはコスト関数を最小化するように最適化されます。" style="text-decoration:underline dotted;text-underline-offset:2px;cursor:help">変分形式</abbr> を定義します。次に、この変分形式を参照状態に適用することで <abbr title="探索空間を記述するための、参照演算子と変分形式の組み合わせ。" style="text-decoration:underline dotted;text-underline-offset:2px;cursor:help">アンザッツ</abbr> を構築します。</p>
+<p>すべての変分アルゴリズムの核心にあるのは、状態間の差異を分析するという重要なアイデアです。これらの状態は、パラメータや変数の集合からの、性質の良い写像（例えば連続かつ微分可能な写像）によって都合よく結び付けられています — これが名前の由来です。</p>
+<p>まず、パラメータ化された Circuit を手動で構築する方法を探ります。これらの Circuit を使って、変分アルゴリズムが探索するパラメータ化された状態の集合を表す <abbr title="一定回数繰り返されるパラメータ化されたゲートの層であり、アルゴリズム中にゲートのパラメータはコスト関数を最小化するように最適化されます。" style="text-decoration:underline dotted;text-underline-offset:2px;cursor:help">変分形式</abbr> を定義します。次に、この変分形式を参照状態に適用することで <abbr title="探索空間を記述するための、参照演算子と変分形式の組み合わせ。" style="text-decoration:underline dotted;text-underline-offset:2px;cursor:help">アンザッツ</abbr> を構築します。</p>
 <p>また、この探索空間を探索する際の速度と精度のトレードオフについても検討します。</p>
 <p><img decoding="async" loading="lazy" alt="アンザッツの議論の主要なコンポーネント（ヒューリスティックなアンザッツと問題固有のアンザッツを含む）を示す図。" src="/assets/images/ansatz-workflow-215f1208e44ef1d9dd046bdb2a8a37dc.svg" width="659" height="335" class="img_ev3q"></p>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="parameterized-quantum-circuits">パラメータ化された量子 Circuit<a href="#parameterized-quantum-circuits" class="hash-link" aria-label="パラメータ化された量子 Circuitへの直接リンク" title="パラメータ化された量子 Circuitへの直接リンク" translate="no">​</a></h2>
@@ -156,10 +156,10 @@ c-16-25.333-24-45-24-59z"></path></svg></span></span></span></span></span></span
 <p>ヒューリスティックなアンザッツの中で最も広く使われる例の一つが <a href="https://docs.quantum.ibm.com/api/qiskit/qiskit.circuit.library.NLocal" target="_blank" rel="noopener noreferrer" class="">N-local 回路</a> です。その理由はいくつかあります。</p>
 <ul>
 <li class="">
-<p><strong>効率的な実装</strong>: N-local アンザッツは、少数の物理 qubit を使用して量子コンピュータ上で効率的に実装できる、シンプルなローカルゲートで構成されます。これにより、量子 Circuit の構築と最適化が容易になります。</p>
+<p><strong>効率的な実装</strong>: N-local アンザッツは通常、少数の物理 qubit を使用して量子コンピュータ上で効率的に実装できる、シンプルなローカルゲートで構成されます。これにより、量子 Circuit の構築と最適化が容易になります。</p>
 </li>
 <li class="">
-<p><strong>重要な相関の捕捉</strong>: N-local アンザッツは、少数のゲートでも量子システム内の qubit 間の重要な相関を捕捉できます。これは、ローカルゲートが隣接する qubit に作用してそれらの間にエンタングルメントを生成できるためで、複雑な量子システムのシミュレーションにおいて重要です。</p>
+<p><strong>重要な相関の捕捉</strong>: N-local アンザッツは、少数のゲートでも量子システム内の qubit 間の重要な相関を捕捉できます。これは、ローカルゲートが隣接する qubit に作用してそれらの間にエンタングルメントを生成できるためで、複雑な量子システムのシミュレーションにおいて重要となり得ます。</p>
 </li>
 </ul>
 <p>これらの Circuit は、回転層とエンタングルメント層が1回以上交互に繰り返されることで構成されます。</p>
