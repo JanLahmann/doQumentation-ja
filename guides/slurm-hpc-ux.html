@@ -14,8 +14,8 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV" crossorigin="anonymous">
 <script src="https://unpkg.com/thebelab@0.4.0/lib/index.js" async></script>
 <script src="https://cloud.umami.is/script.js" defer="defer" data-website-id="97f347ac-e7ba-4be3-b26f-ab4b328bdbf2" data-domains="doqumentation.org"></script><link rel="stylesheet" href="/assets/css/styles.d115d309.css">
-<script src="/assets/js/runtime~main.babed655.js" defer="defer"></script>
-<script src="/assets/js/main.a7976239.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.1e55df66.js" defer="defer"></script>
+<script src="/assets/js/main.677e69ed.js" defer="defer"></script>
 <link data-rh-hreflang rel="alternate" hreflang="en" href="https://doqumentation.org/guides/slurm-hpc-ux" /><link data-rh-hreflang rel="alternate" hreflang="de" href="https://de.doqumentation.org/guides/slurm-hpc-ux" /><link data-rh-hreflang rel="alternate" hreflang="es" href="https://es.doqumentation.org/guides/slurm-hpc-ux" /><link data-rh-hreflang rel="alternate" hreflang="fr" href="https://fr.doqumentation.org/guides/slurm-hpc-ux" /><link data-rh-hreflang rel="alternate" hreflang="it" href="https://it.doqumentation.org/guides/slurm-hpc-ux" /><link data-rh-hreflang rel="alternate" hreflang="pt" href="https://pt.doqumentation.org/guides/slurm-hpc-ux" /><link data-rh-hreflang rel="alternate" hreflang="ja" href="https://ja.doqumentation.org/guides/slurm-hpc-ux" /><link data-rh-hreflang rel="alternate" hreflang="fil" href="https://tl.doqumentation.org/guides/slurm-hpc-ux" /><link data-rh-hreflang rel="alternate" hreflang="ar" href="https://ar.doqumentation.org/guides/slurm-hpc-ux" /><link data-rh-hreflang rel="alternate" hreflang="he" href="https://he.doqumentation.org/guides/slurm-hpc-ux" /><link data-rh-hreflang rel="alternate" hreflang="ms" href="https://ms.doqumentation.org/guides/slurm-hpc-ux" /><link data-rh-hreflang rel="alternate" hreflang="id" href="https://id.doqumentation.org/guides/slurm-hpc-ux" /><link data-rh-hreflang rel="alternate" hreflang="th" href="https://th.doqumentation.org/guides/slurm-hpc-ux" /><link data-rh-hreflang rel="alternate" hreflang="ko" href="https://ko.doqumentation.org/guides/slurm-hpc-ux" /><link data-rh-hreflang rel="alternate" hreflang="pl" href="https://pl.doqumentation.org/guides/slurm-hpc-ux" /><link data-rh-hreflang rel="alternate" hreflang="ro" href="https://ro.doqumentation.org/guides/slurm-hpc-ux" /><link data-rh-hreflang rel="alternate" hreflang="uk" href="https://uk.doqumentation.org/guides/slurm-hpc-ux" /><link data-rh-hreflang rel="alternate" hreflang="cs" href="https://cs.doqumentation.org/guides/slurm-hpc-ux" /><link data-rh-hreflang rel="alternate" hreflang="x-default" href="https://doqumentation.org/guides/slurm-hpc-ux" /></head>
 <body>
 <svg style="display: none;"><defs>
@@ -51,7 +51,7 @@
 <h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="backend-specifics">バックエンド固有の詳細<a href="#backend-specifics" class="hash-link" aria-label="バックエンド固有の詳細への直接リンク" title="バックエンド固有の詳細への直接リンク" translate="no">​</a></h3>
 <h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="ibm-quantum-system-api">IBM Quantum System API<a href="#ibm-quantum-system-api" class="hash-link" aria-label="IBM Quantum System APIへの直接リンク" title="IBM Quantum System APIへの直接リンク" translate="no">​</a></h4>
 <h5 class="anchor anchorTargetStickyNavbar_Vzrq" id="administrator-scope-1">管理者スコープ<a href="#administrator-scope-1" class="hash-link" aria-label="管理者スコープへの直接リンク" title="管理者スコープへの直接リンク" translate="no">​</a></h5>
-<p>Quantum System APIバックエンドの設定（HPC管理者スコープ）には、QuantumSystemエンドポイントおよび認証サービスへのエンドポイントと認証情報、さらにS3エンドポイントへの情報が含まれます。
+<p>Quantum System APIバックエンドの設定（HPC管理者スコープ）には、Quantum Systemのエンドポイントおよび認証サービスへのエンドポイントと認証情報、さらにS3エンドポイントへの情報が含まれます。
 具体的には以下が含まれます：</p>
 <ul>
 <li class="">
@@ -67,7 +67,7 @@
 <p>アクセス認証情報は、HPCユーザーやシステム上の他の非特権ユーザーには見えないようにする必要があります。
 そのため、機密データは個別のファイルに格納し、適切なアクセス保護を設定することができます。</p>
 <p>Slurmはバックエンドへの完全なアクセス権を持つことに注意してください。
-これにはいくつかの重要な意味があります：</p>
+これにはいくつかの影響があります：</p>
 <ul>
 <li class="">
 <p>Slurmプラグインはマルチテナンシーを担当します（ユーザーが他のユーザーのジョブ結果を参照できないようにします）</p>
@@ -109,7 +109,7 @@
 </li>
 </ul>
 <p>これらの詳細情報により、IBM Quantum Compute Serviceがどのユーザーおよびサービスインスタンスで使用されるかが決まります。
-それに応じて、IBM Quantum® Platformのスケジューリングは、スケジューリングにおけるユーザーとサービスインスタンスの能力を考慮します。</p>
+IBM Quantum® Platformは、ユーザーおよびサービスインスタンスの権限や利用枠を考慮してスケジューリングを行います。</p>
 <p>現時点では、ユーザーは上記の詳細情報を自分で提供する必要があります（クラスター全体で共有された量子アクセスはありません）。</p>
 <h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="pasqal-cloud-services">Pasqal Cloud Services<a href="#pasqal-cloud-services" class="hash-link" aria-label="Pasqal Cloud Servicesへの直接リンク" title="Pasqal Cloud Servicesへの直接リンク" translate="no">​</a></h4>
 <h5 class="anchor anchorTargetStickyNavbar_Vzrq" id="hpc-admin-scope">HPC管理者スコープ<a href="#hpc-admin-scope" class="hash-link" aria-label="HPC管理者スコープへの直接リンク" title="HPC管理者スコープへの直接リンク" translate="no">​</a></h5>

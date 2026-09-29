@@ -14,8 +14,8 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV" crossorigin="anonymous">
 <script src="https://unpkg.com/thebelab@0.4.0/lib/index.js" async></script>
 <script src="https://cloud.umami.is/script.js" defer="defer" data-website-id="97f347ac-e7ba-4be3-b26f-ab4b328bdbf2" data-domains="doqumentation.org"></script><link rel="stylesheet" href="/assets/css/styles.d115d309.css">
-<script src="/assets/js/runtime~main.babed655.js" defer="defer"></script>
-<script src="/assets/js/main.a7976239.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.1e55df66.js" defer="defer"></script>
+<script src="/assets/js/main.677e69ed.js" defer="defer"></script>
 <link data-rh-hreflang rel="alternate" hreflang="en" href="https://doqumentation.org/guides/max-execution-time" /><link data-rh-hreflang rel="alternate" hreflang="de" href="https://de.doqumentation.org/guides/max-execution-time" /><link data-rh-hreflang rel="alternate" hreflang="es" href="https://es.doqumentation.org/guides/max-execution-time" /><link data-rh-hreflang rel="alternate" hreflang="fr" href="https://fr.doqumentation.org/guides/max-execution-time" /><link data-rh-hreflang rel="alternate" hreflang="it" href="https://it.doqumentation.org/guides/max-execution-time" /><link data-rh-hreflang rel="alternate" hreflang="pt" href="https://pt.doqumentation.org/guides/max-execution-time" /><link data-rh-hreflang rel="alternate" hreflang="ja" href="https://ja.doqumentation.org/guides/max-execution-time" /><link data-rh-hreflang rel="alternate" hreflang="fil" href="https://tl.doqumentation.org/guides/max-execution-time" /><link data-rh-hreflang rel="alternate" hreflang="ar" href="https://ar.doqumentation.org/guides/max-execution-time" /><link data-rh-hreflang rel="alternate" hreflang="he" href="https://he.doqumentation.org/guides/max-execution-time" /><link data-rh-hreflang rel="alternate" hreflang="ms" href="https://ms.doqumentation.org/guides/max-execution-time" /><link data-rh-hreflang rel="alternate" hreflang="id" href="https://id.doqumentation.org/guides/max-execution-time" /><link data-rh-hreflang rel="alternate" hreflang="th" href="https://th.doqumentation.org/guides/max-execution-time" /><link data-rh-hreflang rel="alternate" hreflang="ko" href="https://ko.doqumentation.org/guides/max-execution-time" /><link data-rh-hreflang rel="alternate" hreflang="pl" href="https://pl.doqumentation.org/guides/max-execution-time" /><link data-rh-hreflang rel="alternate" hreflang="ro" href="https://ro.doqumentation.org/guides/max-execution-time" /><link data-rh-hreflang rel="alternate" hreflang="uk" href="https://uk.doqumentation.org/guides/max-execution-time" /><link data-rh-hreflang rel="alternate" hreflang="cs" href="https://cs.doqumentation.org/guides/max-execution-time" /><link data-rh-hreflang rel="alternate" hreflang="x-default" href="https://doqumentation.org/guides/max-execution-time" /></head>
 <body>
 <svg style="display: none;"><defs>
@@ -32,7 +32,7 @@
 <p><code>max_execution_time</code>に設定された値</p>
 </li>
 <li class="">
-<p>サービスの最大タイムアウト値(3時間)</p>
+<p>サービスの最大タイムアウト値（3時間）</p>
 </li>
 </ul>
 <p><code>max_execution_time</code> の値は、ウォールクロック時間ではなく、<em>QPU 使用量</em>(量子使用量のみ)に基づいています。</p>
@@ -43,11 +43,11 @@
 <span id="max-QPU"></span>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="service-enforced-maximum-execution-time">サービスが強制する最大実行時間<a href="#service-enforced-maximum-execution-time" class="hash-link" aria-label="サービスが強制する最大実行時間への直接リンク" title="サービスが強制する最大実行時間への直接リンク" translate="no">​</a></h2>
 <p>サービスは、デバイスの公平な使用を確保するために、最大実行時間を3時間に制限しています。ジョブに <code>max_execution_time</code> が指定されている場合は、2つの値のうち小さい方が使用されます。</p>
-<p>例えば、<code>max_execution_time=5000</code>(約83分)を指定した場合、サービスが3時間まで実行を許可できる場合でも、ジョブは約83分後にキャンセルされます。</p>
+<p>例えば、<code>max_execution_time=5000</code>（約83分）を指定した場合、サービス側では3時間まで実行が許可されていても、ジョブは約83分後にキャンセルされます。</p>
 <span id="batch-max-time"></span>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="batch-maximum-execution-time">バッチの最大実行時間<a href="#batch-maximum-execution-time" class="hash-link" aria-label="バッチの最大実行時間への直接リンク" title="バッチの最大実行時間への直接リンク" translate="no">​</a></h2>
 <p>バッチが開始されると、最大生存時間（maximum TTL）の値が割り当てられます。このTTLに達すると、バッチは終了され、すでに実行中のジョブは引き続き実行されますが、バッチ内に残っているキュー済みのジョブは失敗状態になります。</p>
-<p>バッチには、設定できないジョブ間のインタラクティブな生存時間（interactive TTL）もあります。バッチを明示的にクローズしない場合、インタラクティブTTLが切れた後に非アクティブ化されますが、最大TTLに達するまでいつでも再アクティブ化できます。</p>
+<p>バッチには、ジョブ間のインタラクティブ生存時間（interactive TTL）もあり、この値は設定できません。バッチを明示的にクローズしない場合、インタラクティブTTLが切れた後に非アクティブ化されますが、最大TTLに達するまでいつでも再アクティブ化できます。</p>
 <p>これらの値の操作方法については、<a class="" href="/guides/run-jobs-batch">バッチでジョブを実行する</a>を参照してください。</p>
 <span id="session-max-time"></span>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="session-maximum-execution-time">セッションの最大実行時間<a href="#session-maximum-execution-time" class="hash-link" aria-label="セッションの最大実行時間への直接リンク" title="セッションの最大実行時間への直接リンク" translate="no">​</a></h2>

@@ -14,8 +14,8 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV" crossorigin="anonymous">
 <script src="https://unpkg.com/thebelab@0.4.0/lib/index.js" async></script>
 <script src="https://cloud.umami.is/script.js" defer="defer" data-website-id="97f347ac-e7ba-4be3-b26f-ab4b328bdbf2" data-domains="doqumentation.org"></script><link rel="stylesheet" href="/assets/css/styles.d115d309.css">
-<script src="/assets/js/runtime~main.babed655.js" defer="defer"></script>
-<script src="/assets/js/main.a7976239.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.1e55df66.js" defer="defer"></script>
+<script src="/assets/js/main.677e69ed.js" defer="defer"></script>
 <link data-rh-hreflang rel="alternate" hreflang="en" href="https://doqumentation.org/learning/courses/quantum-computing-in-practice/running-quantum-circuits" /><link data-rh-hreflang rel="alternate" hreflang="de" href="https://de.doqumentation.org/learning/courses/quantum-computing-in-practice/running-quantum-circuits" /><link data-rh-hreflang rel="alternate" hreflang="es" href="https://es.doqumentation.org/learning/courses/quantum-computing-in-practice/running-quantum-circuits" /><link data-rh-hreflang rel="alternate" hreflang="fr" href="https://fr.doqumentation.org/learning/courses/quantum-computing-in-practice/running-quantum-circuits" /><link data-rh-hreflang rel="alternate" hreflang="it" href="https://it.doqumentation.org/learning/courses/quantum-computing-in-practice/running-quantum-circuits" /><link data-rh-hreflang rel="alternate" hreflang="pt" href="https://pt.doqumentation.org/learning/courses/quantum-computing-in-practice/running-quantum-circuits" /><link data-rh-hreflang rel="alternate" hreflang="ja" href="https://ja.doqumentation.org/learning/courses/quantum-computing-in-practice/running-quantum-circuits" /><link data-rh-hreflang rel="alternate" hreflang="fil" href="https://tl.doqumentation.org/learning/courses/quantum-computing-in-practice/running-quantum-circuits" /><link data-rh-hreflang rel="alternate" hreflang="ar" href="https://ar.doqumentation.org/learning/courses/quantum-computing-in-practice/running-quantum-circuits" /><link data-rh-hreflang rel="alternate" hreflang="he" href="https://he.doqumentation.org/learning/courses/quantum-computing-in-practice/running-quantum-circuits" /><link data-rh-hreflang rel="alternate" hreflang="ms" href="https://ms.doqumentation.org/learning/courses/quantum-computing-in-practice/running-quantum-circuits" /><link data-rh-hreflang rel="alternate" hreflang="id" href="https://id.doqumentation.org/learning/courses/quantum-computing-in-practice/running-quantum-circuits" /><link data-rh-hreflang rel="alternate" hreflang="th" href="https://th.doqumentation.org/learning/courses/quantum-computing-in-practice/running-quantum-circuits" /><link data-rh-hreflang rel="alternate" hreflang="ko" href="https://ko.doqumentation.org/learning/courses/quantum-computing-in-practice/running-quantum-circuits" /><link data-rh-hreflang rel="alternate" hreflang="pl" href="https://pl.doqumentation.org/learning/courses/quantum-computing-in-practice/running-quantum-circuits" /><link data-rh-hreflang rel="alternate" hreflang="ro" href="https://ro.doqumentation.org/learning/courses/quantum-computing-in-practice/running-quantum-circuits" /><link data-rh-hreflang rel="alternate" hreflang="uk" href="https://uk.doqumentation.org/learning/courses/quantum-computing-in-practice/running-quantum-circuits" /><link data-rh-hreflang rel="alternate" hreflang="cs" href="https://cs.doqumentation.org/learning/courses/quantum-computing-in-practice/running-quantum-circuits" /><link data-rh-hreflang rel="alternate" hreflang="x-default" href="https://doqumentation.org/learning/courses/quantum-computing-in-practice/running-quantum-circuits" /></head>
 <body>
 <svg style="display: none;"><defs>
@@ -25,7 +25,7 @@
 <p>Olivia Lanes による量子回路とプリミティブに関する動画を参照してください。または、<a href="https://youtube.com/watch?v=NTplT4WnNbk" target="_blank" rel="noopener noreferrer" class="">YouTube</a> で別ウィンドウで開くこともできます。</p>
 <!-- -->
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="lesson-overview">レッスンの概要<a href="#lesson-overview" class="hash-link" aria-label="レッスンの概要への直接リンク" title="レッスンの概要への直接リンク" translate="no">​</a></h2>
-<p>このレッスンでは、ユーティリティスケールの量子計算を実行するための基本事項を概観します。使用する量子ハードウェアから、量子回路を設計する際に考慮すべき原則までを扱います。このレッスンを終えるころには、以下のことを理解していただけるでしょう：</p>
+<p>このレッスンでは、ユーティリティスケールの量子計算を実行するための基本事項を概観します。使用する量子ハードウェアから、量子回路を設計する際に考慮すべき原則までを扱います。このレッスンを終えるころには、以下のことが理解できるようになるはずです：</p>
 <ol>
 <li class="">
 <p>IBM® の量子コンピューターが実際にどのようなものか。量子回路を最適に設計してハードウェア上で実行するには、ハードウェアの基本的な特徴を知っておく必要があります。</p>
@@ -62,7 +62,7 @@
 <p>これらの指標の重要度は、具体的なアプリケーションによって異なります。今後のレッスンでは、これらの要素が計算結果にどのような影響を与えるかを実際の例で確認していきます。</p>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="software-qiskit-and-ibm-quantum-compute-service">ソフトウェア：Qiskit と IBM Quantum Compute Service<a href="#software-qiskit-and-ibm-quantum-compute-service" class="hash-link" aria-label="ソフトウェア：Qiskit と IBM Quantum Compute Serviceへの直接リンク" title="ソフトウェア：Qiskit と IBM Quantum Compute Serviceへの直接リンク" translate="no">​</a></h2>
 <p>量子問題を量子コンピューターへの命令に変換するには、IBM が開発した量子コンピューター向けのオープンソースソフトウェア開発キットである Qiskit を使用します。また、Qiskit のコア機能を基盤として構築・拡張するソフトウェアチュートリアルや関数のコレクションである Qiskit エコシステムと、IBM Quantumプリミティブを使用して量子ワークロードを設計・最適化し、効率的に実行できる量子コンピューティングサービス・プログラミングモデルである Quantum Compute もあります。</p>
-<p>プリミティブは、より大きな回路やジョブを設計するために使用できる小さなビルディングブロックです。最も重要な 2 つのプリミティブは、サンプラーとエスティメーターであり、まもなく詳しく説明します。</p>
+<p>プリミティブは、より大きな回路やジョブを設計するために使用できる小さなビルディングブロックです。最も重要な 2 つのプリミティブは Sampler と Estimator で、まもなく詳しく説明します。</p>
 <p>最近リリースされた Qiskit v1.0 により、Qiskit はこれまで以上に高性能で安定したものになりました。これから始める方にとっては、絶好のタイミングです！すでに Qiskit に慣れ親しんでいる方は、最新バージョンをダウンロードして再インストールする必要があります。完全なインストールガイドは、<a class="" href="/guides/install-qiskit">Qiskit のインストール</a>ガイドを参照してください。</p>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="quantum-circuits">量子回路<a href="#quantum-circuits" class="hash-link" aria-label="量子回路への直接リンク" title="量子回路への直接リンク" translate="no">​</a></h2>
 <p>いよいよ量子プログラムの基盤となる量子回路について説明します。このセクションは復習としての位置づけです。量子回路に慣れていない方は、続きを読む前に「量子情報の基礎」コースの<a class="" href="/learning/courses/basics-of-quantum-information/quantum-circuits/introduction">量子回路</a>レッスンで詳しく学ぶことをお勧めします。</p>
@@ -84,7 +84,7 @@
 <p><strong>最適化（Optimize）。</strong> このステップでは、Qiskit のトランスパイラーを使用して、実際の物理量子ビットハードウェアに回路を配置・ルーティングします。これには、個々の量子ゲートをハードウェア上で実行される演算のシーケンスに変換することや、ゲートの配置の最適化が含まれます。</p>
 </li>
 <li class="">
-<p><strong>実行（Execute）。</strong> IBM Quantum プリミティブは、トランスパイルされた回路を実行できる IBM Quantum ハードウェアへのインターフェースを提供します。このステップには、ユーザーから抽象化されたエラー抑制・軽減技術の適用も含まれます。</p>
+<p><strong>実行（Execute）。</strong> IBM Quantum プリミティブは、トランスパイルされた回路を実行できる IBM Quantum ハードウェアへのインターフェースを提供します。このステップには、その大部分をユーザーから抽象化できるエラー抑制・軽減技術の適用も含まれます。</p>
 </li>
 <li class="">
 <p><strong>後処理（Post-process）。</strong> このステップでは、量子プロセッサー自体から得られたデータを処理し、元の問題に対する有用な結果をユーザーに提供します。基本的に、取得したデータのさらなる分析を包括します。</p>
@@ -141,7 +141,7 @@
 <p>動的デカップリングは、量子ビットがアイドル状態にある間に導入される環境ノイズの一部を効果的にキャンセルするために使用されます。特定のタイミングで一連のゲートを適用することで、アイドル期間の一方で蓄積されるノイズが他方のノイズを近似的にキャンセルするようにできます。</p>
 </li>
 <li class="">
-<p>Pauli ツワーリングは、動的デカップリングのようにノイズをキャンセルするためではなく、ノイズを単純化するためにランダムなゲートを挿入する方法です。ランダムなゲートを挿入することで、さまざまなエラーの影響が蓄積されるスピードを抑え、ノイズが確率的な性質を持つようになるため、後処理での修正や除去が容易になります。この手法はまた、以下で説明する強力なエラー軽減技術の基礎にもなっています。</p>
+<p>Pauli ツワーリングは、動的デカップリングのようにノイズをキャンセルするためではなく、ノイズを単純化するためにランダムなゲートを挿入する方法です。ランダムなゲートを挿入することで、さまざまなエラーの影響が蓄積されるスピードを抑え、ノイズが確率的な性質を持つようになるため、ノイズの特性評価が容易になります。この手法はまた、以下で説明する強力なエラー軽減技術の基礎にもなっています。</p>
 </li>
 </ol>
 <h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="execute">実行<a href="#execute" class="hash-link" aria-label="実行への直接リンク" title="実行への直接リンク" translate="no">​</a></h3>

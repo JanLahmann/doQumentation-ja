@@ -14,8 +14,8 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV" crossorigin="anonymous">
 <script src="https://unpkg.com/thebelab@0.4.0/lib/index.js" async></script>
 <script src="https://cloud.umami.is/script.js" defer="defer" data-website-id="97f347ac-e7ba-4be3-b26f-ab4b328bdbf2" data-domains="doqumentation.org"></script><link rel="stylesheet" href="/assets/css/styles.d115d309.css">
-<script src="/assets/js/runtime~main.babed655.js" defer="defer"></script>
-<script src="/assets/js/main.a7976239.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.1e55df66.js" defer="defer"></script>
+<script src="/assets/js/main.677e69ed.js" defer="defer"></script>
 <link data-rh-hreflang rel="alternate" hreflang="en" href="https://doqumentation.org/guides/qrmi" /><link data-rh-hreflang rel="alternate" hreflang="de" href="https://de.doqumentation.org/guides/qrmi" /><link data-rh-hreflang rel="alternate" hreflang="es" href="https://es.doqumentation.org/guides/qrmi" /><link data-rh-hreflang rel="alternate" hreflang="fr" href="https://fr.doqumentation.org/guides/qrmi" /><link data-rh-hreflang rel="alternate" hreflang="it" href="https://it.doqumentation.org/guides/qrmi" /><link data-rh-hreflang rel="alternate" hreflang="pt" href="https://pt.doqumentation.org/guides/qrmi" /><link data-rh-hreflang rel="alternate" hreflang="ja" href="https://ja.doqumentation.org/guides/qrmi" /><link data-rh-hreflang rel="alternate" hreflang="fil" href="https://tl.doqumentation.org/guides/qrmi" /><link data-rh-hreflang rel="alternate" hreflang="ar" href="https://ar.doqumentation.org/guides/qrmi" /><link data-rh-hreflang rel="alternate" hreflang="he" href="https://he.doqumentation.org/guides/qrmi" /><link data-rh-hreflang rel="alternate" hreflang="ms" href="https://ms.doqumentation.org/guides/qrmi" /><link data-rh-hreflang rel="alternate" hreflang="id" href="https://id.doqumentation.org/guides/qrmi" /><link data-rh-hreflang rel="alternate" hreflang="th" href="https://th.doqumentation.org/guides/qrmi" /><link data-rh-hreflang rel="alternate" hreflang="ko" href="https://ko.doqumentation.org/guides/qrmi" /><link data-rh-hreflang rel="alternate" hreflang="pl" href="https://pl.doqumentation.org/guides/qrmi" /><link data-rh-hreflang rel="alternate" hreflang="ro" href="https://ro.doqumentation.org/guides/qrmi" /><link data-rh-hreflang rel="alternate" hreflang="uk" href="https://uk.doqumentation.org/guides/qrmi" /><link data-rh-hreflang rel="alternate" hreflang="cs" href="https://cs.doqumentation.org/guides/qrmi" /><link data-rh-hreflang rel="alternate" hreflang="x-default" href="https://doqumentation.org/guides/qrmi" /></head>
 <body>
 <svg style="display: none;"><defs>
@@ -25,8 +25,8 @@
 <!-- -->
 <header><h1>量子リソース管理インターフェース（QRMI）</h1></header>
 <p>量子リソース管理インターフェース（QRMI）は、高性能計算（HPC）システムが量子計算リソースへのアクセス、制御、および動作監視を行うためのベンダー非依存ライブラリです。シンプルなAPIセットを通じて量子リソースの制御に関わる複雑さを抽象化する、薄いミドルウェア層として機能します。Rustで記述されたこのインターフェースは、ほぼあらゆる計算環境への統合を容易にするためPythonおよびC APIも公開しています。</p>
-<p>QRMIのビルドおよびデプロイ用ソースコードは、この<a href="https://github.com/qiskit-community/qrmi" target="_blank" rel="noopener noreferrer" class="">GitHubリポジトリ</a>でご確認いただけます。</p>
-<p>量子ハードウェアに対して量子ペイロードを実行するためのオプションのコマンドラインツール <code>task_runner</code> がPythonパッケージに含まれています。<a href="https://github.com/qiskit-community/qrmi/blob/main/python/qrmi/tools/task_runner/README.md" target="_blank" rel="noopener noreferrer" class="">完全なドキュメント</a>はGitHubリポジトリでご確認いただけます。</p>
+<p>QRMIのビルドおよびデプロイ用ソースコードは、この<a href="https://github.com/qiskit-community/qrmi" target="_blank" rel="noopener noreferrer" class="">GitHubリポジトリ</a>にあります。</p>
+<p>量子ハードウェアに対して量子ペイロードを実行するためのオプションのコマンドラインツール <code>task_runner</code> がPythonパッケージに含まれています。<a href="https://github.com/qiskit-community/qrmi/blob/main/python/qrmi/tools/task_runner/README.md" target="_blank" rel="noopener noreferrer" class="">完全なドキュメント</a>はGitHubリポジトリにあります。</p>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="build-the-qrmi-libraries">QRMIライブラリのビルド<a href="#build-the-qrmi-libraries" class="hash-link" aria-label="QRMIライブラリのビルドへの直接リンク" title="QRMIライブラリのビルドへの直接リンク" translate="no">​</a></h2>
 <p>このセクションでは、CおよびPython向けにQRMIをビルドする方法を説明します。</p>
 <h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="requirements">要件<a href="#requirements" class="hash-link" aria-label="要件への直接リンク" title="要件への直接リンク" translate="no">​</a></h3>
@@ -38,7 +38,7 @@
 <p><a href="https://www.rust-lang.org/tools/install" target="_blank" rel="noopener noreferrer" class="">Rustコンパイラ</a> 1.91以上</p>
 </li>
 <li class="">
-<p>Cコンパイラ: Linuxでは例えばGCC（<code>gcc</code>）、Rustの未知のターゲット/クロスコンパイルにはClang（<code>clang-tools-extra</code>）。QRMIはC11標準に準拠するコンパイラと互換性があります。</p>
+<p>Cコンパイラ: Linuxでは例えばGCC（<code>gcc</code>）、Rustの unknown ターゲット/クロスコンパイルにはClang（<code>clang-tools-extra</code>）。QRMIはC11標準に準拠するコンパイラと互換性があります。</p>
 </li>
 <li class="">
 <p><code>make/cmake</code>（RHEL互換OSではmake/cmake RPM）</p>

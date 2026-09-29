@@ -14,8 +14,8 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV" crossorigin="anonymous">
 <script src="https://unpkg.com/thebelab@0.4.0/lib/index.js" async></script>
 <script src="https://cloud.umami.is/script.js" defer="defer" data-website-id="97f347ac-e7ba-4be3-b26f-ab4b328bdbf2" data-domains="doqumentation.org"></script><link rel="stylesheet" href="/assets/css/styles.d115d309.css">
-<script src="/assets/js/runtime~main.babed655.js" defer="defer"></script>
-<script src="/assets/js/main.a7976239.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.1e55df66.js" defer="defer"></script>
+<script src="/assets/js/main.677e69ed.js" defer="defer"></script>
 <link data-rh-hreflang rel="alternate" hreflang="en" href="https://doqumentation.org/guides/metapackage-migration" /><link data-rh-hreflang rel="alternate" hreflang="de" href="https://de.doqumentation.org/guides/metapackage-migration" /><link data-rh-hreflang rel="alternate" hreflang="es" href="https://es.doqumentation.org/guides/metapackage-migration" /><link data-rh-hreflang rel="alternate" hreflang="fr" href="https://fr.doqumentation.org/guides/metapackage-migration" /><link data-rh-hreflang rel="alternate" hreflang="it" href="https://it.doqumentation.org/guides/metapackage-migration" /><link data-rh-hreflang rel="alternate" hreflang="pt" href="https://pt.doqumentation.org/guides/metapackage-migration" /><link data-rh-hreflang rel="alternate" hreflang="ja" href="https://ja.doqumentation.org/guides/metapackage-migration" /><link data-rh-hreflang rel="alternate" hreflang="fil" href="https://tl.doqumentation.org/guides/metapackage-migration" /><link data-rh-hreflang rel="alternate" hreflang="ar" href="https://ar.doqumentation.org/guides/metapackage-migration" /><link data-rh-hreflang rel="alternate" hreflang="he" href="https://he.doqumentation.org/guides/metapackage-migration" /><link data-rh-hreflang rel="alternate" hreflang="ms" href="https://ms.doqumentation.org/guides/metapackage-migration" /><link data-rh-hreflang rel="alternate" hreflang="id" href="https://id.doqumentation.org/guides/metapackage-migration" /><link data-rh-hreflang rel="alternate" hreflang="th" href="https://th.doqumentation.org/guides/metapackage-migration" /><link data-rh-hreflang rel="alternate" hreflang="ko" href="https://ko.doqumentation.org/guides/metapackage-migration" /><link data-rh-hreflang rel="alternate" hreflang="pl" href="https://pl.doqumentation.org/guides/metapackage-migration" /><link data-rh-hreflang rel="alternate" hreflang="ro" href="https://ro.doqumentation.org/guides/metapackage-migration" /><link data-rh-hreflang rel="alternate" hreflang="uk" href="https://uk.doqumentation.org/guides/metapackage-migration" /><link data-rh-hreflang rel="alternate" hreflang="cs" href="https://cs.doqumentation.org/guides/metapackage-migration" /><link data-rh-hreflang rel="alternate" hreflang="x-default" href="https://doqumentation.org/guides/metapackage-migration" /></head>
 <body>
 <svg style="display: none;"><defs>
@@ -26,9 +26,9 @@
 <p>Qiskit v1.0 は以前のバージョンとは異なるパッケージ構成を採用しており、Qiskit v1.0 に対応していないパッケージを使用している環境では問題が発生する可能性があります。</p>
 <div class="theme-admonition theme-admonition-caution admonition_xJq3 alert alert--warning"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8.893 1.5c-.183-.31-.52-.5-.887-.5s-.703.19-.886.5L.138 13.499a.98.98 0 0 0 0 1.001c.193.31.53.501.886.501h13.964c.367 0 .704-.19.877-.5a1.03 1.03 0 0 0 .01-1.002L8.893 1.5zm.133 11.497H6.987v-2.003h2.039v2.003zm0-3.004H6.987V5.987h2.039v4.006z"></path></svg></span>注意</div><div class="admonitionContent_BuS1"><p>既存の Python 仮想環境をその場で Qiskit v1.0 にアップグレードしようとしないでください。</p><p>今後は同様の破壊的なパッケージ変更は行いません。これは Qiskit v1.0 のリリース時に限った一度限りの変更であり、将来のパッケージ管理をできる限り簡単にするために行ったものです。</p></div></div>
 <p>このページでは、v1.0 以前の Qiskit パッケージの詳細情報と、破壊的なパッケージ変更を行った理由について説明します。</p>
-<p>この変更が不便をおかけすることは承知していますが、これによって Qiskit はほとんどの Python パッケージが採用しているシンプルなパッケージ構成に戻ります。Qiskit v1.0 への移行が完了すれば、ユーザー、開発者、ライブラリ作者にとってより使いやすい環境になります。</p>
+<p>この変更が不便であることは承知していますが、これによって Qiskit はほとんどの Python パッケージが採用しているシンプルなパッケージ構成に戻ります。Qiskit v1.0 への移行が完了すれば、ユーザー、開発者、ライブラリ作者にとってより使いやすい環境になります。</p>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="preface-glossary-of-python-packaging-terminology">前置き: Python パッケージング用語集<a href="#preface-glossary-of-python-packaging-terminology" class="hash-link" aria-label="前置き: Python パッケージング用語集への直接リンク" title="前置き: Python パッケージング用語集への直接リンク" translate="no">​</a></h2>
-<p>以前の Qiskit メタパッケージがどのように構成されていたか、また Qiskit v1.0 のリリースによってそれがどのように変わったかをより分かりやすく説明するために、以下によく使われる Python パッケージングの専門用語の用語集を示します。次の単語は、このドキュメントで使用する特定の意味を持っています。</p>
+<p>以前の Qiskit メタパッケージがどのように構成されていたか、また Qiskit v1.0 のリリースによってそれがどのように変わったかをより分かりやすく説明するために、以下によく使われる Python パッケージングの専門用語の用語集を示します。以下の用語は、このドキュメントでは特定の意味で使用します。</p>
 <div class="dq-accordion"><details class="dq-accordion-item" style="margin:0.5rem 0;padding:0.5rem 1rem;border:1px solid var(--ifm-color-emphasis-300);border-radius:4px"><summary style="cursor:pointer;font-weight:600"><strong>クリックして展開し、このページの用語集を読む</strong></summary><div style="margin-top:0.5rem"><ul>
 <li class="">
 <p><strong>モジュール (module)</strong>: 単一の Python ファイルです。</p>
@@ -77,7 +77,7 @@ Qiskit のコアは <code>qiskit-terra</code> に存在し、Python パッケー
 Qiskit v1.0 以前は、<code>qiskit</code> パッケージは名前空間パッケージであり、<code>qiskit.providers</code> に第 2 の名前空間パッケージを含んでいました。</p>
 <p>この構成は私たちとユーザーにかなりの問題をもたらしました。</p>
 <p>例えば、Qiskit に依存するダウンストリームライブラリは、実際にはコンパイラコアのみを必要とし、<code>pip install qiskit</code> によってインストールされる大規模なエコシステム全体を必要としないことが多くありました。
-そのため、依存関係を正しく <code>qiskit-terra</code> と指定するのが適切でした。
+そのため、こうしたライブラリは依存関係として正しく <code>qiskit-terra</code> を指定していました。
 しかし、<code>pip uninstall qiskit</code> を実行して Qiskit をアンインストールしようとすると、<code>pip</code> はいくつかの問題に遭遇しました：</p>
 <ul>
 <li class="">
@@ -96,14 +96,14 @@ Qiskit v1.0 以前は、<code>qiskit</code> パッケージは名前空間パッ
 <p>時間をかけて、<code>qiskit</code> メタパッケージからコンポーネントを順次削除し、Qiskit v0.44 以降は <code>qiskit-terra</code> のみが残るようになりました。
 これらのコンポーネントのうち、<code>qiskit-aer</code> は現在も存在しており積極的に更新されていますが、現在は独立したディストリビューションとしてインストールされます。</p>
 <p>同様に、他のライブラリに対して名前空間フックの使用をより強く非推奨としました。
-最後の Qiskit による名前空間フックの使用を、廃止されていないパッケージから削除したのは Qiskit Aer v0.11 のリリース時であり、この際に新しい <code>qiskit_aer</code> Python パッケージが導入されました。ただし Qiskit v1.0 以前は <code>qiskit.providers.aer</code> という名前空間パスも強制的に機能させていました。
+廃止されていないパッケージにおける Qiskit の名前空間フックの使用は、Qiskit Aer v0.11 のリリースで最後のものが削除され、この際に新しい <code>qiskit_aer</code> Python パッケージが導入されました。ただし Qiskit v1.0 以前は <code>qiskit.providers.aer</code> という名前空間パスも強制的に機能させていました。
 Qiskit v1.0 以降は、パッケージが <code>qiskit</code> 名前空間を拡張する機能を削除しました。これにより、有効な環境において正しいディストリビューションに対して <code>pip uninstall</code> を実行することが期待通りに機能するようになりました。</p>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="the-new-qiskit-structure">新しい Qiskit の構成<a href="#the-new-qiskit-structure" class="hash-link" aria-label="新しい Qiskit の構成への直接リンク" title="新しい Qiskit の構成への直接リンク" translate="no">​</a></h2>
 <p>バージョン 1.0 以降、Qiskit は <code>qiskit</code> という単一のディストリビューションで構成されており、これも <code>qiskit</code> という一つのパッケージをインストールし、そのディレクトリ内のすべてのコードを所有します。
 これは Python コードの標準的な構成であり、最もシンプルでエラーが起きにくい構成です。</p>
 <p>PyPI 上の <code>qiskit-terra</code> ディストリビューションはバージョン 1.0 以降には更新されません。<code>qiskit</code> によって完全に置き換えられています。
 インストールにおいて <code>qiskit-terra</code> という名前はもはや使用されません。
-ただし、<code>qiskit-terra</code> パッケージは PyPI から削除されず、最新バージョンを動作する状態で維持するため、古い科学的コードやレガシーパッケージが引き続き使用できるようにします。</p>
+ただし、<code>qiskit-terra</code> パッケージは PyPI から削除されず、最新バージョンを動作する状態で維持するため、古い科学的コードやレガシーパッケージが引き続きより容易に使用できるようにします。</p>
 <p>残念ながら、メタパッケージのレガシーと <code>pip</code> パッケージマネージャーの欠点により、Qiskit v1.0 への完全にスムーズなアップグレードパスを提供することは不可能です。特に、一部のパッケージが以前のバージョンの Qiskit に依存し、また一部が Qiskit v1.0 以上のみを必要とする場合はなおさらです。
 エコシステムの多くが Qiskit v1.0 に移行するにつれて、これらの問題は軽減されていきます。</p>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="where-did-the-application-modules-go">アプリケーションモジュールはどこへ？<a href="#where-did-the-application-modules-go" class="hash-link" aria-label="アプリケーションモジュールはどこへ？への直接リンク" title="アプリケーションモジュールはどこへ？への直接リンク" translate="no">​</a></h2>
