@@ -14,8 +14,8 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV" crossorigin="anonymous">
 <script src="https://unpkg.com/thebelab@0.4.0/lib/index.js" async></script>
 <script src="https://cloud.umami.is/script.js" defer="defer" data-website-id="97f347ac-e7ba-4be3-b26f-ab4b328bdbf2" data-domains="doqumentation.org"></script><link rel="stylesheet" href="/assets/css/styles.d115d309.css">
-<script src="/assets/js/runtime~main.ded59830.js" defer="defer"></script>
-<script src="/assets/js/main.53c1dc57.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.babed655.js" defer="defer"></script>
+<script src="/assets/js/main.cfe9b381.js" defer="defer"></script>
 <link data-rh-hreflang rel="alternate" hreflang="en" href="https://doqumentation.org/guides/tools-intro" /><link data-rh-hreflang rel="alternate" hreflang="de" href="https://de.doqumentation.org/guides/tools-intro" /><link data-rh-hreflang rel="alternate" hreflang="es" href="https://es.doqumentation.org/guides/tools-intro" /><link data-rh-hreflang rel="alternate" hreflang="fr" href="https://fr.doqumentation.org/guides/tools-intro" /><link data-rh-hreflang rel="alternate" hreflang="it" href="https://it.doqumentation.org/guides/tools-intro" /><link data-rh-hreflang rel="alternate" hreflang="pt" href="https://pt.doqumentation.org/guides/tools-intro" /><link data-rh-hreflang rel="alternate" hreflang="ja" href="https://ja.doqumentation.org/guides/tools-intro" /><link data-rh-hreflang rel="alternate" hreflang="fil" href="https://tl.doqumentation.org/guides/tools-intro" /><link data-rh-hreflang rel="alternate" hreflang="ar" href="https://ar.doqumentation.org/guides/tools-intro" /><link data-rh-hreflang rel="alternate" hreflang="he" href="https://he.doqumentation.org/guides/tools-intro" /><link data-rh-hreflang rel="alternate" hreflang="ms" href="https://ms.doqumentation.org/guides/tools-intro" /><link data-rh-hreflang rel="alternate" hreflang="id" href="https://id.doqumentation.org/guides/tools-intro" /><link data-rh-hreflang rel="alternate" hreflang="th" href="https://th.doqumentation.org/guides/tools-intro" /><link data-rh-hreflang rel="alternate" hreflang="ko" href="https://ko.doqumentation.org/guides/tools-intro" /><link data-rh-hreflang rel="alternate" hreflang="pl" href="https://pl.doqumentation.org/guides/tools-intro" /><link data-rh-hreflang rel="alternate" hreflang="ro" href="https://ro.doqumentation.org/guides/tools-intro" /><link data-rh-hreflang rel="alternate" hreflang="uk" href="https://uk.doqumentation.org/guides/tools-intro" /><link data-rh-hreflang rel="alternate" hreflang="cs" href="https://cs.doqumentation.org/guides/tools-intro" /><link data-rh-hreflang rel="alternate" hreflang="x-default" href="https://doqumentation.org/guides/tools-intro" /></head>
 <body>
 <svg style="display: none;"><defs>
@@ -26,7 +26,7 @@
 <header><h1>Qiskit入門</h1></header>
 <p>「Qiskit」という名前は、量子コンピューター上でプログラムを実行するためのソフトウェア集合を指す総称です。これらのソフトウェアツールの中で最も注目すべきものは、オープンソースのQiskit SDKと、IBM Quantum Compute Service（以前はQiskit Runtime Serviceと呼ばれていました）を通じてアクセスするランタイム環境であり、IBM®の量子処理ユニット（QPU）上でワークロードを実行できます。量子技術の進化とともに、Qiskitも発展し続け、この量子ソフトウェアのコアコレクションを拡張する新しい機能が毎年リリースされています。</p>
 <p>さらに、多くのオープンソースプロジェクトがより広いQiskitエコシステムの一部となっています。これらのソフトウェアツールはQiskit自体の一部ではありませんが、Qiskitと連携して有益な追加機能を提供します。</p>
-<p>IBMは量子コンピューティングの責任ある開発に取り組んでいます。<a href="https://docs.quantum.ibm.com/responsible-quantum-computing" target="_blank" rel="noopener noreferrer" class="">責任ある量子コンピューティング</a>のトピックで、詳細と私たちの責任ある量子の原則をご確認ください。</p>
+<p>IBMは量子コンピューティングの責任ある開発に取り組んでいます。<a href="https://docs.quantum.ibm.com/responsible-quantum-computing" target="_blank" rel="noopener noreferrer" class="">責任ある量子コンピューティング</a>のトピックで、詳細と私たちの責任ある量子の原則を確認してください。</p>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="the-qiskit-sdk">Qiskit SDK<a href="#the-qiskit-sdk" class="hash-link" aria-label="Qiskit SDKへの直接リンク" title="Qiskit SDKへの直接リンク" translate="no">​</a></h2>
 <p>Qiskit SDK（パッケージ名 <a href="https://pypi.org/project/qiskit/" target="_blank" rel="noopener noreferrer" class=""><code>qiskit</code></a>）は、拡張された（静的、動的、スケジュール済みの）量子回路、演算子、およびプリミティブのレベルで量子コンピューターを扱うためのオープンソースSDKです。このライブラリはQiskitのコアコンポーネントであり、量子計算のための最も広範なツール群を備えたQiskit名下最大のパッケージで、他の多くのコンポーネントがこれと連携しています。</p>
 <p>Qiskit SDKの最も有用な機能の一部を以下に示します。</p>
@@ -38,7 +38,7 @@
 <p><strong>回路ライブラリ</strong> (<a href="https://docs.quantum.ibm.com/api/qiskit/circuit_library" target="_blank" rel="noopener noreferrer" class=""><code>qiskit.circuit.library</code></a>) - 回路ベースの量子計算における重要な構成要素となる、幅広い回路、命令、ゲートを提供します。</p>
 </li>
 <li class="">
-<p><strong>量子情報ライブラリ</strong> (<a href="https://docs.quantum.ibm.com/api/qiskit/quantum_info" target="_blank" rel="noopener noreferrer" class=""><code>qiskit.quantum_info</code></a>) - 量子状態、演算子、チャンネルを正確な計算（サンプリングノイズなし）で扱うためのツールキットです。このモジュールを使用して、入力オブザーバブルを指定し、プリミティブクエリの出力の忠実度を分析します。</p>
+<p><strong>量子情報ライブラリ</strong> (<a href="https://docs.quantum.ibm.com/api/qiskit/quantum_info" target="_blank" rel="noopener noreferrer" class=""><code>qiskit.quantum_info</code></a>) - 量子状態、演算子、チャネルを正確な計算（サンプリングノイズなし）で扱うためのツールキットです。このモジュールを使用して、入力オブザーバブルを指定し、プリミティブクエリの出力の忠実度を分析します。</p>
 </li>
 <li class="">
 <p><strong>トランスパイラー</strong> (<a href="https://docs.quantum.ibm.com/api/qiskit/transpiler" target="_blank" rel="noopener noreferrer" class=""><code>qiskit.transpiler</code></a>) - 特定のデバイストポロジーに合わせて量子回路を変換・適応させ、実際の量子処理ユニット（QPU）上での実行のために最適化します。</p>
@@ -51,7 +51,7 @@
 <p>Qiskit SDKのインストールに関する詳しい説明は<a class="" href="/guides/install-qiskit">インストールページ</a>を参照してください。今すぐインストールする場合は、次のコマンドを実行してください。</p>
 <div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><div class="token-line" style="color:#393A34"><span class="token plain">pip </span><span class="token function" style="color:#d73a49">install</span><span class="token plain"> qiskit</span><br></div></code></pre></div></div>
 <h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="benchmarking-and-the-benchpress-package">ベンチマーキングとBenchpressパッケージ<a href="#benchmarking-and-the-benchpress-package" class="hash-link" aria-label="ベンチマーキングとBenchpressパッケージへの直接リンク" title="ベンチマーキングとBenchpressパッケージへの直接リンク" translate="no">​</a></h3>
-<p>ベンチマーキングは、開発ワークフローのさまざまな段階にわたって量子ソフトウェアの相対的なパフォーマンスを比較するために重要です。量子ソフトウェアのベンチマーキングテストでは、例えば回路の構築、操作、トランスパイルの速度と品質を調べます。IBM Quantumは可能な限り最高のパフォーマンスを持つSDKを提供することに取り組んでおり、そのためQiskit SDKは、主要大学、国立研究所、およびIBMの研究者が開発した1,000以上のテストを使用してベンチマーキングされています。これらのテストに使用されるベンチマーキングスイート「Benchpress」が<a href="https://github.com/qiskit/benchpress" target="_blank" rel="noopener noreferrer" class="">オープンソースパッケージ</a>として公開されました。BenchpressパッケージをQiskit SDK性能の独自分析に活用できます。</p>
+<p>ベンチマーキングは、開発ワークフローのさまざまな段階にわたって量子ソフトウェアの相対的なパフォーマンスを比較するために重要です。量子ソフトウェアのベンチマーキングテストでは、例えば回路の構築、操作、トランスパイルの速度と品質を調べます。IBM Quantumは可能な限り最高のパフォーマンスを持つSDKを提供することに取り組んでおり、そのためQiskit SDKは、主要大学、国立研究所、およびIBMの研究者が開発した1,000以上のテストを使用してベンチマーキングされています。これらのテストに使用されるベンチマーキングスイート「Benchpress」が<a href="https://github.com/qiskit/benchpress" target="_blank" rel="noopener noreferrer" class="">オープンソースパッケージ</a>として公開されました。Benchpressパッケージを使って、量子SDKの性能を独自に分析できるようになりました。</p>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="qiskit-addons">Qiskitアドオン<a href="#qiskit-addons" class="hash-link" aria-label="Qiskitアドオンへの直接リンク" title="Qiskitアドオンへの直接リンク" translate="no">​</a></h2>
 <p>Qiskitアドオンは、ユーティリティスケールのアルゴリズム発見のための研究機能のコレクションです。これらの機能は、量子アルゴリズムを作成・実行するためのQiskitの高性能な基盤ツールを土台としています。アドオンはワークフローに組み込んで新しい量子アルゴリズムをスケールまたは設計するためのモジュール型ソフトウェアコンポーネントです。利用可能なQiskitアドオンのセットとその使い始め方については、<a class="" href="/guides/addons">ドキュメント</a>を参照してください。</p>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="the-qiskit-ecosystem">Qiskitエコシステム<a href="#the-qiskit-ecosystem" class="hash-link" aria-label="Qiskitエコシステムへの直接リンク" title="Qiskitエコシステムへの直接リンク" translate="no">​</a></h2>
@@ -65,7 +65,7 @@
 <p><strong>qBraid SDK</strong> (<code>qbraid</code>) - 量子ソフトウェアとハードウェアプロバイダーの両方に対応したプラットフォーム非依存の量子ランタイムフレームワークで、プログラム仕様の定義からジョブ送信、結果の後処理・可視化に至るまで、量子ジョブのライフサイクル全体の管理を効率化するよう設計されています。qBraidによって管理されています。</p>
 </li>
 <li class="">
-<p><strong>mthree</strong> <code>mthree</code> - M3（行列フリー測定緩和）を実装するためのパッケージです。次元削減ステップの後、直接LU分解またはO(1)ステップで収束する前処理反復法を使用して修正された測定確率を解き、並列計算も可能な測定緩和技術です。IBM Quantumによって管理されています。</p>
+<p><strong>mthree</strong> <code>mthree</code> - M3（行列フリー測定緩和）を実装するためのパッケージです。次元削減ステップの後、直接LU分解または名目上O(1)ステップで収束する前処理付き反復法を使用して修正された測定確率を解き、並列計算も可能な測定緩和技術です。IBM Quantumによって管理されています。</p>
 </li>
 </ul>
 <p>プロジェクトのカタログは<a href="https://qiskit.github.io/ecosystem/" target="_blank" rel="noopener noreferrer" class="">Qiskitエコシステムページ</a>で見つけることができます。また、自分のプロジェクトを推薦する方法についての情報も掲載されています。</p>

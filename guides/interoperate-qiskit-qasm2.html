@@ -14,8 +14,8 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV" crossorigin="anonymous">
 <script src="https://unpkg.com/thebelab@0.4.0/lib/index.js" async></script>
 <script src="https://cloud.umami.is/script.js" defer="defer" data-website-id="97f347ac-e7ba-4be3-b26f-ab4b328bdbf2" data-domains="doqumentation.org"></script><link rel="stylesheet" href="/assets/css/styles.d115d309.css">
-<script src="/assets/js/runtime~main.ded59830.js" defer="defer"></script>
-<script src="/assets/js/main.53c1dc57.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.babed655.js" defer="defer"></script>
+<script src="/assets/js/main.cfe9b381.js" defer="defer"></script>
 <link data-rh-hreflang rel="alternate" hreflang="en" href="https://doqumentation.org/guides/interoperate-qiskit-qasm2" /><link data-rh-hreflang rel="alternate" hreflang="de" href="https://de.doqumentation.org/guides/interoperate-qiskit-qasm2" /><link data-rh-hreflang rel="alternate" hreflang="es" href="https://es.doqumentation.org/guides/interoperate-qiskit-qasm2" /><link data-rh-hreflang rel="alternate" hreflang="fr" href="https://fr.doqumentation.org/guides/interoperate-qiskit-qasm2" /><link data-rh-hreflang rel="alternate" hreflang="it" href="https://it.doqumentation.org/guides/interoperate-qiskit-qasm2" /><link data-rh-hreflang rel="alternate" hreflang="pt" href="https://pt.doqumentation.org/guides/interoperate-qiskit-qasm2" /><link data-rh-hreflang rel="alternate" hreflang="ja" href="https://ja.doqumentation.org/guides/interoperate-qiskit-qasm2" /><link data-rh-hreflang rel="alternate" hreflang="fil" href="https://tl.doqumentation.org/guides/interoperate-qiskit-qasm2" /><link data-rh-hreflang rel="alternate" hreflang="ar" href="https://ar.doqumentation.org/guides/interoperate-qiskit-qasm2" /><link data-rh-hreflang rel="alternate" hreflang="he" href="https://he.doqumentation.org/guides/interoperate-qiskit-qasm2" /><link data-rh-hreflang rel="alternate" hreflang="ms" href="https://ms.doqumentation.org/guides/interoperate-qiskit-qasm2" /><link data-rh-hreflang rel="alternate" hreflang="id" href="https://id.doqumentation.org/guides/interoperate-qiskit-qasm2" /><link data-rh-hreflang rel="alternate" hreflang="th" href="https://th.doqumentation.org/guides/interoperate-qiskit-qasm2" /><link data-rh-hreflang rel="alternate" hreflang="ko" href="https://ko.doqumentation.org/guides/interoperate-qiskit-qasm2" /><link data-rh-hreflang rel="alternate" hreflang="pl" href="https://pl.doqumentation.org/guides/interoperate-qiskit-qasm2" /><link data-rh-hreflang rel="alternate" hreflang="ro" href="https://ro.doqumentation.org/guides/interoperate-qiskit-qasm2" /><link data-rh-hreflang rel="alternate" hreflang="uk" href="https://uk.doqumentation.org/guides/interoperate-qiskit-qasm2" /><link data-rh-hreflang rel="alternate" hreflang="cs" href="https://cs.doqumentation.org/guides/interoperate-qiskit-qasm2" /><link data-rh-hreflang rel="alternate" hreflang="x-default" href="https://doqumentation.org/guides/interoperate-qiskit-qasm2" /></head>
 <body>
 <svg style="display: none;"><defs>
@@ -52,7 +52,7 @@ Qiskit は <code>&quot;qelib1.inc&quot;</code> 内のゲートを表現するた
 <p>インポーターが検出する特定の <code>gate</code> 文に対して使用する <a class="" href="/api/qiskit/qiskit.circuit.Gate"><code>Gate</code></a> クラスを指定することができます。
 このメカニズムを使用して、追加のゲート名を「組み込み」として扱うこともできます。つまり、明示的な定義を必要としないということです。
 <code>&quot;qelib1.inc&quot;</code> 以外の <code>gate</code> 文に対して使用するゲートクラスを指定すると、生成される回路は通常より効率的に扱えるようになります。</p>
-<div class="theme-admonition theme-admonition-warning admonition_xJq3 alert alert--warning"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8.893 1.5c-.183-.31-.52-.5-.887-.5s-.703.19-.886.5L.138 13.499a.98.98 0 0 0 0 1.001c.193.31.53.501.886.501h13.964c.367 0 .704-.19.877-.5a1.03 1.03 0 0 0 .01-1.002L8.893 1.5zm.133 11.497H6.987v-2.003h2.039v2.003zm0-3.004H6.987V5.987h2.039v4.006z"></path></svg></span>警告</div><div class="admonitionContent_BuS1"><p>Qiskit SDK v1.0 以降、Qiskit の OpenQASM 2 <em>エクスポーター</em>（<a href="#qasm2-export" class="">Qiskit 回路を OpenQASM 2 にエクスポートする</a> を参照）は、<code>&quot;qelib1.inc&quot;</code> に実際よりも多くのゲートがあるかのように動作し続けています。
+<div class="theme-admonition theme-admonition-warning admonition_xJq3 alert alert--warning"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8.893 1.5c-.183-.31-.52-.5-.887-.5s-.703.19-.886.5L.138 13.499a.98.98 0 0 0 0 1.001c.193.31.53.501.886.501h13.964c.367 0 .704-.19.877-.5a1.03 1.03 0 0 0 .01-1.002L8.893 1.5zm.133 11.497H6.987v-2.003h2.039v2.003zm0-3.004H6.987V5.987h2.039v4.006z"></path></svg></span>警告</div><div class="admonitionContent_BuS1"><p>Qiskit SDK v1.0 時点では、Qiskit の OpenQASM 2 <em>エクスポーター</em>（<a href="#qasm2-export" class="">Qiskit 回路を OpenQASM 2 にエクスポートする</a> を参照）は、<code>&quot;qelib1.inc&quot;</code> に実際よりも多くのゲートがあるかのように依然として動作します。
 つまり、インポーターのデフォルト設定では、自身のエクスポーターによってエクスポートされたプログラムをインポートできない場合があります。
 この問題を解決するには、<a href="#qasm2-import-legacy" class="">レガシーエクスポーターとの連携に関する具体的な例</a> を参照してください。</p><p>この不整合は Qiskit のレガシーな動作であり、<a href="https://github.com/Qiskit/qiskit/issues/10737" target="_blank" rel="noopener noreferrer" class="">Qiskit の今後のリリースで解決される予定です</a>。</p></div></div>
 <p>カスタム命令に関する情報を OpenQASM 2 インポーターに渡すには、<a class="" href="/api/qiskit/qasm2#qiskit.qasm2.CustomInstruction"><code>qasm2.CustomInstruction</code> クラス</a> を使用します。
@@ -72,7 +72,7 @@ Qiskit は <code>&quot;qelib1.inc&quot;</code> 内のゲートを表現するた
 </li>
 </ul>
 <p>インポーターが特定のカスタム命令に一致する <code>gate</code> 定義を検出すると、そのカスタム情報を使用してゲートオブジェクトを再構築します。
-カスタム命令の <code>name</code> に一致する <code>gate</code> 文が検出されたが、パラメーター数と量子ビット数の両方が一致しない場合、インポーターは <a class="" href="/api/qiskit/qasm2#qasm2parseerror"><code>QASM2ParseError</code></a> を発生させ、提供された情報とプログラムの不一致を示します。</p>
+カスタム命令の <code>name</code> に一致する <code>gate</code> 文が検出されたが、パラメーター数または量子ビット数のいずれかが一致しない場合、インポーターは <a class="" href="/api/qiskit/qasm2#qasm2parseerror"><code>QASM2ParseError</code></a> を発生させ、提供された情報とプログラムの不一致を示します。</p>
 <p>さらに、5 番目の引数 <code>builtin</code> をオプションで <code>True</code> に設定すると、OpenQASM 2 プログラム内で明示的に定義されていなくてもゲートが自動的に利用可能になります。
 インポーターが組み込みのカスタム命令に対する明示的な <code>gate</code> 定義を検出した場合、それをエラーなく受け入れます。
 上記と同様に、同じ名前の明示的な定義が提供されたカスタム命令と互換性がない場合、<a class="" href="/api/qiskit/qasm2#qasm2parseerror"><code>QASM2ParseError</code></a> が発生します。
@@ -100,7 +100,7 @@ Qiskit は <code>&quot;qelib1.inc&quot;</code> 内のゲートを表現するた
 <p>カスタム古典関数を定義するには、以下を提供する必要があります：</p>
 <ul>
 <li class="">
-<p>OpenQASM 2 プログラムに表示される関数の<em>名前</em></p>
+<p>OpenQASM 2 プログラム内で使われる関数の<em>名前</em></p>
 </li>
 <li class="">
 <p>受け取る浮動小数点引数の数</p>
