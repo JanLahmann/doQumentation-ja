@@ -14,8 +14,8 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV" crossorigin="anonymous">
 <script src="https://unpkg.com/thebelab@0.4.0/lib/index.js" async></script>
 <script src="https://cloud.umami.is/script.js" defer="defer" data-website-id="97f347ac-e7ba-4be3-b26f-ab4b328bdbf2" data-domains="doqumentation.org"></script><link rel="stylesheet" href="/assets/css/styles.d115d309.css">
-<script src="/assets/js/runtime~main.f8acdcaf.js" defer="defer"></script>
-<script src="/assets/js/main.76f36928.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.a72b36da.js" defer="defer"></script>
+<script src="/assets/js/main.ff677a00.js" defer="defer"></script>
 <link data-rh-hreflang rel="alternate" hreflang="en" href="https://doqumentation.org/guides/changelog-qiskit-functions" /><link data-rh-hreflang rel="alternate" hreflang="de" href="https://de.doqumentation.org/guides/changelog-qiskit-functions" /><link data-rh-hreflang rel="alternate" hreflang="es" href="https://es.doqumentation.org/guides/changelog-qiskit-functions" /><link data-rh-hreflang rel="alternate" hreflang="fr" href="https://fr.doqumentation.org/guides/changelog-qiskit-functions" /><link data-rh-hreflang rel="alternate" hreflang="it" href="https://it.doqumentation.org/guides/changelog-qiskit-functions" /><link data-rh-hreflang rel="alternate" hreflang="pt" href="https://pt.doqumentation.org/guides/changelog-qiskit-functions" /><link data-rh-hreflang rel="alternate" hreflang="ja" href="https://ja.doqumentation.org/guides/changelog-qiskit-functions" /><link data-rh-hreflang rel="alternate" hreflang="fil" href="https://tl.doqumentation.org/guides/changelog-qiskit-functions" /><link data-rh-hreflang rel="alternate" hreflang="ar" href="https://ar.doqumentation.org/guides/changelog-qiskit-functions" /><link data-rh-hreflang rel="alternate" hreflang="he" href="https://he.doqumentation.org/guides/changelog-qiskit-functions" /><link data-rh-hreflang rel="alternate" hreflang="ms" href="https://ms.doqumentation.org/guides/changelog-qiskit-functions" /><link data-rh-hreflang rel="alternate" hreflang="id" href="https://id.doqumentation.org/guides/changelog-qiskit-functions" /><link data-rh-hreflang rel="alternate" hreflang="th" href="https://th.doqumentation.org/guides/changelog-qiskit-functions" /><link data-rh-hreflang rel="alternate" hreflang="ko" href="https://ko.doqumentation.org/guides/changelog-qiskit-functions" /><link data-rh-hreflang rel="alternate" hreflang="pl" href="https://pl.doqumentation.org/guides/changelog-qiskit-functions" /><link data-rh-hreflang rel="alternate" hreflang="ro" href="https://ro.doqumentation.org/guides/changelog-qiskit-functions" /><link data-rh-hreflang rel="alternate" hreflang="uk" href="https://uk.doqumentation.org/guides/changelog-qiskit-functions" /><link data-rh-hreflang rel="alternate" hreflang="cs" href="https://cs.doqumentation.org/guides/changelog-qiskit-functions" /><link data-rh-hreflang rel="alternate" hreflang="x-default" href="https://doqumentation.org/guides/changelog-qiskit-functions" /></head>
 <body>
 <svg style="display: none;"><defs>
@@ -98,7 +98,7 @@
 <p>ColibriTDによる<a href="https://quantum.cloud.ibm.com/functions?id=colibritd-quick-pde" target="_blank" rel="noopener noreferrer" class="">QUICK-PDE</a>は、材料変形や計算流体力学の問題に対する特定の微分方程式を解くことができます。例えば、ある研究チームは既にQUICK-PDE関数を使用して、小型モジュール炉(SMR)と呼ばれるタイプの原子炉でより効率的に熱を伝達するために開発された新しい反応性流体のダイナミクスを研究し始めています。</p>
 </li>
 <li class="">
-<p>Global Data Quantumによる<a href="https://quantum.cloud.ibm.com/functions?id=global-data-quantum-quantum-portfolio-optimizer" target="_blank" rel="noopener noreferrer" class="">Quantum Portfolio Optimizer</a>は、定量金融の研究者がポートフォリオ最適化戦略をバックテストできるようにします。100量子ビットを超える規模で実行されるこの関数は、指定された期間にわたってポートフォリオのシャープレシオとリターンを計算します。初期のユーザーは、投資戦略の過去のパフォーマンスを評価する能力や、類似条件下での異なるポートフォリオの比較を可能にするこのオプティマイザーの機能を検証しています。</p>
+<p>Global Data Quantumによる<a href="https://quantum.cloud.ibm.com/functions?id=global-data-quantum-quantum-portfolio-optimizer" target="_blank" rel="noopener noreferrer" class="">Quantum Portfolio Optimizer</a>は、定量金融の研究者がポートフォリオ最適化戦略をバックテストできるようにします。100量子ビットを超える規模で実行されるこの関数は、指定された期間におけるポートフォリオのリターンに対するシャープレシオを算出します。初期のユーザーは、投資戦略の過去のパフォーマンスを評価する能力や、類似条件下での異なるポートフォリオの比較を可能にするこのオプティマイザーの機能を検証しています。</p>
 </li>
 </ul>
 </li>
@@ -168,7 +168,7 @@
 <p><strong>Circuit functions</strong>は、回路を実行するための簡素化されたインターフェースを提供します。ユーザーが提供する抽象回路とオブザーバブルを入力として受け取り、代表的なISA回路の合成、最適化、実行を管理します。Circuit functionsは、トランスパイル、エラー抑制、エラー緩和における最新の機能を統合し、すぐに使える実用レベルのパフォーマンスを実現します。これにより、計算科学者は問題ごとにパターンをゼロから構築するのではなく、問題を回路にマッピングすることに集中できます。</p>
 </li>
 <li class="">
-<p><strong>Application functions</strong>は、アルゴリズムの探索やドメイン固有のユースケースなど、より高レベルのタスクをカバーします。エンタープライズの開発者やデータサイエンティストは、回路を扱うための量子情報科学の背景知識を持っていないことがありますが、その代わりに自分のドメイン知識を活かして量子コンピューティングのアルゴリズムやアプリケーションを進化させたいと考えています。Application functionsを使用すると、ユーザーは古典的な入力を入力するだけで解を受け取ることができ、ドメイン固有のワークフローに量子をより簡単に組み込んで実験できます。</p>
+<p><strong>Application functions</strong>は、アルゴリズムの探索やドメイン固有のユースケースなど、より高レベルのタスクをカバーします。エンタープライズの開発者やデータサイエンティストは、回路を扱うための量子情報科学の背景知識を持っていないことがありますが、その代わりに自分のドメイン知識を活かして量子コンピューティングのアルゴリズムやアプリケーションを進化させたいと考えています。Application functionsを使用すると、ユーザーは古典的な入力データを渡すだけで解を受け取ることができ、ドメイン固有のワークフローに量子をより簡単に組み込んで実験できます。</p>
 </li>
 </ul>
 </li>
@@ -180,7 +180,7 @@
 <p><strong>Circuit functions</strong></p>
 <ul>
 <li class="">
-<p>Q-CTRLは、AI駆動の量子制御技術を適用するcircuit functionをリリースします。これにより、ユーザーはより大きな問題にうまくスケールできます。</p>
+<p>Q-CTRLは、AI駆動の量子制御技術を適用するCircuit functionをリリースします。これにより、ユーザーはより大きな問題にうまくスケールできます。</p>
 </li>
 <li class="">
 <p>Algorithmiqは、PEC(確率的エラー相殺)手法よりも少ないショット数で推定値を得るためのエラー緩和手法であるTEM(テンソルネットワーク・エラー緩和)を適用するcircuit functionをリリースします。</p>
