@@ -14,8 +14,8 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV" crossorigin="anonymous">
 <script src="https://unpkg.com/thebelab@0.4.0/lib/index.js" async></script>
 <script src="https://cloud.umami.is/script.js" defer="defer" data-website-id="97f347ac-e7ba-4be3-b26f-ab4b328bdbf2" data-domains="doqumentation.org"></script><link rel="stylesheet" href="/assets/css/styles.d115d309.css">
-<script src="/assets/js/runtime~main.1e55df66.js" defer="defer"></script>
-<script src="/assets/js/main.65cb57d9.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.41d50c58.js" defer="defer"></script>
+<script src="/assets/js/main.095a45ed.js" defer="defer"></script>
 <link data-rh-hreflang rel="alternate" hreflang="en" href="https://doqumentation.org/guides/qiskit-runtime-circuit-timing" /><link data-rh-hreflang rel="alternate" hreflang="de" href="https://de.doqumentation.org/guides/qiskit-runtime-circuit-timing" /><link data-rh-hreflang rel="alternate" hreflang="es" href="https://es.doqumentation.org/guides/qiskit-runtime-circuit-timing" /><link data-rh-hreflang rel="alternate" hreflang="fr" href="https://fr.doqumentation.org/guides/qiskit-runtime-circuit-timing" /><link data-rh-hreflang rel="alternate" hreflang="it" href="https://it.doqumentation.org/guides/qiskit-runtime-circuit-timing" /><link data-rh-hreflang rel="alternate" hreflang="pt" href="https://pt.doqumentation.org/guides/qiskit-runtime-circuit-timing" /><link data-rh-hreflang rel="alternate" hreflang="ja" href="https://ja.doqumentation.org/guides/qiskit-runtime-circuit-timing" /><link data-rh-hreflang rel="alternate" hreflang="fil" href="https://tl.doqumentation.org/guides/qiskit-runtime-circuit-timing" /><link data-rh-hreflang rel="alternate" hreflang="ar" href="https://ar.doqumentation.org/guides/qiskit-runtime-circuit-timing" /><link data-rh-hreflang rel="alternate" hreflang="he" href="https://he.doqumentation.org/guides/qiskit-runtime-circuit-timing" /><link data-rh-hreflang rel="alternate" hreflang="ms" href="https://ms.doqumentation.org/guides/qiskit-runtime-circuit-timing" /><link data-rh-hreflang rel="alternate" hreflang="id" href="https://id.doqumentation.org/guides/qiskit-runtime-circuit-timing" /><link data-rh-hreflang rel="alternate" hreflang="th" href="https://th.doqumentation.org/guides/qiskit-runtime-circuit-timing" /><link data-rh-hreflang rel="alternate" hreflang="ko" href="https://ko.doqumentation.org/guides/qiskit-runtime-circuit-timing" /><link data-rh-hreflang rel="alternate" hreflang="pl" href="https://pl.doqumentation.org/guides/qiskit-runtime-circuit-timing" /><link data-rh-hreflang rel="alternate" hreflang="ro" href="https://ro.doqumentation.org/guides/qiskit-runtime-circuit-timing" /><link data-rh-hreflang rel="alternate" hreflang="uk" href="https://uk.doqumentation.org/guides/qiskit-runtime-circuit-timing" /><link data-rh-hreflang rel="alternate" hreflang="cs" href="https://cs.doqumentation.org/guides/qiskit-runtime-circuit-timing" /><link data-rh-hreflang rel="alternate" hreflang="x-default" href="https://doqumentation.org/guides/qiskit-runtime-circuit-timing" /></head>
 <body>
 <svg style="display: none;"><defs>
@@ -55,15 +55,15 @@
 <p><code>Channel</code> - 命令が割り当てられているチャネル。以下のいずれかです。</p>
 <ul>
 <li class="">
-<p><code>Qubit x</code> - 量子ビット_x_のドライブチャネルです。</p>
+<p><code>Qubit x</code> - qubit <em>x</em> のドライブチャネルです。</p>
 </li>
 <li class="">
-<p><code>AWGRx_y</code>（任意波形発生器読み出し）- Qubit を測定する際の読み出しチャネルとの通信に使用されます。<em>x</em> および <em>y</em> 引数はそれぞれ読み出し機器 ID と qubit 番号に対応します。</p>
+<p><code>AWGRx_y</code>（任意波形発生器読み出し）- qubit を測定する際に、読み出しチャネルが通信に使用します。<em>x</em> および <em>y</em> 引数はそれぞれ読み出し機器 ID と qubit 番号に対応します。</p>
 </li>
 </ul>
 </li>
 <li class="">
-<p><code>T0</code> - 完全なスケジュール内の命令の開始時刻。</p>
+<p><code>T0</code> - スケジュール全体における命令の開始時刻。</p>
 </li>
 <li class="">
 <p><code>Duration</code> - 命令の継続時間（<em>dt</em> 秒単位）。1 dt = 1 スケジューリング・サイクルです。バックエンドの <code>dt</code> 値は <a href="https://docs.quantum.ibm.com/api/qiskit/qiskit.providers.BackendV2#dt" target="_blank" rel="noopener noreferrer" class=""><code>backend.dt</code></a> で確認できます。</p>
@@ -95,7 +95,7 @@
 <p><code>Qubit x</code> - 量子ビットxのドライブチャネルです。</p>
 </li>
 <li class="">
-<p><code>AWGRx_y</code>（任意波形発生器読み出し）- Qubit を測定する際の読み出しチャネルとの通信に使用されます。<em>x</em> および <em>y</em> 引数はそれぞれ読み出し機器 ID と qubit 番号に対応します。</p>
+<p><code>AWGRx_y</code>（任意波形発生器読み出し）- qubit を測定する際に、読み出しチャネルが通信に使用します。<em>x</em> および <em>y</em> 引数はそれぞれ読み出し機器 ID と qubit 番号に対応します。</p>
 </li>
 <li class="">
 <p><code>Hub</code> - ブロードキャストを制御します。</p>

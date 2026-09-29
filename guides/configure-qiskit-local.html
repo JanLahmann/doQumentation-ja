@@ -14,8 +14,8 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV" crossorigin="anonymous">
 <script src="https://unpkg.com/thebelab@0.4.0/lib/index.js" async></script>
 <script src="https://cloud.umami.is/script.js" defer="defer" data-website-id="97f347ac-e7ba-4be3-b26f-ab4b328bdbf2" data-domains="doqumentation.org"></script><link rel="stylesheet" href="/assets/css/styles.d115d309.css">
-<script src="/assets/js/runtime~main.1e55df66.js" defer="defer"></script>
-<script src="/assets/js/main.65cb57d9.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.41d50c58.js" defer="defer"></script>
+<script src="/assets/js/main.095a45ed.js" defer="defer"></script>
 <link data-rh-hreflang rel="alternate" hreflang="en" href="https://doqumentation.org/guides/configure-qiskit-local" /><link data-rh-hreflang rel="alternate" hreflang="de" href="https://de.doqumentation.org/guides/configure-qiskit-local" /><link data-rh-hreflang rel="alternate" hreflang="es" href="https://es.doqumentation.org/guides/configure-qiskit-local" /><link data-rh-hreflang rel="alternate" hreflang="fr" href="https://fr.doqumentation.org/guides/configure-qiskit-local" /><link data-rh-hreflang rel="alternate" hreflang="it" href="https://it.doqumentation.org/guides/configure-qiskit-local" /><link data-rh-hreflang rel="alternate" hreflang="pt" href="https://pt.doqumentation.org/guides/configure-qiskit-local" /><link data-rh-hreflang rel="alternate" hreflang="ja" href="https://ja.doqumentation.org/guides/configure-qiskit-local" /><link data-rh-hreflang rel="alternate" hreflang="fil" href="https://tl.doqumentation.org/guides/configure-qiskit-local" /><link data-rh-hreflang rel="alternate" hreflang="ar" href="https://ar.doqumentation.org/guides/configure-qiskit-local" /><link data-rh-hreflang rel="alternate" hreflang="he" href="https://he.doqumentation.org/guides/configure-qiskit-local" /><link data-rh-hreflang rel="alternate" hreflang="ms" href="https://ms.doqumentation.org/guides/configure-qiskit-local" /><link data-rh-hreflang rel="alternate" hreflang="id" href="https://id.doqumentation.org/guides/configure-qiskit-local" /><link data-rh-hreflang rel="alternate" hreflang="th" href="https://th.doqumentation.org/guides/configure-qiskit-local" /><link data-rh-hreflang rel="alternate" hreflang="ko" href="https://ko.doqumentation.org/guides/configure-qiskit-local" /><link data-rh-hreflang rel="alternate" hreflang="pl" href="https://pl.doqumentation.org/guides/configure-qiskit-local" /><link data-rh-hreflang rel="alternate" hreflang="ro" href="https://ro.doqumentation.org/guides/configure-qiskit-local" /><link data-rh-hreflang rel="alternate" hreflang="uk" href="https://uk.doqumentation.org/guides/configure-qiskit-local" /><link data-rh-hreflang rel="alternate" hreflang="cs" href="https://cs.doqumentation.org/guides/configure-qiskit-local" /><link data-rh-hreflang rel="alternate" hreflang="x-default" href="https://doqumentation.org/guides/configure-qiskit-local" /></head>
 <body>
 <svg style="display: none;"><defs>
@@ -73,10 +73,10 @@
 <p><code>RAYON_NUM_THREADS</code>: Qiskitでマルチスレッド処理を実行するスレッド数です。デフォルトでは、マルチスレッドコードは論理CPUごとにスレッドを起動します。Qiskitが使用するスレッド数を調整するには、整数値を設定してください。例えば、RAYON_NUM_THREADS=4 と設定すると、マルチスレッド関数に対して4つのスレッドが起動されます。</p>
 </li>
 <li class="">
-<p><code>QISKIT_FORCE_THREADS</code>: マルチスレッドコードが常に複数スレッドで実行されるように指定します。デフォルトでは、すでに並列プロセスで実行中のQiskitのセクションでマルチスレッドコードを実行する場合、Qiskitは複数スレッドを起動せず、その関数をシリアルに実行します。これは限られたCPUリソースへの過負荷を避けるためです。ただし、マルチプロセスのコンテキストであっても複数スレッドの使用を強制したい場合は、<code>QISKIT_FORCE_THREADS=TRUE</code> を設定してください。</p>
+<p><code>QISKIT_FORCE_THREADS</code>: マルチスレッドコードが常に複数スレッドで実行されるように指定します。デフォルトでは、すでに並列プロセスで実行中のQiskitのセクションでマルチスレッドコードを実行する場合、Qiskitは複数スレッドを起動せず、その関数を逐次実行します。これは限られたCPUリソースへの過負荷を避けるためです。ただし、マルチプロセスのコンテキストであっても複数スレッドの使用を強制したい場合は、<code>QISKIT_FORCE_THREADS=TRUE</code> を設定してください。</p>
 </li>
 <li class="">
-<p><code>QISKIT_SABRE_ALL_THREADS</code>: Qiskitのプリセットパスマネージャーにおけるレイアウトおよびルーティングパスの動作を制御します。<code>1</code> または <code>TRUE</code> に設定すると、複数のランダムトライアルの実行に利用可能なすべてのCPUが使用されます。これにより結果の品質が向上する場合があります。特に20以上のCPU/コアを持つシステムで効果的ですが、異なるローカルハードウェアで実行した場合に結果が再現されないというトレードオフがあります。</p>
+<p><code>QISKIT_SABRE_ALL_THREADS</code>: Qiskitのプリセットパスマネージャーにおけるレイアウトおよびルーティングパスの動作を制御します。<code>1</code> または <code>TRUE</code> に設定すると、複数のランダムトライアルの実行に利用可能なすべてのCPUが使用されます。これにより結果の品質が向上する場合があります。特に20を超えるCPU/コアを持つシステムで効果的ですが、異なるローカルハードウェアで実行した場合に結果が再現されないというトレードオフがあります。</p>
 </li>
 </ul>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="next-steps">次のステップ<a href="#next-steps" class="hash-link" aria-label="次のステップへの直接リンク" title="次のステップへの直接リンク" translate="no">​</a></h2>

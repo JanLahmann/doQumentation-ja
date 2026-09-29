@@ -14,8 +14,8 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV" crossorigin="anonymous">
 <script src="https://unpkg.com/thebelab@0.4.0/lib/index.js" async></script>
 <script src="https://cloud.umami.is/script.js" defer="defer" data-website-id="97f347ac-e7ba-4be3-b26f-ab4b328bdbf2" data-domains="doqumentation.org"></script><link rel="stylesheet" href="/assets/css/styles.d115d309.css">
-<script src="/assets/js/runtime~main.1e55df66.js" defer="defer"></script>
-<script src="/assets/js/main.65cb57d9.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.41d50c58.js" defer="defer"></script>
+<script src="/assets/js/main.095a45ed.js" defer="defer"></script>
 <link data-rh-hreflang rel="alternate" hreflang="en" href="https://doqumentation.org/guides/qiskit-sdk-version-strategy" /><link data-rh-hreflang rel="alternate" hreflang="de" href="https://de.doqumentation.org/guides/qiskit-sdk-version-strategy" /><link data-rh-hreflang rel="alternate" hreflang="es" href="https://es.doqumentation.org/guides/qiskit-sdk-version-strategy" /><link data-rh-hreflang rel="alternate" hreflang="fr" href="https://fr.doqumentation.org/guides/qiskit-sdk-version-strategy" /><link data-rh-hreflang rel="alternate" hreflang="it" href="https://it.doqumentation.org/guides/qiskit-sdk-version-strategy" /><link data-rh-hreflang rel="alternate" hreflang="pt" href="https://pt.doqumentation.org/guides/qiskit-sdk-version-strategy" /><link data-rh-hreflang rel="alternate" hreflang="ja" href="https://ja.doqumentation.org/guides/qiskit-sdk-version-strategy" /><link data-rh-hreflang rel="alternate" hreflang="fil" href="https://tl.doqumentation.org/guides/qiskit-sdk-version-strategy" /><link data-rh-hreflang rel="alternate" hreflang="ar" href="https://ar.doqumentation.org/guides/qiskit-sdk-version-strategy" /><link data-rh-hreflang rel="alternate" hreflang="he" href="https://he.doqumentation.org/guides/qiskit-sdk-version-strategy" /><link data-rh-hreflang rel="alternate" hreflang="ms" href="https://ms.doqumentation.org/guides/qiskit-sdk-version-strategy" /><link data-rh-hreflang rel="alternate" hreflang="id" href="https://id.doqumentation.org/guides/qiskit-sdk-version-strategy" /><link data-rh-hreflang rel="alternate" hreflang="th" href="https://th.doqumentation.org/guides/qiskit-sdk-version-strategy" /><link data-rh-hreflang rel="alternate" hreflang="ko" href="https://ko.doqumentation.org/guides/qiskit-sdk-version-strategy" /><link data-rh-hreflang rel="alternate" hreflang="pl" href="https://pl.doqumentation.org/guides/qiskit-sdk-version-strategy" /><link data-rh-hreflang rel="alternate" hreflang="ro" href="https://ro.doqumentation.org/guides/qiskit-sdk-version-strategy" /><link data-rh-hreflang rel="alternate" hreflang="uk" href="https://uk.doqumentation.org/guides/qiskit-sdk-version-strategy" /><link data-rh-hreflang rel="alternate" hreflang="cs" href="https://cs.doqumentation.org/guides/qiskit-sdk-version-strategy" /><link data-rh-hreflang rel="alternate" hreflang="x-default" href="https://doqumentation.org/guides/qiskit-sdk-version-strategy" /></head>
 <body>
 <svg style="display: none;"><defs>
@@ -42,8 +42,8 @@
 <p>新しいメジャーバージョンのリリースに伴い、前のメジャーバージョンはバグ修正に
 対して少なくとも6ヶ月間、セキュリティ修正に対して1年間サポートされます。この
 期間中、このメジャーバージョンに対してはパッチリリースのみが公開されます。
-サポートが終了する際に最終パッチバージョンが公開され、そのリリースはその
-メジャーバージョンシリーズのサポート終了も文書化します。下流の
+サポートが終了する際に最終パッチバージョンが公開され、そのリリースでは当該
+メジャーバージョンシリーズのサポート終了も告知されます。下流の
 Qiskit利用者とそのユーザーがコードを移行する機会を与えるため、前のメジャー
 バージョンにはより長いサポート期間が必要です。
 Qiskitに依存する下流ライブラリは、ライブラリのユーザーベースが新しいAPI変更に
@@ -57,14 +57,12 @@ Qiskitバージョンを引き上げるべきではありません。前のメ�
 としてマークされていない（アンダースコア<code>_</code>プレフィックスなし）すべての文書化
 されたモジュール、クラス、関数、またはメソッドと見なされます。ただし、特定の
 文書化されたAPIに対して明示的な例外が設けられる場合があります。そのような場合、
-これらのAPIは安定したインターフェースとしてはまだ考慮されていないことが明確に
-文書化され、これらの不安定なインターフェースの使用に対してユーザーに見える警告
-がアクティブに出されます。さらに、一部の状況では、プライベートとしてマークされた
+これらのAPIはまだ安定したインターフェースとは見なされないことが明記され、
+これらの不安定なインターフェースを使用する際にはユーザー向けの警告が必ず発行されます。さらに、一部の状況では、プライベートとしてマークされた
 インターフェースが公開APIの一部と見なされることがあります。通常、これは2つの
 ケースでのみ発生します：インターフェースの実装を定義する際にサブクラスが
 プライベートメソッドをオーバーライド/実装することが意図されている抽象
-インターフェース定義、または安定したインターフェースを持つが安全に使用する
-ことが推奨されない上級者向けの低レベルメソッド（クラス/安全性不変条件を
+インターフェース定義、または、インターフェースは安定しているものの、安全に使えるとは見なされていない上級者向けの低レベルメソッド（クラス/安全性不変条件を
 自分で維持する責任がユーザーにある場合。この典型的な例は
 <code>QuantumCircuit._append</code>メソッドです）。</p>
 <p>サポートされるPythonバージョン、最小サポートRustバージョン（ソースからQiskitを

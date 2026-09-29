@@ -14,8 +14,8 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV" crossorigin="anonymous">
 <script src="https://unpkg.com/thebelab@0.4.0/lib/index.js" async></script>
 <script src="https://cloud.umami.is/script.js" defer="defer" data-website-id="97f347ac-e7ba-4be3-b26f-ab4b328bdbf2" data-domains="doqumentation.org"></script><link rel="stylesheet" href="/assets/css/styles.d115d309.css">
-<script src="/assets/js/runtime~main.1e55df66.js" defer="defer"></script>
-<script src="/assets/js/main.65cb57d9.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.41d50c58.js" defer="defer"></script>
+<script src="/assets/js/main.095a45ed.js" defer="defer"></script>
 <link data-rh-hreflang rel="alternate" hreflang="en" href="https://doqumentation.org/guides/custom-roles" /><link data-rh-hreflang rel="alternate" hreflang="de" href="https://de.doqumentation.org/guides/custom-roles" /><link data-rh-hreflang rel="alternate" hreflang="es" href="https://es.doqumentation.org/guides/custom-roles" /><link data-rh-hreflang rel="alternate" hreflang="fr" href="https://fr.doqumentation.org/guides/custom-roles" /><link data-rh-hreflang rel="alternate" hreflang="it" href="https://it.doqumentation.org/guides/custom-roles" /><link data-rh-hreflang rel="alternate" hreflang="pt" href="https://pt.doqumentation.org/guides/custom-roles" /><link data-rh-hreflang rel="alternate" hreflang="ja" href="https://ja.doqumentation.org/guides/custom-roles" /><link data-rh-hreflang rel="alternate" hreflang="fil" href="https://tl.doqumentation.org/guides/custom-roles" /><link data-rh-hreflang rel="alternate" hreflang="ar" href="https://ar.doqumentation.org/guides/custom-roles" /><link data-rh-hreflang rel="alternate" hreflang="he" href="https://he.doqumentation.org/guides/custom-roles" /><link data-rh-hreflang rel="alternate" hreflang="ms" href="https://ms.doqumentation.org/guides/custom-roles" /><link data-rh-hreflang rel="alternate" hreflang="id" href="https://id.doqumentation.org/guides/custom-roles" /><link data-rh-hreflang rel="alternate" hreflang="th" href="https://th.doqumentation.org/guides/custom-roles" /><link data-rh-hreflang rel="alternate" hreflang="ko" href="https://ko.doqumentation.org/guides/custom-roles" /><link data-rh-hreflang rel="alternate" hreflang="pl" href="https://pl.doqumentation.org/guides/custom-roles" /><link data-rh-hreflang rel="alternate" hreflang="ro" href="https://ro.doqumentation.org/guides/custom-roles" /><link data-rh-hreflang rel="alternate" hreflang="uk" href="https://uk.doqumentation.org/guides/custom-roles" /><link data-rh-hreflang rel="alternate" hreflang="cs" href="https://cs.doqumentation.org/guides/custom-roles" /><link data-rh-hreflang rel="alternate" hreflang="x-default" href="https://doqumentation.org/guides/custom-roles" /></head>
 <body>
 <svg style="display: none;"><defs>
@@ -90,7 +90,7 @@
 カスタムロールにアクションを追加するには、アクション行の末尾にある「Add」をクリックします。</p>
 </li>
 <li class="">
-<p>ロールにマッピングするすべてのアクションを追加したら、「Create」をクリックします。</p>
+<p>ロールにマッピングするすべてのアクションを追加したら、<strong>Create</strong> をクリックします。</p>
 </li>
 <li class="">
 <p><a href="https://cloud.ibm.com/iam/groups" target="_blank" rel="noopener noreferrer" class="">管理 → IAM → アクセスグループ</a> に移動します。<strong>Create +</strong> をクリックして新しいアクセスロールを作成します。（すべてのユーザーにカスタムロールで付与されたアクセス権を持たせたい場合を除き、Public Access グループにロールを追加するのではなく、このロール専用の新しいアクセスグループを作成することをお勧めします。）<strong>Create +</strong> をクリックして新しいグループに名前を付けた後（または既存のアクセスグループを編集する場合は、編集するアクセスグループの名前をクリックした後）、「アクセス」タブをクリックします。<strong>Assign access +</strong> をクリックします。</p>
@@ -99,7 +99,7 @@
 <p>「サービス」で Quantum Compute を選択し、「次へ」をクリックします。</p>
 </li>
 <li class="">
-<p>「リソース」で「すべてのリソース」を選択し、「次へ」をクリックします。（アクセス範囲をすべてのリソースに設定しない場合、Analytics Viewer ロールはすべてのインスタンスの分析を表示できなくなることに注意してください。）</p>
+<p>「リソース」で「すべてのリソース」を選択し、「次へ」をクリックします。（アクセス範囲をすべてのリソースに設定しない場合、Analytics Viewer ロールは一部のインスタンスの分析しか表示できないことに注意してください。）</p>
 </li>
 <li class="">
 <p>「ロールとアクション」で、「Viewer」ボックス（プラットフォームの下）と「Analytics Viewer」ボックス（カスタムアクセスの下）にチェックを入れ、「次へ」をクリックします。</p>
