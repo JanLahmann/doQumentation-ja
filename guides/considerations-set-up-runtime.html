@@ -14,8 +14,8 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV" crossorigin="anonymous">
 <script src="https://unpkg.com/thebelab@0.4.0/lib/index.js" async></script>
 <script src="https://cloud.umami.is/script.js" defer="defer" data-website-id="97f347ac-e7ba-4be3-b26f-ab4b328bdbf2" data-domains="doqumentation.org"></script><link rel="stylesheet" href="/assets/css/styles.d115d309.css">
-<script src="/assets/js/runtime~main.48570a2f.js" defer="defer"></script>
-<script src="/assets/js/main.edd6b657.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.ded59830.js" defer="defer"></script>
+<script src="/assets/js/main.53c1dc57.js" defer="defer"></script>
 <link data-rh-hreflang rel="alternate" hreflang="en" href="https://doqumentation.org/guides/considerations-set-up-runtime" /><link data-rh-hreflang rel="alternate" hreflang="de" href="https://de.doqumentation.org/guides/considerations-set-up-runtime" /><link data-rh-hreflang rel="alternate" hreflang="es" href="https://es.doqumentation.org/guides/considerations-set-up-runtime" /><link data-rh-hreflang rel="alternate" hreflang="fr" href="https://fr.doqumentation.org/guides/considerations-set-up-runtime" /><link data-rh-hreflang rel="alternate" hreflang="it" href="https://it.doqumentation.org/guides/considerations-set-up-runtime" /><link data-rh-hreflang rel="alternate" hreflang="pt" href="https://pt.doqumentation.org/guides/considerations-set-up-runtime" /><link data-rh-hreflang rel="alternate" hreflang="ja" href="https://ja.doqumentation.org/guides/considerations-set-up-runtime" /><link data-rh-hreflang rel="alternate" hreflang="fil" href="https://tl.doqumentation.org/guides/considerations-set-up-runtime" /><link data-rh-hreflang rel="alternate" hreflang="ar" href="https://ar.doqumentation.org/guides/considerations-set-up-runtime" /><link data-rh-hreflang rel="alternate" hreflang="he" href="https://he.doqumentation.org/guides/considerations-set-up-runtime" /><link data-rh-hreflang rel="alternate" hreflang="ms" href="https://ms.doqumentation.org/guides/considerations-set-up-runtime" /><link data-rh-hreflang rel="alternate" hreflang="id" href="https://id.doqumentation.org/guides/considerations-set-up-runtime" /><link data-rh-hreflang rel="alternate" hreflang="th" href="https://th.doqumentation.org/guides/considerations-set-up-runtime" /><link data-rh-hreflang rel="alternate" hreflang="ko" href="https://ko.doqumentation.org/guides/considerations-set-up-runtime" /><link data-rh-hreflang rel="alternate" hreflang="pl" href="https://pl.doqumentation.org/guides/considerations-set-up-runtime" /><link data-rh-hreflang rel="alternate" hreflang="ro" href="https://ro.doqumentation.org/guides/considerations-set-up-runtime" /><link data-rh-hreflang rel="alternate" hreflang="uk" href="https://uk.doqumentation.org/guides/considerations-set-up-runtime" /><link data-rh-hreflang rel="alternate" hreflang="cs" href="https://cs.doqumentation.org/guides/considerations-set-up-runtime" /><link data-rh-hreflang rel="alternate" hreflang="x-default" href="https://doqumentation.org/guides/considerations-set-up-runtime" /></head>
 <body>
 <svg style="display: none;"><defs>
@@ -25,7 +25,7 @@
 <!-- -->
 <header><h1>組織向けIBM Quantum Platformのセットアップに関する考慮事項</h1></header>
 <p>IBM Quantum® Platformは、IBM Cloud®アカウントのIBM Quantum Compute Serviceインスタンスとワークロードのダッシュボードであり、アクセス管理の簡略化されたビューを提供します。組織のIBM Cloudアカウントは、複数のユーザーと複数のQuantum Computeインスタンスを持つことができ、それぞれに独自の割り当てがあります。Identity and Access Management（IAM）は、どのユーザーがどのサービスインスタンスにアクセスできるかを制御するため、必要に応じて可視性を制限しながらコラボレーションを可能にします。有料プランのサービスインスタンスがある場合、アクセス管理の重要性が高まります。アカウント、ユーザー、インスタンス、アクセスがどのように連携するかの概要については、<a class="" href="/guides/cloud-account-structure">IBM Cloudアカウント構造</a>を参照してください。このガイドで参照されているアクセスグループ、ポリシー、ロール、リソースグループなどのIAMの概念の詳細については、<a href="https://cloud.ibm.com/docs/account?topic=account-iamoverview" target="_blank" rel="noopener noreferrer" class="">IBM Cloud IAMドキュメント</a>を参照してください。</p>
-<p>このガイドでは、複数のサービスインスタンスを持つ組織のアクセスを設定する際に関わる決定事項とトレードオフについて説明します—たとえば、チームまたはワークロードごとに1つのインスタンスを割り当てる場合などです。</p>
+<p>このガイドでは、複数のサービスインスタンス（たとえば、チームやワークロードごとに1つのインスタンスを割り当てる場合）を持つ組織のアクセスを設定する際の決定事項とトレードオフについて説明します。</p>
 <div class="theme-admonition theme-admonition-note admonition_xJq3 alert alert--secondary"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 14 16"><path fill-rule="evenodd" d="M6.3 5.69a.942.942 0 0 1-.28-.7c0-.28.09-.52.28-.7.19-.18.42-.28.7-.28.28 0 .52.09.7.28.18.19.28.42.28.7 0 .28-.09.52-.28.7a1 1 0 0 1-.7.3c-.28 0-.52-.11-.7-.3zM8 7.99c-.02-.25-.11-.48-.31-.69-.2-.19-.42-.3-.69-.31H6c-.27.02-.48.13-.69.31-.2.2-.3.44-.31.69h1v3c.02.27.11.5.31.69.2.2.42.31.69.31h1c.27 0 .48-.11.69-.31.2-.19.3-.42.31-.69H8V7.98v.01zM7 2.3c-3.14 0-5.7 2.54-5.7 5.68 0 3.14 2.56 5.7 5.7 5.7s5.7-2.55 5.7-5.7c0-3.15-2.56-5.69-5.7-5.69v.01zM7 .98c3.86 0 7 3.14 7 7s-3.14 7-7 7-7-3.12-7-7 3.14-7 7-7z"></path></svg></span>備考</div><div class="admonitionContent_BuS1"><p>組織に複数のIBM Cloudアカウントがある場合 — 例えば、事業部ごとに個別のアカウントがあり、それぞれが独自のQuantum Computeインスタンスを持っている場合 — それらを単一のIBM Cloud Enterpriseアカウントの下にリンクすることができます。このアカウントには、課金を担当する1つのメインアカウントと1つ以上の子アカウントがあります。子アカウント間でPremiumまたはFlex Planの割り当てを再配分するには、<a href="https://cloud.ibm.com/unifiedsupport/cases/form" target="_blank" rel="noopener noreferrer" class="">IBM Cloud Support Center</a>を通じてIBM Quantumサポートにお問い合わせください。詳細については、<a href="https://cloud.ibm.com/docs/account?topic=account-what-is-enterprise" target="_blank" rel="noopener noreferrer" class="">IBM Cloud Enterpriseアカウントのドキュメント</a>を参照してください。</p></div></div>
 <span id="overview-org"></span>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="overview">概要<a href="#overview" class="hash-link" aria-label="概要への直接リンク" title="概要への直接リンク" translate="no">​</a></h2>
@@ -58,10 +58,10 @@
 <p>組織向けにIBM Quantum Platformをセットアップする前に、以下の点を決定する必要があります。</p>
 <ul>
 <li class="">
-<p><strong>ユーザーIDはどのように定義しますか？</strong> IBM Cloudユーザー、別のアイデンティティ・プロバイダー（IDP）のユーザー、またはその両方を設定できます。</p>
+<p><strong>ユーザーIDはどのように定義しますか？</strong> IBM Cloudユーザー、別のIDプロバイダー（IDP）のユーザー、またはその両方を設定できます。</p>
 <ul>
 <li class="">
-<p>別のIDPを使用する場合、クラウド管理者またはIDP管理者がユーザーをアクセスグループに割り当てますか？</p>
+<p>別のIDPを使用する場合、ユーザーをアクセスグループに割り当てるのは、クラウド管理者とIDP管理者のどちらですか？</p>
 </li>
 <li class="">
 <p>IDP管理者が動的ルールを通じてユーザーを割り当てる場合、マッチングキーとして使用するカスタムIDPユーザー属性（たとえば<code>team</code>属性）が必要です。</p>
