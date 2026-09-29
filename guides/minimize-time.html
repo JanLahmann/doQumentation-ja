@@ -14,8 +14,8 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV" crossorigin="anonymous">
 <script src="https://unpkg.com/thebelab@0.4.0/lib/index.js" async></script>
 <script src="https://cloud.umami.is/script.js" defer="defer" data-website-id="97f347ac-e7ba-4be3-b26f-ab4b328bdbf2" data-domains="doqumentation.org"></script><link rel="stylesheet" href="/assets/css/styles.d115d309.css">
-<script src="/assets/js/runtime~main.546c0d06.js" defer="defer"></script>
-<script src="/assets/js/main.4476c6e3.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.ca21abb1.js" defer="defer"></script>
+<script src="/assets/js/main.7dd7f3b8.js" defer="defer"></script>
 <link data-rh-hreflang rel="alternate" hreflang="en" href="https://doqumentation.org/guides/minimize-time" /><link data-rh-hreflang rel="alternate" hreflang="de" href="https://de.doqumentation.org/guides/minimize-time" /><link data-rh-hreflang rel="alternate" hreflang="es" href="https://es.doqumentation.org/guides/minimize-time" /><link data-rh-hreflang rel="alternate" hreflang="fr" href="https://fr.doqumentation.org/guides/minimize-time" /><link data-rh-hreflang rel="alternate" hreflang="it" href="https://it.doqumentation.org/guides/minimize-time" /><link data-rh-hreflang rel="alternate" hreflang="pt" href="https://pt.doqumentation.org/guides/minimize-time" /><link data-rh-hreflang rel="alternate" hreflang="ja" href="https://ja.doqumentation.org/guides/minimize-time" /><link data-rh-hreflang rel="alternate" hreflang="fil" href="https://tl.doqumentation.org/guides/minimize-time" /><link data-rh-hreflang rel="alternate" hreflang="ar" href="https://ar.doqumentation.org/guides/minimize-time" /><link data-rh-hreflang rel="alternate" hreflang="he" href="https://he.doqumentation.org/guides/minimize-time" /><link data-rh-hreflang rel="alternate" hreflang="ms" href="https://ms.doqumentation.org/guides/minimize-time" /><link data-rh-hreflang rel="alternate" hreflang="id" href="https://id.doqumentation.org/guides/minimize-time" /><link data-rh-hreflang rel="alternate" hreflang="th" href="https://th.doqumentation.org/guides/minimize-time" /><link data-rh-hreflang rel="alternate" hreflang="ko" href="https://ko.doqumentation.org/guides/minimize-time" /><link data-rh-hreflang rel="alternate" hreflang="pl" href="https://pl.doqumentation.org/guides/minimize-time" /><link data-rh-hreflang rel="alternate" hreflang="ro" href="https://ro.doqumentation.org/guides/minimize-time" /><link data-rh-hreflang rel="alternate" hreflang="uk" href="https://uk.doqumentation.org/guides/minimize-time" /><link data-rh-hreflang rel="alternate" hreflang="cs" href="https://cs.doqumentation.org/guides/minimize-time" /><link data-rh-hreflang rel="alternate" hreflang="x-default" href="https://doqumentation.org/guides/minimize-time" /></head>
 <body>
 <svg style="display: none;"><defs>
@@ -26,7 +26,7 @@
 <p>ジョブの処理と実行に費やす時間を制限する方法はいくつかあります：</p>
 <ul>
 <li class="">
-<p><strong>必要なショット数だけを実行する</strong>：ジョブのQPU消費量（およびそのコスト）はショット数に比例してスケールします。そのため、必要なショット数だけを実行することでコストを管理できます。Estimator ジョブでは、精度を低くすると一般的にショット数が増え、実行時間も長くなります。</p>
+<p><strong>必要なショット数だけを実行する</strong>：ジョブのQPU消費量（およびそのコスト）はショット数に比例して増加します。そのため、必要なショット数だけを実行することでコストを管理できます。Estimator ジョブでは、precision の値を小さくする（より高い精度を求める）と、一般的にショット数が増え、実行時間も長くなります。</p>
 </li>
 <li class="">
 <p>実行時間に制限を設ける：各ジョブ、バッチ、またはセッションの実行時間を制限できます。詳細については、<a class="" href="/guides/max-execution-time">最大実行時間</a>ガイドを参照してください。</p>
@@ -35,7 +35,7 @@
 <p><strong>エラー抑制とエラー軽減に必要な設定のみを使用する</strong>：値を高く設定するとジョブの実行時間が長くなる場合があります。詳細については、<a class="" href="/guides/runtime-options-overview">オプションの概要</a>、<a class="" href="/guides/error-mitigation-and-suppression-techniques">エラー抑制の設定</a>、および<a class="" href="/guides/error-mitigation-and-suppression-techniques">エラー軽減の設定</a>を参照してください。</p>
 </li>
 <li class="">
-<p>PEA や PEC など、ノイズモデルを必要とするエラー緩和方法を使用しながら、同じ（おそらくパラメータ化された）Circuit を含む複数のジョブを実行している場合は、<code>NoiseLearner</code> の使用を検討してください。このヘルパープログラムを使用すると、Circuit のノイズモデルを一度学習し、以降の Estimator クエリでそのモデルを再利用できます。ノイズモデルは一定時間が経過すると古くなるため、これはジョブ間に長い遅延がない場合（たとえばセッション内）にのみ実用的であることに注意してください。詳細については、<a class="" href="/guides/noise-learning">ノイズ学習ヘルパー
+<p>PEA や PEC など、ノイズモデルを必要とするエラー軽減手法を使用しながら、同じ（おそらくパラメータ化された）Circuit を含む複数のジョブを実行している場合は、<code>NoiseLearner</code> の使用を検討してください。このヘルパープログラムを使用すると、Circuit のノイズモデルを一度学習し、以降の Estimator クエリでそのモデルを再利用できます。ノイズモデルは一定時間が経過すると古くなるため、これはジョブ間に長い遅延がない場合（たとえばセッション内）にのみ実用的であることに注意してください。詳細については、<a class="" href="/guides/noise-learning">ノイズ学習ヘルパー
 </a> を参照してください。</p>
 </li>
 </ul>
