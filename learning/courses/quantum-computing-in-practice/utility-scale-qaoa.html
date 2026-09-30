@@ -14,8 +14,8 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV" crossorigin="anonymous">
 <script src="https://unpkg.com/thebelab@0.4.0/lib/index.js" async></script>
 <script src="https://cloud.umami.is/script.js" defer="defer" data-website-id="97f347ac-e7ba-4be3-b26f-ab4b328bdbf2" data-domains="doqumentation.org"></script><link rel="stylesheet" href="/assets/css/styles.d115d309.css">
-<script src="/assets/js/runtime~main.652b66de.js" defer="defer"></script>
-<script src="/assets/js/main.8cac7985.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.36168420.js" defer="defer"></script>
+<script src="/assets/js/main.305668c9.js" defer="defer"></script>
 <link data-rh-hreflang rel="alternate" hreflang="en" href="https://doqumentation.org/learning/courses/quantum-computing-in-practice/utility-scale-qaoa" /><link data-rh-hreflang rel="alternate" hreflang="de" href="https://de.doqumentation.org/learning/courses/quantum-computing-in-practice/utility-scale-qaoa" /><link data-rh-hreflang rel="alternate" hreflang="es" href="https://es.doqumentation.org/learning/courses/quantum-computing-in-practice/utility-scale-qaoa" /><link data-rh-hreflang rel="alternate" hreflang="fr" href="https://fr.doqumentation.org/learning/courses/quantum-computing-in-practice/utility-scale-qaoa" /><link data-rh-hreflang rel="alternate" hreflang="it" href="https://it.doqumentation.org/learning/courses/quantum-computing-in-practice/utility-scale-qaoa" /><link data-rh-hreflang rel="alternate" hreflang="pt" href="https://pt.doqumentation.org/learning/courses/quantum-computing-in-practice/utility-scale-qaoa" /><link data-rh-hreflang rel="alternate" hreflang="ja" href="https://ja.doqumentation.org/learning/courses/quantum-computing-in-practice/utility-scale-qaoa" /><link data-rh-hreflang rel="alternate" hreflang="fil" href="https://tl.doqumentation.org/learning/courses/quantum-computing-in-practice/utility-scale-qaoa" /><link data-rh-hreflang rel="alternate" hreflang="ar" href="https://ar.doqumentation.org/learning/courses/quantum-computing-in-practice/utility-scale-qaoa" /><link data-rh-hreflang rel="alternate" hreflang="he" href="https://he.doqumentation.org/learning/courses/quantum-computing-in-practice/utility-scale-qaoa" /><link data-rh-hreflang rel="alternate" hreflang="ms" href="https://ms.doqumentation.org/learning/courses/quantum-computing-in-practice/utility-scale-qaoa" /><link data-rh-hreflang rel="alternate" hreflang="id" href="https://id.doqumentation.org/learning/courses/quantum-computing-in-practice/utility-scale-qaoa" /><link data-rh-hreflang rel="alternate" hreflang="th" href="https://th.doqumentation.org/learning/courses/quantum-computing-in-practice/utility-scale-qaoa" /><link data-rh-hreflang rel="alternate" hreflang="ko" href="https://ko.doqumentation.org/learning/courses/quantum-computing-in-practice/utility-scale-qaoa" /><link data-rh-hreflang rel="alternate" hreflang="pl" href="https://pl.doqumentation.org/learning/courses/quantum-computing-in-practice/utility-scale-qaoa" /><link data-rh-hreflang rel="alternate" hreflang="ro" href="https://ro.doqumentation.org/learning/courses/quantum-computing-in-practice/utility-scale-qaoa" /><link data-rh-hreflang rel="alternate" hreflang="uk" href="https://uk.doqumentation.org/learning/courses/quantum-computing-in-practice/utility-scale-qaoa" /><link data-rh-hreflang rel="alternate" hreflang="cs" href="https://cs.doqumentation.org/learning/courses/quantum-computing-in-practice/utility-scale-qaoa" /><link data-rh-hreflang rel="alternate" hreflang="x-default" href="https://doqumentation.org/learning/courses/quantum-computing-in-practice/utility-scale-qaoa" /></head>
 <body>
 <svg style="display: none;"><defs>
@@ -119,13 +119,13 @@
 <p>さあ、回路を実行する準備がほぼ整いました。しかしその前に、ジョブを送信するいくつかの方法（実行モードと呼ばれます）があることを確認しておきましょう。</p>
 <ul>
 <li class="">
-<p>ジョブモード：コンテキストマネージャーを使わずに、EstimatorまたはSamplerへの単一のプリミティブリクエストが行われます。回路と入力はプリミティブユニファイドブロック（PUB）としてパッケージ化され、量子コンピューターの実行タスクとして送信されます。</p>
+<p>job mode：コンテキストマネージャーを使わずに、EstimatorまたはSamplerへの単一のプリミティブリクエストが行われます。回路と入力はプリミティブユニファイドブロック（PUB）としてパッケージ化され、量子コンピューターの実行タスクとして送信されます。</p>
 </li>
 <li class="">
-<p>バッチモード：独立したジョブの束から構成される実験を効率的に実行するためのマルチジョブマネージャーです。バッチモードを使用して、複数のプリミティブジョブを同時に送信できます。</p>
+<p>batch mode：独立したジョブの束から構成される実験を効率的に実行するためのマルチジョブマネージャーです。batch mode を使用して、複数のプリミティブジョブを同時に送信できます。</p>
 </li>
 <li class="">
-<p>セッションモード：マルチジョブワークロードを実行するための専用ウィンドウです。ユーザーが変分アルゴリズムをより予測可能な方法で試せ、スタックの並列性を活用して複数の実験を同時に実行することもできます。専用アクセスが必要な反復的なワークロードや実験にはセッションを使用してください。例については「セッションでのジョブ実行」を参照してください。</p>
+<p>session mode：マルチジョブワークロードを実行するための専用ウィンドウです。ユーザーが変分アルゴリズムをより予測可能な方法で試せ、スタックの並列性を活用して複数の実験を同時に実行することもできます。専用アクセスが必要な反復的なワークロードや実験にはセッションを使用してください。例については「セッションでのジョブ実行」を参照してください。</p>
 </li>
 </ul>
 <p>QAOAの実験では、最適値を見つけるために異なるパラメータ値で回路を何度もサンプリングする必要があるため、アクセスできるのであればセッションを選択するのが良いでしょう。</p>

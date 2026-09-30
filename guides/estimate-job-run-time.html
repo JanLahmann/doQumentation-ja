@@ -14,8 +14,8 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV" crossorigin="anonymous">
 <script src="https://unpkg.com/thebelab@0.4.0/lib/index.js" async></script>
 <script src="https://cloud.umami.is/script.js" defer="defer" data-website-id="97f347ac-e7ba-4be3-b26f-ab4b328bdbf2" data-domains="doqumentation.org"></script><link rel="stylesheet" href="/assets/css/styles.d115d309.css">
-<script src="/assets/js/runtime~main.652b66de.js" defer="defer"></script>
-<script src="/assets/js/main.8cac7985.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.36168420.js" defer="defer"></script>
+<script src="/assets/js/main.305668c9.js" defer="defer"></script>
 <link data-rh-hreflang rel="alternate" hreflang="en" href="https://doqumentation.org/guides/estimate-job-run-time" /><link data-rh-hreflang rel="alternate" hreflang="de" href="https://de.doqumentation.org/guides/estimate-job-run-time" /><link data-rh-hreflang rel="alternate" hreflang="es" href="https://es.doqumentation.org/guides/estimate-job-run-time" /><link data-rh-hreflang rel="alternate" hreflang="fr" href="https://fr.doqumentation.org/guides/estimate-job-run-time" /><link data-rh-hreflang rel="alternate" hreflang="it" href="https://it.doqumentation.org/guides/estimate-job-run-time" /><link data-rh-hreflang rel="alternate" hreflang="pt" href="https://pt.doqumentation.org/guides/estimate-job-run-time" /><link data-rh-hreflang rel="alternate" hreflang="ja" href="https://ja.doqumentation.org/guides/estimate-job-run-time" /><link data-rh-hreflang rel="alternate" hreflang="fil" href="https://tl.doqumentation.org/guides/estimate-job-run-time" /><link data-rh-hreflang rel="alternate" hreflang="ar" href="https://ar.doqumentation.org/guides/estimate-job-run-time" /><link data-rh-hreflang rel="alternate" hreflang="he" href="https://he.doqumentation.org/guides/estimate-job-run-time" /><link data-rh-hreflang rel="alternate" hreflang="ms" href="https://ms.doqumentation.org/guides/estimate-job-run-time" /><link data-rh-hreflang rel="alternate" hreflang="id" href="https://id.doqumentation.org/guides/estimate-job-run-time" /><link data-rh-hreflang rel="alternate" hreflang="th" href="https://th.doqumentation.org/guides/estimate-job-run-time" /><link data-rh-hreflang rel="alternate" hreflang="ko" href="https://ko.doqumentation.org/guides/estimate-job-run-time" /><link data-rh-hreflang rel="alternate" hreflang="pl" href="https://pl.doqumentation.org/guides/estimate-job-run-time" /><link data-rh-hreflang rel="alternate" hreflang="ro" href="https://ro.doqumentation.org/guides/estimate-job-run-time" /><link data-rh-hreflang rel="alternate" hreflang="uk" href="https://uk.doqumentation.org/guides/estimate-job-run-time" /><link data-rh-hreflang rel="alternate" hreflang="cs" href="https://cs.doqumentation.org/guides/estimate-job-run-time" /><link data-rh-hreflang rel="alternate" hreflang="x-default" href="https://doqumentation.org/guides/estimate-job-run-time" /></head>
 <body>
 <svg style="display: none;"><defs>
@@ -42,10 +42,10 @@
 <p>ジョブが失敗またはキャンセルされた場合、報告される使用量は次のとおりです：</p>
 <ul>
 <li class="">
-<p>ジョブまたはバッチモード：システムエラーにより失敗またはキャンセルされた場合、報告される使用量はゼロです。ユーザーエラーにより失敗したジョブやユーザーがキャンセルしたジョブの場合、報告される使用量はその時点までに発生した消費量（ジョブを実行するために QPU を準備する際に生じたオーバーヘッドを含む）となります。</p>
+<p>job modeまたはbatch mode：システムエラーにより失敗またはキャンセルされた場合、報告される使用量はゼロです。ユーザーエラーにより失敗したジョブやユーザーがキャンセルしたジョブの場合、報告される使用量はその時点までに発生した消費量（ジョブを実行するために QPU を準備する際に生じたオーバーヘッドを含む）となります。</p>
 </li>
 <li class="">
-<p>セッションモード：報告される使用量は、失敗またはキャンセルされたジョブ数に関わらず、セッションがアクティブなウォールクロック時間です。</p>
+<p>session mode：報告される使用量は、失敗またはキャンセルされたジョブ数に関わらず、セッションがアクティブなウォールクロック時間です。</p>
 </li>
 </ul>
 <span id="view-usage"></span>
@@ -53,7 +53,7 @@
 <p>ワークロードが完了した後、実際の使用量を確認するいくつかの方法があります：</p>
 <ul>
 <li class="">
-<p><code>qiskit-ibm-runtime</code> v0.30以降では、単一ジョブの場合は<a href="https://docs.quantum.ibm.com/api/qiskit-ibm-runtime/runtime-job-v2#usage" target="_blank" rel="noopener noreferrer" class=""><code>job.usage()</code></a>を実行し、バッチまたはセッションモードを使用する場合は<a href="https://docs.quantum.ibm.com/api/qiskit-ibm-runtime/batch#usage" target="_blank" rel="noopener noreferrer" class=""><code>batch.usage()</code></a>または<a href="https://docs.quantum.ibm.com/api/qiskit-ibm-runtime/session#usage" target="_blank" rel="noopener noreferrer" class=""><code>session.usage()</code></a>を実行します。古いバージョンの<code>qiskit-ibm-runtime</code>（&gt;= 0.23 かつ &lt; 0.30）を使用している場合も、<code>session.details()[&quot;usage_time&quot;]</code> および <code>batch.details()[&quot;usage_time&quot;]</code> で使用量を確認できます。</p>
+<p><code>qiskit-ibm-runtime</code> v0.30以降では、単一ジョブの場合は<a href="https://docs.quantum.ibm.com/api/qiskit-ibm-runtime/runtime-job-v2#usage" target="_blank" rel="noopener noreferrer" class=""><code>job.usage()</code></a>を実行し、batch modeまたはsession modeを使用する場合は<a href="https://docs.quantum.ibm.com/api/qiskit-ibm-runtime/batch#usage" target="_blank" rel="noopener noreferrer" class=""><code>batch.usage()</code></a>または<a href="https://docs.quantum.ibm.com/api/qiskit-ibm-runtime/session#usage" target="_blank" rel="noopener noreferrer" class=""><code>session.usage()</code></a>を実行します。古いバージョンの<code>qiskit-ibm-runtime</code>（&gt;= 0.23 かつ &lt; 0.30）を使用している場合も、<code>session.details()[&quot;usage_time&quot;]</code> および <code>batch.details()[&quot;usage_time&quot;]</code> で使用量を確認できます。</p>
 </li>
 <li class="">
 <p><a href="https://docs.quantum.ibm.com/api/qiskit-runtime-rest/tags/sessions#tags__sessions__operations__get_session" target="_blank" rel="noopener noreferrer" class=""><code>GET /sessions/{id}</code></a> を使用して、特定のバッチまたはセッションの使用量を確認します（このエンドポイントは両方の実行モードで同じです）。</p>
