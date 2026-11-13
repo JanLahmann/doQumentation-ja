@@ -16,8 +16,8 @@
 <script src="/runtime-config.js"></script>
 <script src="/umami-before-send.js"></script>
 <script src="https://cloud.umami.is/script.js" defer="defer" data-website-id="97f347ac-e7ba-4be3-b26f-ab4b328bdbf2" data-domains="doqumentation.org,de.doqumentation.org,es.doqumentation.org,uk.doqumentation.org,fr.doqumentation.org,it.doqumentation.org,pt.doqumentation.org,ja.doqumentation.org,tl.doqumentation.org,ar.doqumentation.org,he.doqumentation.org,ms.doqumentation.org,id.doqumentation.org,th.doqumentation.org,ko.doqumentation.org,pl.doqumentation.org,ro.doqumentation.org,cs.doqumentation.org" data-before-send="fwqUmamiBeforeSend"></script><link rel="stylesheet" href="/assets/css/styles.082ca4e0.css">
-<script src="/assets/js/runtime~main.04cff189.js" defer="defer"></script>
-<script src="/assets/js/main.8f8f8981.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.92f55614.js" defer="defer"></script>
+<script src="/assets/js/main.c6da8fdf.js" defer="defer"></script>
 <meta data-dq-mirror-noindex name="robots" content="noindex, follow" /></head>
 <body>
 <svg style="display: none;"><defs>
@@ -32,7 +32,7 @@
 <p>量子ポートフォリオオプティマイザーは、動的ポートフォリオ最適化問題に取り組むQiskit Functionです。これは、リターンを最大化しリスクを最小化するために、一連の資産にわたる定期的な投資のリバランスを目的とする、金融における標準的な問題です。最先端の量子最適化技術を活用することで、この関数はプロセスを簡素化し、量子コンピューティングの専門知識がないユーザーでも、最適な投資トラジェクトリーを見つけるうえでその利点を活用できるようにします。ポートフォリオマネージャー、定量的金融の研究者、および個人投資家に最適で、このツールはポートフォリオ最適化における取引戦略のバックテストを可能にします。</p>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="function-description">関数の説明<a href="#function-description" class="hash-link" aria-label="関数の説明への直接リンク" title="関数の説明への直接リンク" translate="no">​</a></h2>
 <p>量子ポートフォリオオプティマイザー関数は、変分量子固有値ソルバー（VQE）アルゴリズムを使用して二次制約なし二値最適化（QUBO）問題を解き、動的ポートフォリオ最適化問題に対処します。ユーザーは資産価格データを提供し、投資制約を定義するだけで、関数が量子最適化プロセスを実行し、最適化された投資トラジェクトリーのセットを返します。</p>
-<p>The process consists of four main stages. First, the input data is mapped to a quantum-compatible problem, constructing the QUBO of the dynamic portfolio optimization problem, and transforming it into a quantum operator (Ising Hamiltonian). Next, the input problem and the VQE algorithm are adapted to be run in the quantum hardware. The VQE algorithm is then run on the quantum hardware, and finally, the results are post-processed to provide the optimal investment trajectories. The system also includes a noise-aware (<a class="" href="/addons/qiskit-addon-sqd">SQD</a>-based) post-processing to maximize the quality of the output.</p>
+<p>このプロセスは4つの主要なステージで構成されています。まず、入力データを量子互換の問題にマッピングし、動的ポートフォリオ最適化問題のQUBOを構築し、量子演算子（イジング・ハミルトニアン）に変換します。次に、入力問題とVQEアルゴリズムを量子ハードウェア上で実行できるように適応させます。その後、VQEアルゴリズムを量子ハードウェア上で実行し、最後に結果をポストプロセッシングして最適な投資トラジェクトリーを提供します。このシステムにはノイズ対応（<a class="" href="/addons/qiskit-addon-sqd">SQD</a>ベース）のポストプロセッシングも含まれており、出力の品質を最大化します。</p>
 <p>このQiskit FunctionはGlobal Data Quantumによる<a href="https://arxiv.org/abs/2412.19150" target="_blank" rel="noopener noreferrer" class="">公開論文</a>に基づいています。
 <img decoding="async" loading="lazy" alt="関数のワークフローの可視化" src="/assets/images/function_workflow-c87c42714c3fd188911c7aa56d50493c.svg" width="855" height="1290" class="img_ev3q"></p>
 <h1 id="get-started">はじめに</h1>
