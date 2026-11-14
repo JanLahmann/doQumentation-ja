@@ -16,8 +16,8 @@
 <script src="/runtime-config.js"></script>
 <script src="/umami-before-send.js"></script>
 <script src="https://cloud.umami.is/script.js" defer="defer" data-website-id="97f347ac-e7ba-4be3-b26f-ab4b328bdbf2" data-domains="doqumentation.org,de.doqumentation.org,es.doqumentation.org,uk.doqumentation.org,fr.doqumentation.org,it.doqumentation.org,pt.doqumentation.org,ja.doqumentation.org,tl.doqumentation.org,ar.doqumentation.org,he.doqumentation.org,ms.doqumentation.org,id.doqumentation.org,th.doqumentation.org,ko.doqumentation.org,pl.doqumentation.org,ro.doqumentation.org,cs.doqumentation.org" data-before-send="fwqUmamiBeforeSend"></script><link rel="stylesheet" href="/assets/css/styles.082ca4e0.css">
-<script src="/assets/js/runtime~main.92f55614.js" defer="defer"></script>
-<script src="/assets/js/main.c6da8fdf.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.28a2b125.js" defer="defer"></script>
+<script src="/assets/js/main.4d990a02.js" defer="defer"></script>
 </head>
 <body>
 <svg style="display: none;"><defs>
@@ -180,7 +180,7 @@
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="hardware-example">ハードウェアの例<a href="#hardware-example" class="hash-link" aria-label="ハードウェアの例への直接リンク" title="ハードウェアの例への直接リンク" translate="no">​</a></h2>
 <p>この例では20 Qubit（10個の空間軌道）を使用します。この選択は、すばやく実行できるチュートリアルのための便宜上のものであり、この手法の厳密な上限ではありません。</p>
 <p>古典ステップのコストは、Qubit数によって直接決まるわけではありません。SQD は、<em>サンプリングされた</em>構成が張る部分空間に射影したハミルトニアンを対角化します。したがって、古典コストを左右するのは、その選択された部分空間の次元（ここでは <code>samples_per_batch</code>、<code>num_batches</code>、およびCircuitが実際に生成する異なる構成の数によって決まります）と、射影されたハミルトニアンを適用するために必要なスパース線形代数です。完全CI空間は軌道数と電子数に応じて組合せ的に増大しますが、選択された部分空間はその小さく調整可能な一部であり、そのサイズは直接制御できます。したがって、Qubit数と古典的な難しさはある程度独立に変えることができます。小さな系を非常に大きな部分空間で対角化するよりも、広い軌道空間を控えめな部分空間にサンプリングするほうが低コストになることもあります。</p>
-<p>したがって実際には、実現可能な系のサイズは、目的の精度に必要な部分空間の次元と、固有値ソルバーが利用できるメモリおよびコア数によって決まります。より大きな軌道空間では、化学的精度に達するために通常より大きな部分空間が必要となり、それがやがて分散リソースの利用を動機づけます。このステップをスケールアウトする方法については、<a href="https://qiskit.github.io/qiskit-addon-sqd-hpc/" target="_blank" rel="noopener noreferrer" class="">qiskit-addon-sqd-hpc</a> を参照してください。固定のカットオフを仮定するのではなく、報告される部分空間の次元とイテレーションごとのエネルギー収束を観察し、エネルギーの改善が止まるか、利用可能なメモリを使い切るまで部分空間のサイズを増やすのが実用的なアプローチです。</p>
+<p>したがって実際には、実現可能な系のサイズは、目的の精度に必要な部分空間の次元と、固有値ソルバーが利用できるメモリおよびコア数によって決まります。より大きな軌道空間では、化学的精度に達するために通常より大きな部分空間が必要となり、それがやがて分散リソースの利用を動機づけます。このステップをスケールアウトする方法については、<a href="https://github.com/Qiskit/qiskit-sqd-hpc" target="_blank" rel="noopener noreferrer" class="">qiskit-addon-sqd-hpc</a> を参照してください。固定のカットオフを仮定するのではなく、報告される部分空間の次元とイテレーションごとのエネルギー収束を観察し、エネルギーの改善が止まるか、利用可能なメモリを使い切るまで部分空間のサイズを増やすのが実用的なアプローチです。</p>
 <p><em>注:</em> ハードウェアのノイズに起因するサンプリング誤差のため、ハードウェアでの実行で対角化のために作成される部分空間は、シミュレーターを使用した場合よりも大きくなります。対角化したい部分空間の次元は増えますが、SQD のノイズに対する頑健性により、このワークフローは依然として正確な答えを与えてくれます。</p>
 <p><strong>不正なビット列の除外</strong></p>
 <p>ここでは追加のステップを実行することもできます。Circuit実行から得られたすべてのビット列がそろったら、SQD を実行する前に無効なビット列を除外するか、除外せずに先へ進むことができます。ハードウェアでの実行では、一般に除外を行わないほうが望ましいです。対称性が破れたショットを構成回復に利用でき、それらを有効な構成に修復して、ショットを単に捨てる代わりに部分空間を広げられるためです。</p>
